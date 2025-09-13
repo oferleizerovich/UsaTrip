@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 8 - רביעי 8.10 | נורת' קונווי - יום הרים לבנים</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .departure {
+            background: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .option-header {
+            background: linear-gradient(135deg, #38a169, #48bb78);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .alternative {
+            background: linear-gradient(135deg, #d69e2e, #f6ad55);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .time-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .duration-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .activity-col {
+            width: 150px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .details-col {
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .warning {
+            background: #fef5e7;
+            border: 1px solid #f6ad55;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .warning h4 {
+            color: #c05621;
+            margin-top: 0;
+        }
+        
+        .tips {
+            background: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .tips h4 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        .recommendation {
+            background: #e6fffa;
+            border: 1px solid #4fd1c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .recommendation h4 {
+            color: #234e52;
+            margin-top: 0;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>יום 8 - רביעי 8.10</h1>
+            <h2>נורת' קונווי - יום הרים לבנים</h2>
+            <div class="departure">יציאה: 09:00</div>
+        </div>
+
+        <div class="option-header">
+            אם מוותרים על Diana's Baths
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-12:00</td>
+                    <td class="duration-col">3 שעות</td>
+                    <td class="activity-col">Conway Scenic Railroad</td>
+                    <td class="details-col">רכבת נופית היסטורית מ-1874! התחנה: מבנה ויקטוריאני מקסים משנת 1874. הרכבת: Valley Train מתפתל 18 מיל דרך עמק Saco River עם נוף להרי Mount Washington ו-Cathedral Ledge. קרונות משוחזרים מ-1920-1940, בחירה בין Coach Class או First Class עם שירות אוכל. הזמנה מוקדמת חיונית! חניה מוקדמת מומלצת</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30-13:30</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">Intervale Scenic Vista</td>
+                    <td class="details-col">נקודת תצפית מדהימה על עמק Mount Washington Valley. ה"postcard shot" הקלאסי של ניו המפשייר! נוף פנורמי להרי Presidential Range, כפרים קטנים, ונהר Saco המתפתל. מקום מושלם להפסקת צילומים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30-15:00</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Jackson Falls</td>
+                    <td class="details-col">מפל קטן (15 מטר) אך במקום מושלם לצילום ופיקניק. הליכה קלה 10 דקות מהחנייה, בריכות טבעיות קטנות, אידיאלי למשפחות. השביל מוצל ונעים גם בימי קיץ חמים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00-17:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">קניות Settlers Green Outlets + עוגיות מפורסמות</td>
+                    <td class="details-col">קניות ללא מס מכירות! מעל 60 חנויות כולל Nike, North Face, Coach, Polo Ralph Lauren אוטלט. בנוסף: Old Village Bakery עם עוגיות שוקולד ציפס מעולות (מפורסמות בכל ניו אינגלנד), Mystic Sugar Bakery עם עוגות תוצרת בית</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="alternative">
+            אם מוותרים על Jackson Falls
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-12:00</td>
+                    <td class="duration-col">3 שעות</td>
+                    <td class="activity-col">Conway Scenic Railroad</td>
+                    <td class="details-col">רכבת נופית היסטורית מ-1874! (פירוט זהה למעלה)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30-13:30</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">Intervale Scenic Vista</td>
+                    <td class="details-col">(פירוט זהה למעלה)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30-15:00</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Diana's Baths</td>
+                    <td class="details-col">מפלים ובריכות טבע מרהיבים! הליכה 2.4 ק"מ הלוך ושוב (1.5 שעות סה"כ) למערכת של Upper, Middle ו-Lower Baths עם מפלים קטנים וברכות גרניט טבעיות. בעיית חנייה חמורה! פתרון: יציאה מוקדמת ב-08:30 או אלטרנטיבה - Echo Lake State Park עם בריכה טבעית וחנייה גדולה יותר</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00-17:30</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">קניות Settlers Green Outlets + עוגיות מפורסמות</td>
+                    <td class="details-col">(פירוט זהה למעלה) אך עם יותר זמן לגלישה בחנויות ומנוחה</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h3>Conway Scenic Railroad - פירוט מלא:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>ההיסטוריה והתחנה:</h4>
+                    <ul>
+                        <li>נפתחה ב-1874 כחלק מ-Boston & Maine Railroad</li>
+                        <li>התחנה: מבנה ויקטוריאני מקסים משנת 1874, שוחזר במלואו</li>
+                        <li>הרכבת הופסקה ב-1961, חזרה כרכבת תיירותית ב-1974</li>
+                        <li>אחת מרכבות התיירות הפופולריות ביותר בניו אינגלנד</li>
+                    </ul>
+                    
+                    <h4>המסלול - Valley Train:</h4>
+                    <ul>
+                        <li>אורך: 18 מיל (29 ק"מ) הלוך ושוב</li>
+                        <li>זמן: 55 דקות נסיעה + 20 דקות עצירה בקונווי</li>
+                        <li>נוף: מתפתל לאורך נהר Saco River דרך Mount Washington Valley</li>
+                        <li>אטרקציות בדרך: Mount Washington, Cathedral Ledge, כפרים היסטוריים</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>הקרונות ההיסטוריות:</h4>
+                    <ul>
+                        <li>Coach Class: קרונות משוחזרים מ-1920-1940 עם מושבים מקוריים</li>
+                        <li>First Class: שירות אוכל במהלך הנסיעה, מושבים נוחים יותר</li>
+                        <li>חימום: בחורף, אוורור בקיץ</li>
+                    </ul>
+                    
+                    <h4>מחירים והזמנות:</h4>
+                    <ul>
+                        <li>Coach Class: $22 למבוגר</li>
+                        <li>First Class: $35 למבוגר</li>
+                        <li><span class="highlight">הזמנה מוקדמת חיונית - המטיילים מלאים!</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>Diana's Baths - פירוט מלא:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>המיקום והגישה:</h4>
+                    <ul>
+                        <li>נמצא ב-Echo Lake State Park</li>
+                        <li>חנייה מוגבלת! (20-30 מכוניות בלבד)</li>
+                        <li>פתרון לבעיית החנייה: יציאה ב-08:30 או אלטרנטיבה Echo Lake</li>
+                    </ul>
+                    
+                    <h4>פרטי המסלול:</h4>
+                    <ul>
+                        <li>אורך: 2.4 ק"מ הלוך ושוב</li>
+                        <li>זמן: 1.5 שעות כולל זמן ליהנות</li>
+                        <li>דרגת קושי: קל לכולם, מתאים למשפחות</li>
+                        <li>שביל: מסומן היטב, מוצל ברובו</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>הבריכות והמפלים:</h4>
+                    <ul>
+                        <li>Upper Baths: הבריכות העליונות, הכי יפות</li>
+                        <li>Middle Baths: בריכות בינוניות עם מפלים קטנים</li>
+                        <li>Lower Baths: נגישות ביותר, טובות למשפחות</li>
+                    </ul>
+                    
+                    <h4>שחייה ובטיחות:</h4>
+                    <ul>
+                        <li>שחייה אפשרית בקיץ</li>
+                        <li>מים קרירים 15-18°C גם בקיץ</li>
+                        <li><span class="highlight">הביאו נעלי מים - הסלעים חלקים!</span></li>
+                        <li>שמירה על הטבע - אל תזיזו סלעים</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendation">
+            <h4>אלטרנטיבה - Echo Lake State Park:</h4>
+            <ul>
+                <li>אגם גדול עם חוף חולי</li>
+                <li>בריכה טבעית גדולה</li>
+                <li>חנייה גדולה (פתרון לבעיית Diana's Baths)</li>
+                <li>מתקני פיקניק ושירותים</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>מידע נוסף על נורת' קונווי:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>יתרונות הקניות:</h4>
+                    <ul>
+                        <li>ללא מס מכירות: חסכון של 6-8% לעומת מדינות שכנות</li>
+                        <li>מגוון חנויות: מאוטלטים ועד בוטיקים מיוחדים</li>
+                        <li>מיקום מרכזי: בלב האזור התיירותי</li>
+                    </ul>
+                    
+                    <h4>מסעדות מומלצות:</h4>
+                    <ul>
+                        <li>Moat Mountain Smoke House & Brewing: בירה מקומית + BBQ</li>
+                        <li>Delaney's Hole in the Wall: פיצה משפחתית מעולה</li>
+                        <li>Muddy Moose: משפחתי עם תפריט רחב</li>
+                        <li>Thompson House Eatery: מנות גורמה מקומיות</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>חנויות מזון מיוחדות:</h4>
+                    <ul>
+                        <li>Old Village Bakery: עוגיות שוקולד ציפס מפורסמות</li>
+                        <li>Mystic Sugar Bakery: עוגות ומאפים תוצרת בית</li>
+                        <li>Zeb's General Store: ממתקים ומוצרי ניו אינגלנד</li>
+                    </ul>
+                    
+                    <h4>לינה:</h4>
+                    <p>North Conway Airbnb, NH</p>
+                    <p>הערות: ערב רגוע, ארגון לימים הבאים, כביסה במקרה הצורך</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips">
+            <h4>עלויות משוערות ליום:</h4>
+            <ul>
+                <li>דלק $40</li>
+                <li>ארוחות $150</li>
+                <li>כניסות $85</li>
+            </ul>
+            <p><strong>טיפ:</strong> נורת' קונווי הוא הבסיס המושלם לחקר ההרים הלבנים!</p>
+        </div>
+    </div>
+</body>
+</html>

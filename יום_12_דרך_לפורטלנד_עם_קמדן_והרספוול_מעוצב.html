@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 12 - ראשון 12.10 | דרך לפורטלנד עם קמדן והרספוול</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .departure {
+            background: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .time-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .duration-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .activity-col {
+            width: 180px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .details-col {
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .costs {
+            background: #e6fffa;
+            border: 1px solid #4fd1c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .costs h4 {
+            color: #234e52;
+            margin-top: 0;
+        }
+        
+        .scenic-note {
+            background: #fed7ed;
+            border: 2px solid #f687b3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .scenic-note h4 {
+            color: #97266d;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>יום 12 - ראשון 12.10</h1>
+            <h2>דרך לפורטלנד עם קמדן והרספוול</h2>
+            <div class="departure">יציאה: 09:00</div>
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-10:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">נסיעה לקמדן</td>
+                    <td class="details-col">יציאה מבר הארבור דרך Route 3 North ו-Route 1 North לאורך חוף מיין הציורי. נסיעה דרך כפרי דייגים קטנים: Ellsworth (עיר השער לאכדיה), Bucksport (נוף לנהר Penobscot), Belfast (עיר נמל היסטורית)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:30-12:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">קמדן - כפר הדייגים המקסים</td>
+                    <td class="details-col">Camden Harbor + Mount Battie: כפר הדייגים המקסים ביותר במיין! נמל עם סירות דיג אמיתיות, סקונרים (ספינות מפרש היסטוריות), ומספנות פעילות. Mount Battie: 230 מטר מעל העיר, נסיעה ברכב להר + הליכה קצרה 10 דקות למגדל אבן בן 100 שנה. נוף פנורמי על Penobscot Bay ועשרות איים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30-14:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">Harpswell + Bailey Island לארוחת צהריים</td>
+                    <td class="details-col">נסיעה לחצי האי Harpswell דרך Route 1 South ו-Route 123 South. דרך מעבר Brunswick (עם Bowdoin College) ו-Freeport (עם L.L.Bean Flagship Store). הגעה ל-Bailey Island דרך Cribstone Bridge הייחודי</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:30-16:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">ארוחת צהריים באווירה מיוחדת</td>
+                    <td class="details-col">Cribstone Bridge (1927) - הגשר היחיד מסוגו בעולם! גשר אבן שמאפשר למים לעבור בין הסלעים. Cook's Lobster & Ale House - מסעדה על המים עם נוף ל-Halfway Rock Lighthouse. לובסטר טרי ישירות מהדייגים המקומיים, מנות דגים מקומיות, אווירה אמיתית של מיין</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:00-17:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">נסיעה לפורטלנד</td>
+                    <td class="details-col">נסיעה לפורטלנד דרך החוף הנופי Route 1 South. מעבר דרך עיירות קטנות כמו Bath (עם Maine Maritime Museum) ו-Wiscasset ("הכפר הכי יפה במיין")</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:30-19:00</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">פורטלנד - Old Port</td>
+                    <td class="details-col">הנמל הישן ההיסטורי המשוחזר במיוחד. רובע מרוצף אבנים עם מבני לבנים מהמאה ה-19 שהוסבו לגלריות, בוטיקים, מסעדות גורמה, ויקבי בירה. Exchange Street ו-Commercial Street הן הרחובות העיקריים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">20:00-22:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">שקיעה Fort Williams Park + מגדלור</td>
+                    <td class="details-col">Fort Williams Park - פארק על שטח של בסיס צבא לשעבר עם Portland Head Light - המגדלור המפורסם ביותר במיין (1791)! נוף מרהיב לאוקיינוס האטלנטי, זמן מושלם לשקיעה מהחוף. המגדלור הוא סמל מיין והופיע באינספור תמונות</td>
+                </tr>
+                <tr>
+                    <td class="time-col">21:30-22:00</td>
+                    <td class="duration-col">30 דק</td>
+                    <td class="activity-col">צ'ק אין</td>
+                    <td class="details-col">צ'ק אין במלון בפורטלנד (כנראה צריך להזמין עוד מלון - לא מצוין במסמך)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h3>קמדן - פירוט מלא:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>המיקום והאופי:</h4>
+                    <ul>
+                        <li>מיקום: גדות Penobscot Bay, 2 שעות צפונית מפורטלנד</li>
+                        <li>אוכלוסיה: 4,850 תושבים קבועים, מתרבה בקיץ לכ-15,000</li>
+                        <li>מוניטין: "המקום שבו ההרים פוגשים את הים"</li>
+                        <li>אופי: עיירת נמל אמיתית עם תיירות מטופחת (לא מסחרית מדי)</li>
+                    </ul>
+                    
+                    <h4>הנמל והמפרץ:</h4>
+                    <ul>
+                        <li>נמל עבודה אמיתי עם סירות דיג פעילות</li>
+                        <li>סקונרים (ספינות מפרש מסורתיות) להפלגות תיירות</li>
+                        <li>מספנות היסטוריות שעדיין פועלות</li>
+                        <li>צי של יאכטות פרטיות מרשימות</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Mount Battie State Park:</h4>
+                    <ul>
+                        <li>גובה: 230 מטר מעל הנמל</li>
+                        <li>נסיעה ברכב: כביש מפותל להר (3 מיל)</li>
+                        <li>מגדל אבן: נבנה ב-1921 לזכר המלחים המקומיים</li>
+                        <li>נוף: פנורמה של Penobscot Bay עם עשרות איים</li>
+                    </ul>
+                    
+                    <h4>מסעדות מומלצות:</h4>
+                    <ul>
+                        <li>Peter Ott's on the Water: הטוב ביותר</li>
+                        <li>Waterfront Restaurant: נוף הנמל, דגים טריים</li>
+                        <li>Natalie's (Camden Harbour Inn): דיינינג יוקרתי עם תפריט טעימות 5 מנות</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>חצי האי Harpswell - פירוט מלא:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>מה זה חצי האי Harpswell:</h4>
+                    <ul>
+                        <li>גיאוגרפיה: חצי אי עם 3 איים מחוברים בגשרים - Bailey, Orr's, Great Island</li>
+                        <li>אופי: הפחות תיירותי והכי אמיתי באזור פורטלנד</li>
+                        <li>דייג: עדיין קהילת דייגי לובסטר פעילה</li>
+                    </ul>
+                    
+                    <h4>Cribstone Bridge:</h4>
+                    <ul>
+                        <li>שנת בנייה: 1927</li>
+                        <li>ייחודיות: הגשר היחיד מסוגו בעולם - אבני גרניט מסודרות כך שמים יכולים לעבור ביניהן</li>
+                        <li>אורך: 94 מטר</li>
+                        <li>עומק מתחתיו: 7 מטר בגאות גבוה</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Bailey Island:</h4>
+                    <ul>
+                        <li>גודל: 2.4 ק"מ אורך, 1.6 ק"מ רוחב</li>
+                        <li>אוכלוסיה: 400 תושבים קבועים</li>
+                        <li>אטרקציה עיקרית: Cook's Lobster & Ale House</li>
+                    </ul>
+                    
+                    <h4>למה כדאי:</h4>
+                    <ul>
+                        <li>נופי חוף מרהיבים מכל הכיוונים</li>
+                        <li>הליכה על סלעים לחוף האוקיינוס - Giant's Stairs Trail</li>
+                        <li>Land's End - הנקודה הדרומית ביותר של המיין לנד</li>
+                        <li>אווירה אמיתית של מיין דייגי, פחות תיירותי</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>פורטלנד Old Port:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>ההיסטוריה:</h4>
+                    <ul>
+                        <li>נוסד ב-1632, נהרס בשריפות מרובות</li>
+                        <li>השיקום הגדול: שנות ה-70-80 הפכו את הנמל הישן לרובע תיירותי</li>
+                        <li>שימור מבני לבנים מהמאה ה-19</li>
+                    </ul>
+                    
+                    <h4>הרחובות העיקריים:</h4>
+                    <ul>
+                        <li>Exchange Street: גלריות אמנות, בוטיקים, בתי קפה</li>
+                        <li>Commercial Street: מסעדות, בארים, חנויות מזכרות</li>
+                        <li>Free Street: תיאטרונים, קולנוע, מוזיקה חיה</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>מסעדות ובירות מפורסמות:</h4>
+                    <ul>
+                        <li>Holy Donut (דונאטס מתפוחי אדמה!)</li>
+                        <li>Duckfat (צ'יפס בשומן ברווז)</li>
+                        <li>Allagash Brewing (בירה מקומית מפורסמת)</li>
+                    </ul>
+                    
+                    <h4>Fort Williams Park:</h4>
+                    <ul>
+                        <li>ההיסטוריה: בסיס צבא אמריקאי 1873-1964</li>
+                        <li>הפך לפארק עירוני ב-1964</li>
+                        <li>שטח: 90 דונם על צוק מול האוקיינוס</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>Portland Head Light:</h3>
+            <ul>
+                <li>נבנה: 1791 (בפקודת ג'ורג' וושינגטון)</li>
+                <li>גובה: 24 מטר</li>
+                <li>מקור האור: LED מודרני (עדיין פועל)</li>
+                <li>מוזיאון: בבית השומר לשעבר</li>
+            </ul>
+        </div>
+
+        <div class="costs">
+            <h4>עלויות משוערות ליום:</h4>
+            <ul>
+                <li>דלק $65</li>
+                <li>ארוחות $220</li>
+                <li>כניסות $15</li>
+            </ul>
+        </div>
+
+        <div class="scenic-note">
+            <h4>זה אחד הימים הציוריים ביותר בחוף מיין!</h4>
+        </div>
+    </div>
+</body>
+</html>

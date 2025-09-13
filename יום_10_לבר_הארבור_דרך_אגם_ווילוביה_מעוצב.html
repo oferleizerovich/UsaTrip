@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 10 - שישי 10.10 | לבר הארבור דרך אגם ווילוביה</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .departure {
+            background: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .time-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .duration-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .activity-col {
+            width: 180px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .details-col {
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .hotel-info {
+            background: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .hotel-info h3 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        .costs {
+            background: #e6fffa;
+            border: 1px solid #4fd1c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .costs h4 {
+            color: #234e52;
+            margin-top: 0;
+        }
+        
+        .important-note {
+            background: #fed7ed;
+            border: 2px solid #f687b3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .important-note h4 {
+            color: #97266d;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>יום 10 - שישי 10.10</h1>
+            <h2>לבר הארבור דרך אגם ווילוביה</h2>
+            <div class="departure">יציאה: 09:00</div>
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-11:30</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">נסיעה לאגם ווילוביה</td>
+                    <td class="details-col">נסיעה צפונית מנורת' קונווי דרך I-93 North ו-I-91 North עד ורמונט. מעבר דרך עמקי ניו המפשייר וכניסה לאזור Northeast Kingdom של ורמונט - האזור הכי פחות מפותח והכי יפה במדינה</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:30-13:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">אגם ווילוביה + הליכה קצרה</td>
+                    <td class="details-col">"הפיורד הקטן של ורמונט"! אגם צר וארוך (שרכו 8 ק"מ) בין הרי Mount Pisgah ו-Mount Hor - נוצר על ידי קרחונים. הנוף מדהים ללא צורך בטיפוס על הר פיסגה. הליכה קצרה לחוף הצפוני עם נוף פנורמי, צילומים מרהיבים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30-15:00</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">ארוחת צהריים</td>
+                    <td class="details-col">ארוחת צהריים ב-Burke Mountain Hotel (15 דקות נסיעה) עם נוף לההרים או פיקניק ליד האגם עם המזון שקניתם בנורת' קונווי. האווירה הכפרית האמיתית של ורמונט הצפונית</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00-17:30</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">נסיעה לבר הארבור</td>
+                    <td class="details-col">נסיעה ארוכה אך נופית דרך מיין הכפרי עם נופי יער מדהימים עם שלכת צבעונית. מעבר דרך Route 2 East, I-95 South ו-Route 3 South לבר הארבור. נוף משתנה מהרים לחוף, מיערות לעיירות דייגים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:30-18:00</td>
+                    <td class="duration-col">30 דק</td>
+                    <td class="activity-col">צ'ק אין מוקדם</td>
+                    <td class="details-col">הגעה ל-Best Western Acadia Park Inn בלב בר הארבור. צ'ק אין מוקדם (רצוי), קבלת 2 החדרים, התארגנות מהירה לערב באכדיה</td>
+                </tr>
+                <tr>
+                    <td class="time-col">19:00-20:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">מרכז העיר בר הארבור</td>
+                    <td class="details-col">מרכז העיר בר הארבור - Main Street ההיסטורי: לובסטר מפורסם ב-Shaw's Wharf (נוף לפרענק'לין ביי), חנויות יוקרה ואמנות, גלריות מקומיות. התכוננות לכניסה לפארק אכדיה מחר - רכישת מפות, מידע על מזג אוויר</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h3>אגם ווילוביה - פירוט מלא:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>המיקום והגיאולוגיה:</h4>
+                    <ul>
+                        <li>מיקום: Westmore, Vermont</li>
+                        <li>עמק צר בין הרי Mount Pisgah ו-Mount Hor</li>
+                        <li>גיאולוגיה: נוצר על ידי קרחונים לפני כ-12,000 שנה בסוף העידן הקרחוני</li>
+                        <li>גודל: אורך 8 ק"מ, רוחב מקסימלי 1.6 ק"מ</li>
+                        <li>עומק: 90 מטר - האגם העמוק ביותר בורמונט</li>
+                        <li>מיוחד: הכי דומה לפיורדים של נורווגיה שאפשר למצוא בארה"ב</li>
+                    </ul>
+                    
+                    <h4>הנוף והטבע:</h4>
+                    <ul>
+                        <li>Northeast Kingdom: האזור הכי פחות מפותח בורמונט, כפרים קטנים עם 200-500 תושבים</li>
+                        <li>צמחייה: יערות מעורבים עם מייפל, בירץ, אלון - שלכת מרהיבה באוקטובר</li>
+                        <li>חיות בר: דוב שחור, איילים, קנדן (נדיר), עופות מים רבים</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Mount Pisgah Trail (אופציונלי למי שרוצה לטפס):</h4>
+                    <ul>
+                        <li>אורך: 4.1 ק"מ הלוך ושוב</li>
+                        <li>עליה: 336 מטר</li>
+                        <li>זמן: 2-3 שעות</li>
+                        <li>נוף בפסגה: לקנדה, הרי White Mountains וכמובן Lake Willoughby מלמעלה</li>
+                    </ul>
+                    
+                    <h4>מה לעשות באגם:</h4>
+                    <ul>
+                        <li>צילומים מנקודות תצפית מרובות</li>
+                        <li>הליכה קלה לחוף הצפוני</li>
+                        <li>פיקניק עם נוף</li>
+                        <li>ביקור ב-Westmore Store (חנות כפרית אמיתית)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>בר הארבור - הכנות לאכדיה:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>ההיסטוריה:</h4>
+                    <ul>
+                        <li>נוסדה: בכ-1796 כ-"Eden"</li>
+                        <li>שונה ל-Bar Harbor באמצע המאה ה-19</li>
+                        <li>התפתחות: ב-1918 התפתחה לאתר נופש לעשירי הצפון המזרח</li>
+                        <li>הרס הגדול: השריפה של 1947 השמידה 67 אחוזות ענק</li>
+                        <li>היום: עיר תיירות מטופחת עם 5,235 תושבים קבועים</li>
+                    </ul>
+                    
+                    <h4>הרחוב הראשי - Main Street:</h4>
+                    <ul>
+                        <li>אורך: מיל של חנויות יוקרה, גלריות ומסעדות במבנים ויקטוריאניים</li>
+                        <li>חנויות מיוחדות:</li>
+                        <ul>
+                            <li>Sherman's Books & Stationery (מ-1886)</li>
+                            <li>Bar Harbor Brewing Company (בירה מקומית)</li>
+                            <li>Lompoc Cafe (מוזיקה חיה)</li>
+                        </ul>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>מסעדות לובסטר מומלצות:</h4>
+                    <ul>
+                        <li>Jordan's Restaurant (מ-1976): נוף הנמל הטוב ביותר</li>
+                        <li>Side Street Cafe: אווירה מקומית אמיתית</li>
+                        <li>Stewman's Lobster Pound: לובסטר בכל הצורות האפשריות</li>
+                        <li>Shaw's Wharf: ממוקם על רציף עם נוף לפרענק'לין ביי</li>
+                    </ul>
+                    
+                    <h4>הכנות לפארק אכדיה:</h4>
+                    <ul>
+                        <li>מפות: רכישה ב-Visitor Center או חנויות מקומיות</li>
+                        <li>מזג אוויר: בדיקה לתכנון הזריחה מחר</li>
+                        <li>ציוד: פנס ראש לזריחה, בגדים חמים, מים</li>
+                        <li>דלק: מילוי טנק - תחנות הדלק יקרות יותר בבר הארבור</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>מידע מעשי על המעבר לחוף:</h3>
+            
+            <h4>מיין הכפרי:</h4>
+            <p>הנסיעה חוצה את מיין הכפרי האמיתי:</p>
+            <ul>
+                <li>יערות עבותים עם שלכת צבעונית</li>
+                <li>אגמים קטנים וכפרים היסטוריים</li>
+                <li>עיירות דייגים כמו Calais ו-Machias</li>
+            </ul>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>המרחק והזמן:</h4>
+                    <ul>
+                        <li>מרחק כולל: כ-280 ק"מ</li>
+                        <li>זמן נסיעה: 2.5-3 שעות תלוי בתנועה</li>
+                        <li>עצירות מומלצות: Calais (גבול קנדה) או Machias</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>שינוי הנוף:</h4>
+                    <ul>
+                        <li>מהרים לחוף</li>
+                        <li>מיערות לעיירות דייגים</li>
+                        <li>מכפרי לתיירותי</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel-info">
+            <h3>🏨 לינה: Best Western Acadia Park Inn</h3>
+            <div class="grid-2">
+                <div>
+                    <ul>
+                        <li>כתובת: 4 Holland Avenue, Bar Harbor, ME</li>
+                        <li>מחיר: $1,914.04 (2 חדרים - 2 מלך + זוגיות, 4 אורחים)</li>
+                        <li>אישור: #406878838</li>
+                        <li>ביטול עד: 30 אוק' 16:00</li>
+                        <li>מיקום: הליכה של 5 דקות מ-Main Street ומהנמל</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>שירותים במלון:</h4>
+                    <ul>
+                        <li>חנייה חופשית (חשוב בבר הארבור!)</li>
+                        <li>בריכה מקורה ומכון כושר</li>
+                        <li>ארוחת בוקר חופשית (שימושי לזריחה המוקדמת מחר)</li>
+                        <li>WiFi חופשי</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="costs">
+            <h4>עלויות משוערות ליום:</h4>
+            <ul>
+                <li>דלק $90</li>
+                <li>ארוחות $200</li>
+                <li>כניסות $25</li>
+            </ul>
+        </div>
+
+        <div class="important-note">
+            <h4>הערה חשובה:</h4>
+            <p><span class="highlight">הזריחה מחר ב-Cadillac Mountain מתחילה ב-04:30! הכינו הכל הערב.</span></p>
+        </div>
+    </div>
+</body>
+</html>

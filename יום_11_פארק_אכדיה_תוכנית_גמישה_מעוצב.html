@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 11 - שבת 11.10 | פארק אכדיה - תוכנית גמישה</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .sunrise-section {
+            background: linear-gradient(135deg, #f6ad55, #fbb040);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .decision-point {
+            background: linear-gradient(135deg, #805ad5, #b794f6);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .scenario-header {
+            background: linear-gradient(135deg, #38a169, #48bb78);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .scenario-b { background: linear-gradient(135deg, #e53e3e, #f56565); }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .time-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .duration-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .activity-col {
+            width: 180px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .details-col {
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        
+        .warning {
+            background: #fef5e7;
+            border: 1px solid #f6ad55;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .warning h4 {
+            color: #c05621;
+            margin-top: 0;
+        }
+        
+        .parking-alert {
+            background: #fed7d7;
+            border: 2px solid #f56565;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .parking-alert h4 {
+            color: #c53030;
+            margin-top: 0;
+        }
+        
+        .weather-backup {
+            background: #e6fffa;
+            border: 1px solid #4fd1c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .weather-backup h4 {
+            color: #234e52;
+            margin-top: 0;
+        }
+        
+        .tips {
+            background: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .tips h4 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        .park-details {
+            background: #fef5e7;
+            border: 1px solid #f6ad55;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .park-details h4 {
+            color: #c05621;
+            margin-top: 0;
+        }
+        
+        .magical-day {
+            background: #fed7ed;
+            border: 2px solid #f687b3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .magical-day h4 {
+            color: #97266d;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>יום 11 - שבת 11.10</h1>
+            <h2>פארק אכדיה - תוכנית גמישה</h2>
+        </div>
+
+        <div class="sunrise-section">
+            <h2>זריחה בהר קדילק (קבוע) 04:30-07:00</h2>
+            <h3>הזריחה הראשונה בארה"ב!</h3>
+            
+            <table class="schedule-table">
+                <tbody>
+                    <tr>
+                        <td class="time-col">04:30-07:00</td>
+                        <td class="duration-col">2.5 שעות</td>
+                        <td class="activity-col">Cadillac Mountain - הזריחה הראשונה בארה"ב</td>
+                        <td class="details-col">יציאה מהמלון עם פנס ראש, בגדים חמים (בפסגה 5-10°C), מים וחטיפים. נסיעה 30 דקות להר קדילק. הגעה 30 דק לפני זריחה חיונית - החניות נתפסות עד 8:30! הזמנה מוקדמת חובה ב-recreation.gov ($6 נוסף על כרטיס הפארק)<br><br>זריחה: 06:45 בתאריך 11.10<br>גובה: 466 מטר - הנקודה הגבוהה בחוף המזרח<br>מיוחד: מ-7 אוקטובר עד 6 מרץ - זריחה ראשונה בארה"ב!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="decision-point">
+            נקודת החלטה החשובה - 07:00
+            <br>לאחר הירידה מהר קדילק, החלטה על פי:
+            <br>רמת העייפות • זמינות חנייה ב-Sand Beach • מצב רוח כללי
+        </div>
+
+        <div class="scenario-header">
+            תרחיש A - יש כוח + יש חנייה ב-Sand Beach
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">07:30-08:00</td>
+                    <td class="duration-col">30 דק</td>
+                    <td class="activity-col">נסיעה ל-Sand Beach</td>
+                    <td class="details-col">נסיעה קצרה ל-Sand Beach דרך Park Loop Road הציורי</td>
+                </tr>
+                <tr>
+                    <td class="time-col">08:00-09:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Sand Beach + Great Head Trail</td>
+                    <td class="details-col">החוף החולי היחיד באכדיה (תערובת חול קוורץ ושברי צדפות) + Great Head Trail - מסלול 1.4 מייל עם נופים פנורמיים לפמפרץ Frenchman Bay, rock scrambling קל, נוף מדהים לכל החוף. מתאים למשפחות, קל למי שיש כוח אחרי הזריחה המוקדמת</td>
+                </tr>
+                <tr>
+                    <td class="time-col">09:30-11:00</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Park Loop Road</td>
+                    <td class="details-col">כביש 43 ק"מ במעגל מתוכנן בשנות ה-30 לנוף מקסימלי. עצירות ב: Thunder Hole (חלל בסלע שהגלים עושים רעש כמו רעם), Otter Cliffs (צוקים של 33 מטר מעל האוקיינוס)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00-12:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Jordan Pond + פופאוברס</td>
+                    <td class="details-col">Jordan Pond House - מסעדה היסטורית מ-1896 מפורסמת בפופאוברס ותה + נוף שקט לאגם ו-"The Bubbles" (שני גבעות עגולות). ארוחת צהריים מיתולוגית - פופאוברס מ-1893 + נוף ל-"Bubbles"</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30-14:00</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Jordan Pond Path</td>
+                    <td class="details-col">הליכה חלקית סביב האגם הטבעי (3 ק"מ אורך). מסלול שטוח: 1.6 ק"מ לטרסות הראשונות, שטוח ונעים, מתאים לכל הגילאים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:00-15:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Ocean Path</td>
+                    <td class="details-col">Ocean Path - שביל שטוח עם נוף קבוע לאוקיינוס, הליכה לאורך החוף מ-Sand Beach ל-Otter Point, צילומים מרהיבים של החוף הסלעי</td>
+                </tr>
+                <tr>
+                    <td class="time-col">20:00-21:00</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">Bass Harbor Lighthouse!</td>
+                    <td class="details-col">המגדלור המפורסם ביותר במיין! נבנה ב-1858, גובה 10 מטר, מוקף בסלעי גרניט ורודים. "השקיעה הכי יפה בפארק" - הסיום המושלם</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="scenario-header scenario-b">
+            תרחיש B - עייפות או אין חנייה
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">07:30-08:30</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">Thunder Hole + Otter Cliffs</td>
+                    <td class="details-col">Thunder Hole - רעם הגלים בסלעים (הכי מרשים בגאות גבוהה), Otter Cliffs - תצפית על צוקי גרניט 33 מטר. פחות הליכה, יותר נהיגה ותצפיות. התחלה מחנייה פחות בעייתית</td>
+                </tr>
+                <tr>
+                    <td class="time-col">09:00-10:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Jordan Pond + פופאוברס</td>
+                    <td class="details-col">Jordan Pond House - מסעדה היסטורית עם פופאוברס מפורסמים + נוף שקט לאגם ו-"The Bubbles". מקום מושלם לארוחת בוקר מאוחרת אחרי זריחה מוקדמת</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00-12:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Jordan Pond Path המלא</td>
+                    <td class="details-col">Jordan Pond Path המלא - מעגל מלא 5.3 ק"מ סביב האגם. הליכה שטוחה ורגועה, פחות עמוס, מתאים לימי מנוחה, נוף משתנה לאורך המעגל</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:00-14:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Cadillac Summit Loop</td>
+                    <td class="details-col">חזרה לתצפית מהפסגה - Cadillac Summit Loop: רק 0.3 מייל בלבד + נוף 360 מעלות בשעות היום (שונה מהזריחה), פחות עמוס אחר הצהריים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00-16:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">זמן חופשי בבר הארבור</td>
+                    <td class="details-col">זמן חופשי בבר הארבור - מרכז העיר + חנויות ומסעדות + מנוחה לפני השקיעה. רכישת מזכרות, גלידה, קפה</td>
+                </tr>
+                <tr>
+                    <td class="time-col">20:00-21:00</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">Bass Harbor Lighthouse</td>
+                    <td class="details-col">שקיעה במגדלור Bass Harbor Lighthouse</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="parking-alert">
+            <h4>אזהרות חנייה קריטיות:</h4>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>הר קדילק:</h4>
+                    <ul>
+                        <li>הגעה 04:30 - 30 דק לפני זריחה לחנייה</li>
+                        <li><span class="highlight">הזמנה מוקדמת חובה ב-recreation.gov</span></li>
+                    </ul>
+                    
+                    <h4>Sand Beach:</h4>
+                    <ul>
+                        <li><span class="highlight">הגעה 07:30 - החניות נגמרות עד 08:30!</span></li>
+                        <li>אלטרנטיבה: Great Head Trail Parking (עמוס פחות)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Jordan Pond:</h4>
+                    <ul>
+                        <li>בדרך כלל פחות בעייתי, אבל עדיף הגעה לפני 12:00</li>
+                        <li>חנייה גדולה יותר מ-Sand Beach</li>
+                    </ul>
+                    
+                    <h4>Bass Harbor:</h4>
+                    <ul>
+                        <li>חנייה קטנה - הגעה מוקדמת מומלצת</li>
+                        <li>שקיעה פופולרית - הגעה שעה לפני</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-backup">
+            <h4>גיבוי למזג אויר גרוע:</h4>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>אם גשום:</h4>
+                    <ul>
+                        <li>Great Head Trail: לא מומלץ בגשם (סלעים חלקים)</li>
+                        <li>Jordan Pond + מוזיאון בבר הארבור</li>
+                        <li>חנויות ומסעדות במרכז העיר</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>אם ערפל:</h4>
+                    <ul>
+                        <li>דחיית הזריחה ל-Cadillac Summit בשעות היום</li>
+                        <li>התמקדות באטרקציות ברמת הים</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips">
+            <h4>עצות מעשיות:</h4>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>ליום השלם:</h4>
+                    <ul>
+                        <li>הביאו פנס ראש לזריחה</li>
+                        <li>בגדים בשכבות - קר בבוקר (5°C), חם אחר הצהריים (20°C)</li>
+                        <li>נעליים עם גריפ טוב לסלעים</li>
+                        <li><span class="highlight">הרבה מים וחטיפים - יום ארוך!</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>לזריחה:</h4>
+                    <ul>
+                        <li>יציאה מהמלון ב-04:00</li>
+                        <li>שתיית קפה לפני (לא במהלך הנסיעה)</li>
+                        <li>סוודר/מעיל חם חובה</li>
+                        <li>כפפות ולכובע מומלצים</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="park-details">
+            <h4>פרטים טכניים על הפארק:</h4>
+            
+            <div class="grid-3">
+                <div>
+                    <h4>כרטיס פארק:</h4>
+                    <ul>
+                        <li>7 ימים: $30 לרכב</li>
+                        <li>שנתי: $55 לרכב</li>
+                        <li>America the Beautiful: $80 לכל הפארקים</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Sand Beach:</h4>
+                    <p>החוף החולי היחיד באכדיה - תערובת חול קוורץ ושברי צדפות</p>
+                    
+                    <h4>Jordan Pond:</h4>
+                    <p>אגם טבעי באורך 3 ק"מ מוקף ב-"The Bubbles" - שני גבעות עגולות</p>
+                </div>
+                
+                <div>
+                    <h4>מגדלור Bass Harbor:</h4>
+                    <ul>
+                        <li>נבנה ב-1858</li>
+                        <li>אוטומטי מ-1974</li>
+                        <li>עדיין פועל כמגדלור אמיתי</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>עלויות משוערות ליום:</h3>
+            <ul>
+                <li>דלק $30</li>
+                <li>ארוחות $180</li>
+                <li>כניסות $35</li>
+            </ul>
+        </div>
+
+        <div class="magical-day">
+            <h4>זה היום הקסום של הטיול!</h4>
+        </div>
+    </div>
+</body>
+</html>

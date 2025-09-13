@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סיכום עלויות יומיות - טיול משפחת ליזרובץ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .header h2 {
+            margin: 10px 0 0 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .costs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .costs-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .costs-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .costs-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .costs-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .date-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 100px;
+        }
+        
+        .day-col {
+            background: #e2e8f0;
+            font-weight: bold;
+            width: 80px;
+        }
+        
+        .fuel-col {
+            background: #fed7d7;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .food-col {
+            background: #c6f6d5;
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+        }
+        
+        .attractions-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .hotel-col {
+            background: #fef5e7;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .total-col {
+            background: #e6fffa;
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .expensive-day {
+            background: #fed7d7 !important;
+        }
+        
+        .cheap-day {
+            background: #c6f6d5 !important;
+        }
+        
+        .summary-section {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .summary-section h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        
+        .totals-box {
+            background: #f0fff4;
+            border: 2px solid #68d391;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .totals-box h3 {
+            color: #2f855a;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        
+        .averages-box {
+            background: #fef5e7;
+            border: 1px solid #f6ad55;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .averages-box h3 {
+            color: #c05621;
+            margin-top: 0;
+        }
+        
+        .notes-box {
+            background: #fed7ed;
+            border: 1px solid #f687b3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .notes-box h3 {
+            color: #97266d;
+            margin-top: 0;
+        }
+        
+        .expensive-days {
+            background: #fed7d7;
+            border: 1px solid #f56565;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .expensive-days h3 {
+            color: #c53030;
+            margin-top: 0;
+        }
+        
+        .cheap-days {
+            background: #c6f6d5;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .cheap-days h3 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .big-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2f855a;
+            margin: 10px 0;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .costs-table {
+                font-size: 12px;
+            }
+            .costs-table th,
+            .costs-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>סיכום עלויות יומיות</h1>
+            <h2>טיול משפחת ליזרובץ - שלכת מרהיבה | 1.10-15.10.2024 | 5 מבוגרים</h2>
+        </div>
+
+        <table class="costs-table">
+            <thead>
+                <tr>
+                    <th>תאריך</th>
+                    <th>יום</th>
+                    <th>עלות דלק</th>
+                    <th>עלות ארוחות</th>
+                    <th>עלות אטרקציות</th>
+                    <th>עלות מלון</th>
+                    <th>סה"כ יומי</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-col">1.10</td>
+                    <td class="day-col">רביעי</td>
+                    <td class="fuel-col">$95</td>
+                    <td class="food-col">$185</td>
+                    <td class="attractions-col">$0</td>
+                    <td class="hotel-col">$375</td>
+                    <td class="total-col">$655</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2.10</td>
+                    <td class="day-col">חמישי</td>
+                    <td class="fuel-col">$70</td>
+                    <td class="food-col">$140</td>
+                    <td class="attractions-col">$35</td>
+                    <td class="hotel-col">$375</td>
+                    <td class="total-col">$620</td>
+                </tr>
+                <tr class="expensive-day">
+                    <td class="date-col">3.10</td>
+                    <td class="day-col">שישי</td>
+                    <td class="fuel-col">$50</td>
+                    <td class="food-col">$200</td>
+                    <td class="attractions-col">$120</td>
+                    <td class="hotel-col">$680</td>
+                    <td class="total-col">$1,050</td>
+                </tr>
+                <tr>
+                    <td class="date-col">4.10</td>
+                    <td class="day-col">שבת</td>
+                    <td class="fuel-col">$80</td>
+                    <td class="food-col">$180</td>
+                    <td class="attractions-col">$65</td>
+                    <td class="hotel-col">$333</td>
+                    <td class="total-col">$658</td>
+                </tr>
+                <tr class="expensive-day">
+                    <td class="date-col">5.10</td>
+                    <td class="day-col">ראשון</td>
+                    <td class="fuel-col">$95</td>
+                    <td class="food-col">$170</td>
+                    <td class="attractions-col">$55</td>
+                    <td class="hotel-col">$1,180</td>
+                    <td class="total-col">$1,500</td>
+                </tr>
+                <tr>
+                    <td class="date-col">6.10</td>
+                    <td class="day-col">שני</td>
+                    <td class="fuel-col">$45</td>
+                    <td class="food-col">$160</td>
+                    <td class="attractions-col">$75</td>
+                    <td class="hotel-col">$563</td>
+                    <td class="total-col">$843</td>
+                </tr>
+                <tr class="cheap-day">
+                    <td class="date-col">7.10</td>
+                    <td class="day-col">שלישי</td>
+                    <td class="fuel-col">$85</td>
+                    <td class="food-col">$140</td>
+                    <td class="attractions-col">$90</td>
+                    <td class="hotel-col">$115</td>
+                    <td class="total-col">$430</td>
+                </tr>
+                <tr class="cheap-day">
+                    <td class="date-col">8.10</td>
+                    <td class="day-col">רביעי</td>
+                    <td class="fuel-col">$40</td>
+                    <td class="food-col">$150</td>
+                    <td class="attractions-col">$85</td>
+                    <td class="hotel-col">$115</td>
+                    <td class="total-col">$390</td>
+                </tr>
+                <tr class="cheap-day">
+                    <td class="date-col">9.10</td>
+                    <td class="day-col">חמישי</td>
+                    <td class="fuel-col">$70</td>
+                    <td class="food-col">$130</td>
+                    <td class="attractions-col">$60</td>
+                    <td class="hotel-col">$115</td>
+                    <td class="total-col">$375</td>
+                </tr>
+                <tr class="expensive-day">
+                    <td class="date-col">10.10</td>
+                    <td class="day-col">שישי</td>
+                    <td class="fuel-col">$90</td>
+                    <td class="food-col">$200</td>
+                    <td class="attractions-col">$25</td>
+                    <td class="hotel-col">$638</td>
+                    <td class="total-col">$953</td>
+                </tr>
+                <tr>
+                    <td class="date-col">11.10</td>
+                    <td class="day-col">שבת</td>
+                    <td class="fuel-col">$30</td>
+                    <td class="food-col">$180</td>
+                    <td class="attractions-col">$35</td>
+                    <td class="hotel-col">$638</td>
+                    <td class="total-col">$883</td>
+                </tr>
+                <tr>
+                    <td class="date-col">12.10</td>
+                    <td class="day-col">ראשון</td>
+                    <td class="fuel-col">$65</td>
+                    <td class="food-col">$220</td>
+                    <td class="attractions-col">$15</td>
+                    <td class="hotel-col">$638</td>
+                    <td class="total-col">$938</td>
+                </tr>
+                <tr>
+                    <td class="date-col">13.10</td>
+                    <td class="day-col">שני</td>
+                    <td class="fuel-col">$75</td>
+                    <td class="food-col">$190</td>
+                    <td class="attractions-col">$45</td>
+                    <td class="hotel-col">$470</td>
+                    <td class="total-col">$780</td>
+                </tr>
+                <tr>
+                    <td class="date-col">14.10</td>
+                    <td class="day-col">שלישי</td>
+                    <td class="fuel-col">$80</td>
+                    <td class="food-col">$160</td>
+                    <td class="attractions-col">$40</td>
+                    <td class="hotel-col">$470</td>
+                    <td class="total-col">$750</td>
+                </tr>
+                <tr>
+                    <td class="date-col">15.10</td>
+                    <td class="day-col">רביעי</td>
+                    <td class="fuel-col">$30</td>
+                    <td class="food-col">$120</td>
+                    <td class="attractions-col">$0</td>
+                    <td class="hotel-col">$470</td>
+                    <td class="total-col">$620</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="totals-box">
+            <h3>סך הכל לפי קטגוריה</h3>
+            <div class="grid-4">
+                <div>
+                    <h4>מלונות:</h4>
+                    <div class="big-number">$7,651</div>
+                </div>
+                <div>
+                    <h4>ארוחות:</h4>
+                    <div class="big-number">$2,395</div>
+                </div>
+                <div>
+                    <h4>דלק:</h4>
+                    <div class="big-number">$1,010</div>
+                </div>
+                <div>
+                    <h4>אטרקציות:</h4>
+                    <div class="big-number">$750</div>
+                </div>
+            </div>
+            <hr style="margin: 30px 0; border: 2px solid #68d391;">
+            <h3>סה"כ טיול:</h3>
+            <div style="font-size: 48px; font-weight: bold; color: #2f855a;">$11,806</div>
+        </div>
+
+        <div class="averages-box">
+            <h3>ממוצעים:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>ממוצע יומי לפי קטגוריה:</h4>
+                    <ul>
+                        <li>מלונות: <strong>$510</strong></li>
+                        <li>ארוחות: <strong>$160</strong></li>
+                        <li>דלק: <strong>$67</strong></li>
+                        <li>אטרקציות: <strong>$50</strong></li>
+                    </ul>
+                    <p style="font-size: 20px; color: #c05621; font-weight: bold;">סה"כ יום: $787</p>
+                </div>
+                
+                <div>
+                    <h4>ממוצע לאדם:</h4>
+                    <ul>
+                        <li>כל הטיול: <strong>$2,361</strong></li>
+                        <li>יום אחד: <strong>$157</strong></li>
+                    </ul>
+                    
+                    <h4>בסיס החישוב:</h4>
+                    <ul>
+                        <li>5 מבוגרים בכל האטרקציות והארוחות</li>
+                        <li>מחירי מלונות מחולקים לפי מספר לילות</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="expensive-days">
+            <h3>ימים יקרים במיוחד:</h3>
+            <ul>
+                <li><span class="highlight">יום 5 (ראשון): $1,500</span> - יקר בורמונט Airbnb</li>
+                <li><span class="highlight">יום 3 (שישי): $1,050</span> - מפלי ניאגרה</li>
+                <li><span class="highlight">יום 10 (שישי): $953</span> - יום ראשון באכדיה</li>
+            </ul>
+        </div>
+
+        <div class="cheap-days">
+            <h3>ימים חסכוניים:</h3>
+            <ul>
+                <li><span class="highlight">יום 9 (חמישי): $375</span> - פעילויות טבע</li>
+                <li><span class="highlight">יום 8 (רביעי): $390</span> - נורת' קונווי</li>
+                <li><span class="highlight">יום 7 (שלישי): $430</span> - הרים הלבנים</li>
+            </ul>
+        </div>
+
+        <div class="summary-section">
+            <h3>הערות לחישובים:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>מחירי מלונות מחושבים:</h4>
+                    <ul>
+                        <li>Canopy Ithaca (2 לילות): $1,126.87 ÷ 3 ימים = $375/יום</li>
+                        <li>North Conway (3 לילות): ₪3,447 ≈ $967 ÷ 3 ימים = $115/יום</li>
+                        <li>Best Western Acadia (3 לילות): $1,914 ÷ 3 ימים = $638/יום</li>
+                        <li>Wyndham Newport (2 לילות): $470 ÷ 3 ימים = $157/יום</li>
+                        <li>מלונות לילה אחד: לפי המחיר המלא</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>בסיס החישוב:</h4>
+                    <ul>
+                        <li>ארוחות ודלק: הערכות המסמך המקורי</li>
+                        <li>אטרקציות: מחירי כניסה כפי שצוינו</li>
+                        <li>מלונות: מחיר כולל מחולק לפי לילות בפועל</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes-box">
+            <h3>עלויות נוספות לא כלולות:</h3>
+            <ul>
+                <li>טיסות לארה"ב וחזרה</li>
+                <li>ביטוח נסיעות</li>
+                <li>קניות ומזכרות</li>
+                <li>טיפים במסעדות (15-20%)</li>
+                <li>חניות בערים גדולות</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

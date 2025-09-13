@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סיכום מלונות וזמני ביטול - טיול משפחת ליזרובץ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .header h2 {
+            margin: 10px 0 0 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .hotels-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .hotels-table th {
+            background: #4a5568;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .hotels-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .hotels-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .hotels-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .dates-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 100px;
+        }
+        
+        .hotel-col {
+            width: 200px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .price-col {
+            background: #c6f6d5;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .confirmation-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 150px;
+        }
+        
+        .cancellation-col {
+            background: #fed7d7;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .urgent {
+            background: #fed7d7;
+            color: #c53030;
+            font-weight: bold;
+        }
+        
+        .late-cancellation {
+            background: #fef5e7;
+            color: #c05621;
+        }
+        
+        .early-cancellation {
+            background: #e6fffa;
+            color: #234e52;
+        }
+        
+        .pending {
+            background: #fed7ed;
+            color: #97266d;
+            font-weight: bold;
+        }
+        
+        .summary-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .summary-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .currency-summary {
+            background: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .currency-summary h3 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        .actions-needed {
+            background: #fef5e7;
+            border: 2px solid #f6ad55;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .actions-needed h3 {
+            color: #c05621;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        
+        .important-notes {
+            background: #fed7d7;
+            border: 2px solid #f56565;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .important-notes h3 {
+            color: #c53030;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .hotels-table {
+                font-size: 14px;
+            }
+            .hotels-table th,
+            .hotels-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>סיכום מלונות וזמני ביטול</h1>
+            <h2>טיול משפחת ליזרובץ - שלכת מרהיבה | 1.10-15.10.2024</h2>
+        </div>
+
+        <table class="hotels-table">
+            <thead>
+                <tr>
+                    <th>תאריכים</th>
+                    <th>שם המלון</th>
+                    <th>מחיר</th>
+                    <th>מספר אישור</th>
+                    <th>ביטול עד</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="dates-col">1-3.10</td>
+                    <td class="hotel-col">Canopy by Hilton Ithaca Downtown</td>
+                    <td class="price-col">$1,126.87</td>
+                    <td class="confirmation-col">#3313981165</td>
+                    <td class="cancellation-col early-cancellation">29/09 23:59</td>
+                </tr>
+                <tr>
+                    <td class="dates-col">3-4.10</td>
+                    <td class="hotel-col">Niagara Falls Marriott Ontario</td>
+                    <td class="price-col">908.18 CAD</td>
+                    <td class="confirmation-col">#93332350</td>
+                    <td class="cancellation-col early-cancellation">30/09 23:59</td>
+                </tr>
+                <tr>
+                    <td class="dates-col">4-5.10</td>
+                    <td class="hotel-col">Riveredge Resort Alexandria Bay</td>
+                    <td class="price-col">$333.00</td>
+                    <td class="confirmation-col">#331848</td>
+                    <td class="cancellation-col early-cancellation">27/09 23:59</td>
+                </tr>
+                <tr>
+                    <td class="dates-col">5-7.10</td>
+                    <td class="hotel-col">Smugglers Notch Airbnb Cambridge, VT</td>
+                    <td class="price-col">₪4,203.64</td>
+                    <td class="confirmation-col">YJXCDA2HME</td>
+                    <td class="cancellation-col late-cancellation">04/10 17:00</td>
+                </tr>
+                <tr>
+                    <td class="dates-col">7-10.10</td>
+                    <td class="hotel-col">North Conway Airbnb NH</td>
+                    <td class="price-col">₪3,447.41</td>
+                    <td class="confirmation-col">SNRK5A8HMS</td>
+                    <td class="cancellation-col late-cancellation">02/10 15:00</td>
+                </tr>
+                <tr>
+                    <td class="dates-col">10-13.10</td>
+                    <td class="hotel-col">Best Western Acadia Park Inn ME</td>
+                    <td class="price-col">$1,914.04</td>
+                    <td class="confirmation-col">#406878838</td>
+                    <td class="cancellation-col late-cancellation">07/10 16:00</td>
+                </tr>
+                <tr>
+                    <td class="dates-col pending">12-13.10</td>
+                    <td class="hotel-col pending">טרם נקבע - פורטלנד, מיין</td>
+                    <td class="price-col pending">-</td>
+                    <td class="confirmation-col pending">-</td>
+                    <td class="cancellation-col pending">-</td>
+                </tr>
+                <tr>
+                    <td class="dates-col">13-14.10</td>
+                    <td class="hotel-col">Wyndham Newport Hotel RI</td>
+                    <td class="price-col">$470.32</td>
+                    <td class="confirmation-col">#89666EE086572<br>#89666EE086573</td>
+                    <td class="cancellation-col urgent">לא צוין</td>
+                </tr>
+                <tr>
+                    <td class="dates-col">14-15.10</td>
+                    <td class="hotel-col">Residence Inn Newark Airport NJ</td>
+                    <td class="price-col">-</td>
+                    <td class="confirmation-col">-</td>
+                    <td class="cancellation-col pending">-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="currency-summary">
+            <h3>סיכום עלויות מלונות:</h3>
+            <div class="grid-3">
+                <div>
+                    <h4>דולר אמריקאי:</h4>
+                    <p style="font-size: 24px; color: #2f855a; font-weight: bold;">$3,868.22</p>
+                </div>
+                <div>
+                    <h4>דולר קנדי:</h4>
+                    <p style="font-size: 24px; color: #2f855a; font-weight: bold;">908.18 CAD</p>
+                </div>
+                <div>
+                    <h4>שקל ישראלי:</h4>
+                    <p style="font-size: 24px; color: #2f855a; font-weight: bold;">₪7,651.05</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="important-notes">
+            <h3>מלונות שדורשים תשומת לב:</h3>
+            <ul>
+                <li><span class="highlight">Niagara Falls Marriott</span> - דרכון נדרש לכניסה לקנדה</li>
+                <li><span class="highlight">פורטלנד, מיין</span> - טרם נקבע מלון ללילה 12-13.10</li>
+                <li><span class="highlight">Wyndham Newport</span> - שתי הזמנות נפרדות ללא זמן ביטול מצוין</li>
+            </ul>
+        </div>
+
+        <div class="summary-box">
+            <h3>סיכום זמני ביטול:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>מלונות עם ביטול מאוחר:</h4>
+                    <ul>
+                        <li>Best Western Acadia - ביטול עד 07/10 16:00 (3 ימים מראש)</li>
+                        <li>Smugglers Notch Airbnb - ביטול עד 04/10 17:00 (יום לפני)</li>
+                        <li>North Conway Airbnb - ביטול עד 02/10 15:00 (5 ימים מראש)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>מלונות עם ביטול מוקדם:</h4>
+                    <ul>
+                        <li>Canopy Ithaca - ביטול עד 29/09 23:59 (יומיים לפני)</li>
+                        <li>Marriott Niagara - ביטול עד 30/09 23:59 (3 ימים לפני)</li>
+                        <li>Riveredge Resort - ביטול עד 27/09 23:59 (7 ימים לפני)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions-needed">
+            <h3>פעולות נדרשות:</h3>
+            <ol>
+                <li><span class="highlight">הזמנת מלון בפורטלנד ללילה 12-13.10</span></li>
+                <li>בדיקת זמן ביטול עבור Wyndham Newport</li>
+                <li>הכנת דרכונים לכניסה לקנדה</li>
+                <li>אישור הזמנות Airbnb עם הקודים המצוינים</li>
+            </ol>
+        </div>
+
+        <div class="summary-box">
+            <h3>פירוט מלא חדרים ומחירים:</h3>
+            
+            <table class="hotels-table" style="margin-top: 15px;">
+                <thead>
+                    <tr>
+                        <th>מלון</th>
+                        <th>פרטי החדר</th>
+                        <th>מחיר פירוט</th>
+                        <th>הערות מיוחדות</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="hotel-col">Canopy Hilton Ithaca</td>
+                        <td>חדר 1: מיטת קינג, 2 אורחים<br>חדר 2: 2 מיטות זוגיות, 2 אורחים</td>
+                        <td class="price-col">$551.89 + $574.98 = $1,126.87</td>
+                        <td>מיקום מרכזי</td>
+                    </tr>
+                    <tr>
+                        <td class="hotel-col">Niagara Falls Marriott</td>
+                        <td>סוויטה 2 חדרי שינה, 5 אורחים</td>
+                        <td class="price-col">908.18 CAD</td>
+                        <td class="urgent">הערה: דרכון נדרש</td>
+                    </tr>
+                    <tr>
+                        <td class="hotel-col">Riveredge Resort</td>
+                        <td>חדר משפחתי, 5 אורחים</td>
+                        <td class="price-col">$333.00</td>
+                        <td>על נהר סט. לורנס</td>
+                    </tr>
+                    <tr>
+                        <td class="hotel-col">Smugglers Notch Airbnb</td>
+                        <td>בית נופש 5 חדרי שינה, 5 אורחים</td>
+                        <td class="price-col">₪4,203.64</td>
+                        <td>קוד: YJXCDA2HME</td>
+                    </tr>
+                    <tr>
+                        <td class="hotel-col">North Conway Airbnb</td>
+                        <td>דירה מרווחת, 5 אורחים</td>
+                        <td class="price-col">₪3,447.41</td>
+                        <td>קוד: SNRK5A8HMS</td>
+                    </tr>
+                    <tr>
+                        <td class="hotel-col">Best Western Acadia</td>
+                        <td>2 חדרים (מלך + זוגיות), 4 אורחים</td>
+                        <td class="price-col">$1,914.04</td>
+                        <td>5 דקות הליכה מ-Main Street</td>
+                    </tr>
+                    <tr>
+                        <td class="hotel-col">Wyndham Newport</td>
+                        <td>חדר 1: King Bed, 2 אורחים<br>חדר 2: King Bed Deluxe, 3 אורחים</td>
+                        <td class="price-col">$224.99 + $245.33 = $470.32</td>
+                        <td class="urgent">2 הזמנות נפרדות</td>
+                    </tr>
+                    <tr>
+                        <td class="hotel-col">Residence Inn Newark</td>
+                        <td>לינה לצד אאוטלט The Mills</td>
+                        <td class="price-col pending">-</td>
+                        <td>קרוב לשדה התעופה</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

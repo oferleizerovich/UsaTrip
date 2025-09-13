@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 7 - שלישי 7.10 | הרים הלבנים - לנורת' קונווי</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .departure {
+            background: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .option-header {
+            background: linear-gradient(135deg, #38a169, #48bb78);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .time-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .duration-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .activity-col {
+            width: 150px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .details-col {
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .warning {
+            background: #fef5e7;
+            border: 1px solid #f6ad55;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .warning h4 {
+            color: #c05621;
+            margin-top: 0;
+        }
+        
+        .tips {
+            background: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .tips h4 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>יום 7 - שלישי 7.10</h1>
+            <h2>הרים הלבנים - לנורת' קונווי</h2>
+            <div class="departure">יציאה: 08:30</div>
+        </div>
+
+        <div class="option-header">
+            אופציה 1: פרנקוניה נוטש מקוצר (מומלץ)
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">08:30-11:00</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">נסיעה לפרנקוניה</td>
+                    <td class="details-col">נסיעה דרך I-89 South ו-I-93 South מסטון. דרך ניו המפשייר ההררי. נוף מרהיב של הרי White Mountains מתקרבים, עצירה אופציונלית בפרנקוניה לקפה</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00-12:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Franconia Notch State Park - Flume Gorge בלבד</td>
+                    <td class="details-col">הנוטש המפורסם של "Franconia Notch State Park". התמקדות ב-Flume Gorge בלבד: ערוץ טבעי מדהים באורך 244 מטר, רוחב 3-6 מטרים, גובה קירות 21-27 מטר. מסלול מעגלי 3.2 ק"מ עם גשרים עץ וקרונות. דילוג על Old Man of the Mountain Site (קרס ב-2003) - חסכון של שעה!</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30-13:00</td>
+                    <td class="duration-col">30 דק</td>
+                    <td class="activity-col">ארוחה מהירה</td>
+                    <td class="details-col">ארוחה מהירה בקפטריה של הפארק - מנות בסיסיות אך נוף יפה לההרים. אלטרנטיבה: Subway בליטלטון (15 דקות נסיעה)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:00-14:00</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">נסיעה להר וושינגטון</td>
+                    <td class="details-col">נסיעה נופית קצרה רק 60 ק"מ דרך Route 3 South ו-Route 302 East דרך עמק Crawford Notch - אחד הנופים ההרריים היפים בניו אינגלנד</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:00-17:00</td>
+                    <td class="duration-col">3 שעות</td>
+                    <td class="activity-col">Mount Washington Auto Road</td>
+                    <td class="details-col">הפסגה הגבוהה במזרח ארה"ב (1,917 מ')! נסיעה 12 ק"מ בכביש פרטי תלול עם 16 תפניות חדות. מעלה של 1,463 מטר ב-30 דקות נסיעה. בפסגה: קפטריה, חנות מזכרות, נוף לכל ניו אינגלנד. הגעה מוקדמת לשקיעה מהפסגה הגבוהה ביותר!</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:00-18:00</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">נסיעה לנורת' קונווי</td>
+                    <td class="details-col">נסיעה קצרה 30 ק"מ דרך Route 16 South לנורת' קונווי דרך כפרים הרריים קטנים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:30-20:00</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">ארוחת ערב</td>
+                    <td class="details-col">נורת' קונווי - עיר ללא מס מכירות! ארוחת ערב ב-Main Street ההיסטורי: לובסטר מומלצות: Moat Mountain Smoke House & Brewing (בירה מקומית), Delaney's Hole in the Wall (פיצה), Muddy Moose (משפחתי)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="option-header">
+            אופציה 2: דרך אחרת (עוקפת פרנקוניה)
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">08:30-10:00</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">נסיעה עד ליטלטון</td>
+                    <td class="details-col">נסיעה צפונית דרך I-91 North עד ליטלטון - מעבר דרך כפרים ורמונטיים קטנים עם שלכת צבעונית</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:00-11:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">Littleton + Sugar Hill</td>
+                    <td class="details-col">ליטלטון ו-Sugar Hill - כפרים קסומים עם שלכת מרהיבה. Main Street ליטלטון עם חנויות אנטיק וקפה Chutters (הבר ממתקים הארוך בעולם - 34 מטר!). Sugar Hill: כפר קטן עם Harman's Cheese & Country Store</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:30-12:30</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">ארוחת צהריים</td>
+                    <td class="details-col">ארוחת צהריים בליטלטון - מומלץ: Miller's Bakery & Cafe או Topic of the Town Restaurant (מקומי משנת 1976)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30-13:30</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">נסיעה להר וושינגטון</td>
+                    <td class="details-col">נסיעה מהירה דרך Franconia Notch ללא עצירות - רק ליהנות מהנוף מהרכב בדרך להר וושינגטון</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30-17:00</td>
+                    <td class="duration-col">3.5 שעות</td>
+                    <td class="activity-col">Mount Washington Auto Road</td>
+                    <td class="details-col">הפסגה הגבוהה במזרח (1,917 מ')! זמן ארוך יותר בפסגה עבור שקיעה מרהיבה ונוף לילה מדהים מהנקודה הגבוהה ביותר</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:00-18:00</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">נסיעה לנורת' קונווי</td>
+                    <td class="details-col">נסיעה לנורת' קונווי</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h3>Mount Washington Auto Road - פירוט מלא</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h4>השיאים וההיסטוריה:</h4>
+                    <ul>
+                        <li>גובה: 1,917 מ' - הפסגה הגבוהה במזרח צפון אמריקה</li>
+                        <li>רוח: שיא רוח עולמי 372 קמ"ש נמדד ב-1934</li>
+                        <li>טמפרטורה: יכולה להיות 15-20 מעלות קר יותר מבעמק</li>
+                        <li>נפתח: 1861 - הכביש ההררי הקדום ביותר בארה"ב</li>
+                    </ul>
+                    
+                    <h4>הכביש:</h4>
+                    <ul>
+                        <li>אורך: 12 ק"מ כביש פרטי</li>
+                        <li>עליה: 1,463 מטר במהלך 30 דקות נסיעה</li>
+                        <li>תפניות: 16 תפניות חדות עם שמות כמו "Cragway Turn"</li>
+                        <li>מחיר: $39 לרכב עם נהג ($12 נוספים לאדם)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>בפסגה:</h4>
+                    <ul>
+                        <li>קפטריה עם מזון חם (חשוב - קר בפסגה!)</li>
+                        <li>חנות מזכרות עם מוצרי "This Car Climbed Mt Washington"</li>
+                        <li>מרכז מידע על מזג אוויר קיצוני</li>
+                        <li>נוף ל-6 מדינות ביום צלול</li>
+                    </ul>
+                    
+                    <h4>Tours מיוחדים זמינים:</h4>
+                    <ul>
+                        <li>Sunset Tours: נסיעה מודרכת לשקיעה (בתאריכים נבחרים)</li>
+                        <li>Stage Coach Tours: לאלה שלא רוצים לנהוג בעצמם</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning">
+            <h4>אזהרות בטיחות:</h4>
+            <ul>
+                <li><span class="highlight">בדקו בלמים לפני העליה - חובה!</span></li>
+                <li>נהגו בהילוך נמוך בירידה (לא בלמים!)</li>
+                <li>בדקו מזג אוויר - ייתכן ערפל פתאומי או שלג</li>
+                <li>כל הרכבים חייבים לרדת 45 דקות אחרי סגירה</li>
+            </ul>
+        </div>
+
+        <div class="tips">
+            <h4>טיפים:</h4>
+            <ul>
+                <li>הביאו בגדים חמים - יכול להיות 5°C בפסגה גם בקיץ</li>
+                <li>דלק: מילאו טנק לפני העליה</li>
+                <li>תמונות: הנוף הטוב ביותר בניו אינגלנד!</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>מידע שימושי על האזור:</h3>
+            
+            <h4>פרנקוניה נוטש - Flume Gorge הערוץ הטבעי המפורסם:</h4>
+            <ul>
+                <li>נתגלה ב-1808 על ידי דודה של Jess Webster Daniel</li>
+                <li>קירות גרניט בגובה 21-27 מטר</li>
+                <li>רוחב 3-6 מטרים</li>
+                <li>אורך 244 מטר</li>
+                <li>מסלול מעגלי עם גשרים עץ יפהפיים</li>
+            </ul>
+            
+            <h4>נורת' קונווי:</h4>
+            <ul>
+                <li>יתרון מס: ניו המפשייר ללא מס מכירות</li>
+                <li>אוטלטים: Settlers Green Outlets עם מעל 60 חנויות</li>
+                <li>מסעדות: ריכוז מצוין של מסעדות איכות</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
