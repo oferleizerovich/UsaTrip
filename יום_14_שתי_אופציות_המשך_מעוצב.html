@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יום 14 - שלישי 14.10 | שתי אופציות המשך</title>
+    <title>יום 14 - שלישי 14.10 | שלוש אופציות המשך</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,6 +61,7 @@
         }
         
         .option-2 { background: linear-gradient(135deg, #805ad5, #b794f6); }
+        .option-3 { background: linear-gradient(135deg, #ed8936, #f6ad55); }
         
         .schedule-table {
             width: 100%;
@@ -202,6 +203,19 @@
             gap: 20px;
         }
         
+        .new-section {
+            background: #fff5f5;
+            border: 2px solid #fc8181;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .new-section h3 {
+            color: #c53030;
+            margin-top: 0;
+        }
+        
         @media print {
             body { background: white; }
             .container { box-shadow: none; }
@@ -217,7 +231,7 @@
     <div class="container">
         <div class="header">
             <h1>יום 14 - שלישי 14.10</h1>
-            <h2>שתי אופציות המשך</h2>
+            <h2>שלוש אופציות המשך</h2>
         </div>
 
         <div class="option-header">
@@ -328,6 +342,66 @@
             </tbody>
         </table>
 
+        <div class="option-header option-3">
+            עבור אופציה 3 (פיצה, שקיעה במנהטן וג'רזי גרדנס)
+        </div>
+        <div class="departure">יציאה: 09:00</div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-11:30</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">נסיעה לNew Haven</td>
+                    <td class="details-col">נסיעה מניופורט לNew Haven דרך I-95 North. מעבר דרך קונטיקט עם עיירות חוף קטנות ויפות</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:30-13:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">סיור בNew Haven</td>
+                    <td class="details-col">סיור קצר במרכז העיר ובאוניברסיטת ייל העתיקה. התכוננות לארוחת הפיצה המיוחדת בFrank Pepe</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30-14:30</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">Frank Pepe Pizzeria - הפיצה הטובה בעולם!</td>
+                    <td class="details-col"><span class="highlight">האגדה! הפיצריה!</span> Frank Pepe Pizzeria ב-157 Wooster Street. White Clam Pizza בתנור פחם מקורי מ-1925 ב-540°C. חוויה קולינרית אמיתית!</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:30-16:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">נסיעה לLiberty State Park</td>
+                    <td class="details-col">נסיעה ישירה לניו ג'רזי דרך I-95 South ו-NJ Turnpike. הגעה לפארק עם הנוף הטוב ביותר של מנהטן</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:30-19:00</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">Liberty State Park - שקיעה במנהטן</td>
+                    <td class="details-col"><span class="highlight">הנוף המושלם!</span> שקיעה מול קו הרקיע של מנהטן, פסל החירות ואליס איילנד. הפארק בגודל 1,212 דונם עם טיילת באורך 3.2 ק"מ. הזמן המושלם לצילומים</td>
+                </tr>
+                <tr>
+                    <td class="time-col">19:00-19:20</td>
+                    <td class="duration-col">20 דקות</td>
+                    <td class="activity-col">נסיעה למלון</td>
+                    <td class="details-col">נסיעה קצרה למלון ליד Jersey Gardens Outlets - רק 12 מייל (17 דקות נסיעה)</td>
+                </tr>
+                <tr>
+                    <td class="time-col">19:30-21:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">ארוחת ערב ומנוחה</td>
+                    <td class="details-col">ארוחת ערב ומנוחה באזור ניו ג'רזי. הכנות לטיסה מחר</td>
+                </tr>
+            </tbody>
+        </table>
+
         <div class="pizza-info">
             <h3>Frank Pepe Pizzeria - פירוט מלא:</h3>
             
@@ -366,7 +440,7 @@
                         <li>תור תמיד - אין הזמנות מראש</li>
                         <li>"charred bubbles" - פיצות דקות עם פסגות מפוחמות</li>
                         <li>מוגשת על מגשי אלומיניום חמים</li>
-                        <li>אין לפרוס - אוכלים ביד</li>
+                        <li>אין לפרוס - נאכלים ביד</li>
                     </ul>
                 </div>
             </div>
@@ -377,6 +451,130 @@
                 <li>הזמינו גם Regular Tomato Pizza להשוואה</li>
                 <li>אל תבקשו לפרוס - זה נגד הפילוסופיה</li>
             </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>Liberty State Park - הפארק המושלם לשקיעה:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>מה מיוחד בפארק:</h4>
+                    <ul>
+                        <li><strong>הנוף הטוב ביותר</strong> של קו הרקיע של מנהטן מניו ג'רזי</li>
+                        <li>נוף ישיר לפסל החירות ואליס איילנד</li>
+                        <li>טיילת Liberty Walk באורך 3.2 ק"מ לאורך המים</li>
+                        <li>שטח של 1,212 דונם עם אזורי פיקניק ומשחקים</li>
+                        <li>אזור מושלם לצילומים בשקיעה</li>
+                    </ul>
+                    
+                    <h4>מה תראו בשקיעה:</h4>
+                    <ul>
+                        <li>One World Trade Center (Freedom Tower)</li>
+                        <li>Empire State Building</li>
+                        <li>Chrysler Building</li>
+                        <li>גשר ברוקלין וגשר מנהטן</li>
+                        <li>קו הרקיע המלא של לואר ומידטאון מנהטן</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>למה Liberty State Park הוא הבחירה הטובה ביותר:</h4>
+                    <ul>
+                        <li>קרוב מאוד למלון - רק 17 דקות נסיעה</li>
+                        <li>נוף פנורמי של 360 מעלות</li>
+                        <li>אפשרות לשבת על הדשא או על ספסלים</li>
+                        <li>חניה חינם וגישה נוחה</li>
+                        <li>מיקום אידיאלי לצילומי שקיעה</li>
+                    </ul>
+                    
+                    <h4>אלטרנטיבות נוספות:</h4>
+                    <ul>
+                        <li><strong>Hamilton Park, Weehawken</strong> - נוף גבוה יותר (25 דקות מהמלון)</li>
+                        <li><strong>Exchange Place</strong> - נוף ישיר לוול סטריט (20 דקות מהמלון)</li>
+                        <li><strong>Newport Green Park</strong> - נוף למידטאון (18 דקות מהמלון)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>🎯 פעילויות בLiberty State Park:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>פעילויות חוץ:</h4>
+                    <ul>
+                        <li><strong>טיילת Liberty Walk</strong> - הליכה/רכיבה של 3.2 ק"מ לאורך המים</li>
+                        <li><strong>מגרשי משחקים</strong> - כולל מתקן טיפוס עם לוויתן ונושא ימי</li>
+                        <li><strong>שטחי דשא ענקיים</strong> - מושלם לפיקניק וטיסן עפיפונים</li>
+                        <li><strong>Kayak Eco Tours</strong> - סיורי קיאק מודרכים (מגיל 16+)</li>
+                        <li><strong>שביל הטבע</strong> - הליכה דרך ביצת מלח בת 36 דונם</li>
+                        <li><strong>צפרות</strong> - ניתן לראות בזים ועוד מינים נדירים</li>
+                    </ul>
+                    
+                    <h4>מתקנים נוספים:</h4>
+                    <ul>
+                        <li><strong>אזורי פיקניק עם גרילים</strong> - ניתן להזמין פביליונים</li>
+                        <li><strong>Liberty Landing Marina</strong> - 250 עגינות וסירות</li>
+                        <li><strong>שירותים ומזנונים</strong> - פזורים ברחבי הפארק</li>
+                        <li><strong>חניות מרובות</strong> - חלקן בחינם, אחרות בתשלום</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>אטרקציות היסטוריות:</h4>
+                    <ul>
+                        <li><strong>Central Railroad Terminal</strong> - בניין היסטורי מ-1889, שימש את המהגרים</li>
+                        <li><strong>Empty Sky Memorial</strong> - אנדרטה לזכר קורבנות 11 בספטמבר</li>
+                        <li><strong>מרכז הטבע</strong> - תערוכות על האקולוגיה של נהר ההדסון</li>
+                        <li><strong>מסלולי היסטוריה</strong> - סיורים מודרכים על תפקיד האזור בהגירה</li>
+                    </ul>
+                    
+                    <h4>Liberty Science Center (באזור):</h4>
+                    <ul>
+                        <li><strong>מוזיאון מדע אינטראקטיבי</strong> - 300,000 רגל מרובעת</li>
+                        <li><strong>פלנטריום ענק</strong> - הגדול במחצית המערבית של כדור הארץ</li>
+                        <li><strong>12 אולמות תערוכה</strong> - מגוון נושאים מדעיים</li>
+                        <li><strong>אקווריום קטן</strong> - חיי ים מקומיים</li>
+                        <li><strong>מבוכי טיפוס</strong> - כולל מבוך בחושך מוחלט</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>🚢 הפלגה לפסל החירות ואליס איילנד:</h3>
+            <ul>
+                <li><strong>מחירים:</strong> ילדים (4-12): $16.50 | מבוגרים: $25.50 | קשישים: $22.50</li>
+                <li><strong>לילדים מתחת לגיל 3:</strong> חינם</li>
+                <li><strong>כרטיס אחד</strong> כולל גישה לשני האיים</li>
+                <li><strong>Statue Cruises</strong> - החברה הרשמית והיחידה</li>
+                <li><strong>מדריכי שמע</strong> - חינם לכל הגילאים</li>
+                <li><strong>המלצה:</strong> לקנות כרטיסים מראש באינטרנט</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>🍽️ מסעדות בפארק:</h3>
+            <div class="grid-2">
+                <div>
+                    <h4>Maritime Parc:</h4>
+                    <ul>
+                        <li>מטבח אמריקאי יוקרתי</li>
+                        <li>נוף למנהטן ולמרינה</li>
+                        <li>ארוחות ערב רומנטיות</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Liberty House Restaurant:</h4>
+                    <ul>
+                        <li>מטבח אמריקאי מודרני</li>
+                        <li>נוף מדהים למנהטן</li>
+                        <li>מתאים למשפחות וקבוצות</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="info-box">
@@ -435,11 +633,29 @@
         </div>
 
         <div class="hotel-info">
-            <h3>🏨 לינה: Residence Inn Newark Elizabeth/Liberty International Airport, NJ</h3>
-            <ul>
-                <li>מיקום: ליד נתב"ג ניוארק</li>
-                <li>יתרון: קרוב לשדה התעופה ולקניות מחר ב-The Mills Outlets</li>
-            </ul>
+            <h3>🏨 לינה: מלונות ליד Jersey Gardens Outlets</h3>
+            <div class="grid-2">
+                <div>
+                    <h4>אופציות מלון עיקריות (כולם ברדיוס של 0.3 מייל מהאאוטלט):</h4>
+                    <ul>
+                        <li><strong>Residence Inn Newark Elizabeth/Liberty Airport</strong> - סוויטות עם מטבח, ארוחת בוקר חינם</li>
+                        <li><strong>Courtyard by Marriott Elizabeth</strong> - מודרני עם בריכה וחדר כושר</li>
+                        <li><strong>Hampton Inn & Suites Newark Airport</strong> - שירות הסעות חינם לשדה התעופה</li>
+                        <li><strong>Country Inn & Suites by Radisson</strong> - מחירים טובים, נוח למשפחות</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>יתרונות האזור:</h4>
+                    <ul>
+                        <li>רק 30 דקות ממנהטן</li>
+                        <li>5 דקות הליכה לאאוטלט הגדול ביותר בניו ג'רזי</li>
+                        <li>ללא מס על בגדים ונעליים!</li>
+                        <li>קרוב לנמל התעופה ניוארק</li>
+                        <li>מיקום מושלם לטיסה למחרת</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="costs">
