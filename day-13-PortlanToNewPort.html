@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 13 - שני 13.10 | שתי אופציות למסלול</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .departure {
+            background: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .option-header {
+            background: linear-gradient(135deg, #38a169, #48bb78);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .option-2 { background: linear-gradient(135deg, #805ad5, #b794f6); }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .time-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .duration-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .activity-col {
+            width: 180px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .details-col {
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .hotel-info {
+            background: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .hotel-info h3 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        .incomplete-note {
+            background: #fef5e7;
+            border: 2px solid #f6ad55;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .incomplete-note h4 {
+            color: #c05621;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .waze-link {
+            background: #4285f4;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .waze-link:hover {
+            background: #3367d6;
+            color: white;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>יום 13 - שני 13.10</h1>
+            <h2>שתי אופציות למסלול</h2>
+        </div>
+
+        <div class="option-header">
+            אופציה 1: ניופורט יום מלא (מקורי)
+        </div>
+        <div class="departure">יציאה: 09:00</div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-12:30</td>
+                    <td class="duration-col">3.5 שעות</td>
+                    <td class="activity-col">נסיעה לניופורט</td>
+                    <td class="details-col">
+                        נסיעה מפורטלנד לניופורט דרך I-95 South ו-Route 1 החוף הדרומי. מעבר דרך קנבנקפורט (עיר הנופש של הנשיאים), פורטסמות' (עיר נמל קולוניאלית), ניו המפשייר<br>
+                        <strong>יעד:</strong> Newport, RI 02840<br>
+                        <a href="waze://?ll=41.4901,-71.3128&navigate=yes" class="waze-link">📍 Waze - ניופורט</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:00-13:30</td>
+                    <td class="duration-col">30 דק</td>
+                    <td class="activity-col">צ'ק אין מהיר במלון</td>
+                    <td class="details-col">
+                        <strong>כתובת מלון:</strong> Wyndham Newport Hotel, 240 Aquidneck Ave, Newport, RI 02842<br>
+                        צ'ק אין במלון Wyndham Newport Hotel בלב העיר (2 הזמנות נפרדות: חדר King Bed + חדר King Bed Deluxe). מיקום מרכזי בהליכה מכל האטרקציות העיקריות<br>
+                        <a href="waze://?ll=41.4901,-71.3128&navigate=yes" class="waze-link">📍 Waze - מלון וינדהם</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30-16:00</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">The Cliff Walk</td>
+                    <td class="details-col">
+                        <strong>כתובת התחלה:</strong> Memorial Boulevard, Newport, RI 02840<br>
+                        <strong>כתובת סיום:</strong> Ruggles Avenue, Newport, RI 02840<br>
+                        המסלול המפורסם בעולם! שביל 5.6 ק"מ לאורך הצוקים בין האוקיינוס האטלנטי לאחוזות המיליונרים מתקופת הזהב האמריקאי. הקטע החובה: 2.4 ק"מ מ-Memorial Boulevard עד Ruggles Avenue עם האחוזות המפורסמות: The Breakers (ונדרבילט), Marble House, Rosecliff<br>
+                        <a href="waze://?ll=41.4751,-71.2947&navigate=yes" class="waze-link">📍 Waze - תחילת Cliff Walk</a><br>
+                        <a href="waze://?ll=41.4656,-71.2877&navigate=yes" class="waze-link">📍 Waze - The Breakers Mansion</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:00-19:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">Thames Street + נמל</td>
+                    <td class="details-col">
+                        <strong>כתובת מרכז:</strong> Thames Street, Newport, RI 02840<br>
+                        "שאנז אליזה של ניופורט": מיל של חנויות יוקרה, גלריות ומסעדות במבנים ויקטוריאניים משוחזרים. הנמל עם יאכטות מיליונרים, מרינה יוקרתית, נוף לנרגנסט ביי<br>
+                        <a href="waze://?ll=41.4893,-71.3126&navigate=yes" class="waze-link">📍 Waze - Thames Street מרכז</a><br>
+                        <a href="waze://?ll=41.4904,-71.3265&navigate=yes" class="waze-link">📍 Waze - Newport Harbor</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">19:30-21:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">ארוחת ערב יוקרתית</td>
+                    <td class="details-col">
+                        ארוחת ערב יוקרתית באחד ממסעדות הפרמיום של ניופורט עם נוף לנרגנסט ביי. מומלצות: The Chanler (יוקרה מקסימלית), 21 Bowens (נוף מרהיב), Castle Hill Inn (רומנטי). תפריטים מבוססי פירות ים מקומיים<br>
+                        <strong>The Chanler:</strong> 117 Memorial Blvd, Newport, RI 02840<br>
+                        <a href="waze://?ll=41.4728,-71.2925&navigate=yes" class="waze-link">📍 Waze - The Chanler</a><br>
+                        <strong>21 Bowens:</strong> 21 Bowens Wharf, Newport, RI 02840<br>
+                        <a href="waze://?ll=41.4895,-71.3281&navigate=yes" class="waze-link">📍 Waze - 21 Bowens</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="option-header option-2">
+            אופציה 2: מסלול נופים + ניופורט בערב
+        </div>
+        <div class="departure">יציאה: 09:00</div>
+
+        <div class="incomplete-note">
+            <h4>שימו לב: אופציה זו לא הושלמה במסמך המקורי</h4>
+            <p>המידע על Mystic Seaport Museum נחתך באמצע המשפט. להלן השלמה מבוססת על מחקר:</p>
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-10:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">נסיעה ל-Mystic Seaport</td>
+                    <td class="details-col">
+                        נסיעה מפורטלנד ל-Mystic Seaport דרך החוף הנופי I-95 South ו-Route 1. מעבר דרך קנבנקפורט, פורטסמות', ניו המפשייר והגעה לקונטיקט ההיסטורי<br>
+                        <strong>יעד:</strong> 75 Greenmanville Ave, Mystic, CT 06355<br>
+                        <a href="waze://?ll=41.3612,-71.9662&navigate=yes" class="waze-link">📍 Waze - Mystic Seaport</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:30-14:00</td>
+                    <td class="duration-col">3.5 שעות</td>
+                    <td class="activity-col">Mystic Seaport Museum</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> 75 Greenmanville Ave, Mystic, CT 06355<br>
+                        מוזיאון ימי חי עם ספינות היסטוריות אמיתיות על 19 דונם. העיקר: ספינת הלווייתן Charles W. Morgan (1841) - הספינה הלווייתן האמריקאית היחידה ששרדה. כפר ימי משוחזר ממאה ה-19 עם בעלי מלאכה היסטוריים, מספנה פעילה, ומוזיאון עם 60,000 חפצים ימיים. אטרקציות נוספות: הדגמות בניית סירות, סדנאות מלחות מסורתיות, וסיורים מודרכים בספינות<br>
+                        <strong>מחירי כניסה:</strong> מבוגרים $36, ילדים $26<br>
+                        <strong>שעות פתיחה:</strong> 9:00-17:00<br>
+                        <a href="waze://?ll=41.3612,-71.9662&navigate=yes" class="waze-link">📍 Waze - מוזיאון מיסטיק</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:30-16:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">נסיעה לניופורט</td>
+                    <td class="details-col">
+                        נסיעה קצרה מ-Mystic לניופורט דרך I-95 North ו-Route 138 East. מעבר דרך החוף הדרומי של רוד איילנד<br>
+                        <strong>יעד:</strong> Newport, RI<br>
+                        <a href="waze://?ll=41.4901,-71.3128&navigate=yes" class="waze-link">📍 Waze - ניופורט</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:30-17:00</td>
+                    <td class="duration-col">30 דק</td>
+                    <td class="activity-col">צ'ק אין במלון</td>
+                    <td class="details-col">
+                        צ'ק אין במלון Wyndham Newport Hotel<br>
+                        <a href="waze://?ll=41.4901,-71.3128&navigate=yes" class="waze-link">📍 Waze - מלון וינדהם</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:30-19:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">Cliff Walk מהיר + Thames Street</td>
+                    <td class="details-col">
+                        Cliff Walk מהיר - הקטע החובה בלבד (2.4 ק"מ) עם האחוזות המפורסמות + Thames Street לקניות וגלידה<br>
+                        <a href="waze://?ll=41.4751,-71.2947&navigate=yes" class="waze-link">📍 Waze - תחילת Cliff Walk</a><br>
+                        <a href="waze://?ll=41.4893,-71.3126&navigate=yes" class="waze-link">📍 Waze - Thames Street</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">20:00-22:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">ארוחת ערב</td>
+                    <td class="details-col">
+                        ארוחת ערב בניופורט - אותן מסעדות מומלצות כמו באופציה 1<br>
+                        <a href="waze://?ll=41.4728,-71.2925&navigate=yes" class="waze-link">📍 Waze - The Chanler</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="hotel-info">
+            <h3>🏨 לינה: Wyndham Newport Hotel, RI</h3>
+            <div class="grid-2">
+                <div>
+                    <ul>
+                        <li><strong>כתובת:</strong> 240 Aquidneck Ave, Newport, RI 02842</li>
+                        <li>מחיר: $470.32 (2 הזמנות נפרדות)</li>
+                        <li>חדר 1: King Bed, 2 אורחים - $224.99</li>
+                        <li>חדר 2: King Bed Deluxe, 3 אורחים - $245.33</li>
+                        <li>מספר אישור: #89666EE086572, #89666EE086573</li>
+                        <li>ביטול עד: לא צוין</li>
+                    </ul>
+                    <a href="waze://?ll=41.4901,-71.3128&navigate=yes" class="waze-link">📍 Waze - מלון וינדהם</a>
+                </div>
+                
+                <div>
+                    <h4>מיקום:</h4>
+                    <ul>
+                        <li>בלב העיר ניופורט</li>
+                        <li>הליכה מכל האטרקציות העיקריות</li>
+                        <li>קרוב ל-Thames Street ול-Cliff Walk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>מידע נוסף על ניופורט:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>The Cliff Walk:</h4>
+                    <ul>
+                        <li><strong>כתובת התחלה:</strong> Memorial Boulevard, Newport, RI</li>
+                        <li>אורך מלא: 5.6 ק"מ</li>
+                        <li>הקטע החובה: 2.4 ק"מ</li>
+                        <li>זמן: 2-3 שעות עם עצירות</li>
+                        <li>קושי: קל עד בינוני</li>
+                    </ul>
+                    
+                    <h4>אחוזות מפורסמות:</h4>
+                    <ul>
+                        <li><strong>The Breakers</strong> (משפחת ונדרבילט):<br>
+                        <a href="waze://?ll=41.4656,-71.2877&navigate=yes" class="waze-link">📍 Waze</a></li>
+                        <li><strong>Marble House</strong> (יוקרה מקסימלית):<br>
+                        <a href="waze://?ll=41.4721,-71.2919&navigate=yes" class="waze-link">📍 Waze</a></li>
+                        <li><strong>Rosecliff</strong> (אלגנטיות צרפתית):<br>
+                        <a href="waze://?ll=41.4693,-71.2889&navigate=yes" class="waze-link">📍 Waze</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Thames Street:</h4>
+                    <ul>
+                        <li><strong>כתובת:</strong> Thames Street, Newport, RI 02840</li>
+                        <li>אורך: כמיל של חנויות יוקרה</li>
+                        <li>סגנון: מבנים ויקטוריאניים משוחזרים</li>
+                        <li>אטרקציות: גלריות, בוטיקים, מסעדות</li>
+                    </ul>
+                    
+                    <h4>הנמל:</h4>
+                    <ul>
+                        <li><strong>כתובת:</strong> Newport Harbor, Thames St, Newport, RI</li>
+                        <li>יאכטות מיליונרים</li>
+                        <li>מרינה יוקרתית</li>
+                        <li>נוף לנרגנסט ביי</li>
+                    </ul>
+                    <a href="waze://?ll=41.4904,-71.3265&navigate=yes" class="waze-link">📍 Waze - נמל ניופורט</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>Mystic Seaport Museum - פירוט מלא:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>פרטי המוזיאון:</h4>
+                    <ul>
+                        <li><strong>כתובת:</strong> 75 Greenmanville Ave, Mystic, CT 06355</li>
+                        <li><strong>שטח:</strong> 19 דונם על נהר מיסטיק</li>
+                        <li><strong>נוסד:</strong> 1929</li>
+                        <li><strong>מחיר:</strong> מבוגרים $36, ילדים $26</li>
+                        <li><strong>שעות:</strong> 9:00-17:00</li>
+                    </ul>
+                    
+                    <h4>האטרקציות העיקריות:</h4>
+                    <ul>
+                        <li>Charles W. Morgan - ספינת לווייתן מ-1841</li>
+                        <li>Joseph Conrad - ספינת אימון מ-1882</li>
+                        <li>L.A. Dunton - סקונר דיג מ-1921</li>
+                        <li>כפר ימי משוחזר ממאה ה-19</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>פעילויות באתר:</h4>
+                    <ul>
+                        <li>סיורים מודרכים בספינות</li>
+                        <li>הדגמות בניית סירות</li>
+                        <li>סדנאות מלחות מסורתיות</li>
+                        <li>מוזיאון עם 60,000 חפצים ימיים</li>
+                    </ul>
+                    
+                    <h4>מה מיוחד:</h4>
+                    <ul>
+                        <li>המוזיאון הימי הגדול בעולם</li>
+                        <li>הכפר הימי המשוחזר האמיתי ביותר</li>
+                        <li>בעלי מלאכה עובדים במקום</li>
+                        <li>ספינות שאפשר לעלות עליהן</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="waze://?ll=41.3612,-71.9662&navigate=yes" class="waze-link">📍 Waze - Mystic Seaport Museum</a>
+        </div>
+
+        <div class="info-box">
+            <h3>הערות חשובות:</h3>
+            <ul>
+                <li><span class="highlight">אופציה 2 לא הושלמה במסמך המקורי</span> - המידע על Mystic Seaport Museum נחתך באמצע</li>
+                <li>שתי האופציות מוליכות לניופורט כבסיס ללינה</li>
+                <li>מלון Wyndham נמצא במיקום מרכזי מעולה</li>
+                <li>יש צורך לבדוק זמן ביטול עבור המלון</li>
+                <li><strong>המלצה:</strong> אופציה 1 מלאה ומפורטת יותר</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

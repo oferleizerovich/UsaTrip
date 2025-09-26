@@ -227,6 +227,23 @@
             font-weight: bold;
         }
         
+        .waze-link {
+            background: #4285f4;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .waze-link:hover {
+            background: #3367d6;
+            color: white;
+        }
+        
         ul {
             padding-right: 20px;
         }
@@ -271,7 +288,14 @@
                         <td class="time-col">04:30-07:00</td>
                         <td class="duration-col">2.5 שעות</td>
                         <td class="activity-col">Cadillac Mountain - הזריחה הראשונה בארה"ב</td>
-                        <td class="details-col">יציאה מהמלון עם פנס ראש, בגדים חמים (בפסגה 5-10°C), מים וחטיפים. נסיעה 30 דקות להר קדילק. הגעה 30 דק לפני זריחה חיונית - החניות נתפסות עד 8:30! הזמנה מוקדמת חובה ב-recreation.gov ($6 נוסף על כרטיס הפארק)<br><br>זריחה: 06:45 בתאריך 11.10<br>גובה: 466 מטר - הנקודה הגבוהה בחוף המזרח<br>מיוחד: מ-7 אוקטובר עד 6 מרץ - זריחה ראשונה בארה"ב!</td>
+                        <td class="details-col">
+                            <strong>כתובת:</strong> Cadillac Summit Rd, Bar Harbor, ME 04609<br>
+                            יציאה מהמלון עם פנס ראש, בגדים חמים (בפסגה 5-10°C), מים וחטיפים. נסיעה 30 דקות להר קדילק. הגעה 30 דק לפני זריחה חיונית - החניות נתפסות עד 8:30! הזמנה מוקדמת חובה ב-recreation.gov ($6 נוסף על כרטיס הפארק)<br><br>
+                            זריחה: 06:45 בתאריך 11.10<br>
+                            גובה: 466 מטר - הנקודה הגבוהה בחוף המזרח<br>
+                            מיוחד: מ-7 אוקטובר עד 6 מרץ - זריחה ראשונה בארה"ב!<br>
+                            <a href="waze://?ll=44.3532,-68.2250&navigate=yes" class="waze-link">📍 Waze - הר קדילק</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -280,11 +304,11 @@
         <div class="decision-point">
             נקודת החלטה החשובה - 07:00
             <br>לאחר הירידה מהר קדילק, החלטה על פי:
-            <br>רמת העייפות • זמינות חנייה ב-Sand Beach • מצב רוח כללי
+            <br>רמת העייפות • זמינות חניה ב-Sand Beach • מצב רוח כללי
         </div>
 
         <div class="scenario-header">
-            תרחיש A - יש כוח + יש חנייה ב-Sand Beach
+            תרחיש A - יש כוח + יש חניה ב-Sand Beach
         </div>
 
         <table class="schedule-table">
@@ -301,49 +325,79 @@
                     <td class="time-col">07:30-08:00</td>
                     <td class="duration-col">30 דק</td>
                     <td class="activity-col">נסיעה ל-Sand Beach</td>
-                    <td class="details-col">נסיעה קצרה ל-Sand Beach דרך Park Loop Road הציורי</td>
+                    <td class="details-col">
+                        נסיעה קצרה ל-Sand Beach דרך Park Loop Road הציורי<br>
+                        <strong>כתובת:</strong> Sand Beach, Ocean Dr, Bar Harbor, ME 04609<br>
+                        <a href="waze://?ll=44.3266,-68.1844&navigate=yes" class="waze-link">📍 Waze - Sand Beach</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">08:00-09:30</td>
                     <td class="duration-col">1.5 שעות</td>
                     <td class="activity-col">Sand Beach + Great Head Trail</td>
-                    <td class="details-col">החוף החולי היחיד באכדיה (תערובת חול קוורץ ושברי צדפות) + Great Head Trail - מסלול 1.4 מייל עם נופים פנורמיים לפמפרץ Frenchman Bay, rock scrambling קל, נוף מדהים לכל החוף. מתאים למשפחות, קל למי שיש כוח אחרי הזריחה המוקדמת</td>
+                    <td class="details-col">
+                        החוף החולי היחיד באכדיה (תערובת חול קוורץ ושברי צדפות) + Great Head Trail - מסלול 1.4 מייל עם נופים פנורמיים לפמפרץ Frenchman Bay, rock scrambling קל, נוף מהדים לכל החוף. מתאים למשפחות, קל למי שיש כוח אחרי הזריחה המוקדמת<br>
+                        <strong>נקודת התחלה:</strong> Great Head Trail Parking (אלטרנטיבה לחניית Sand Beach)<br>
+                        <a href="waze://?ll=44.3239,-68.1820&navigate=yes" class="waze-link">📍 Waze - Great Head Trail</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">09:30-11:00</td>
                     <td class="duration-col">1.5 שעות</td>
                     <td class="activity-col">Park Loop Road</td>
-                    <td class="details-col">כביש 43 ק"מ במעגל מתוכנן בשנות ה-30 לנוף מקסימלי. עצירות ב: Thunder Hole (חלל בסלע שהגלים עושים רעש כמו רעם), Otter Cliffs (צוקים של 33 מטר מעל האוקיינוס)</td>
+                    <td class="details-col">
+                        כביש 43 ק"מ במעגל מתוכנן בשנות ה-30 לנוף מקסימלי. עצירות ב: Thunder Hole (חלל בסלע שהגלים עושים רעש כמו רעם), Otter Cliffs (צוקים של 33 מטר מעל האוקיינוס)<br>
+                        <strong>Thunder Hole:</strong> Ocean Dr, Bar Harbor, ME 04609<br>
+                        <a href="waze://?ll=44.3130,-68.1894&navigate=yes" class="waze-link">📍 Waze - Thunder Hole</a><br>
+                        <strong>Otter Cliffs:</strong> Ocean Dr, Bar Harbor, ME 04609<br>
+                        <a href="waze://?ll=44.3024,-68.1872&navigate=yes" class="waze-link">📍 Waze - Otter Cliffs</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">11:00-12:30</td>
                     <td class="duration-col">1.5 שעות</td>
-                    <td class="activity-col">Jordan Pond + פופאוברס</td>
-                    <td class="details-col">Jordan Pond House - מסעדה היסטורית מ-1896 מפורסמת בפופאוברס ותה + נוף שקט לאגם ו-"The Bubbles" (שני גבעות עגולות). ארוחת צהריים מיתולוגית - פופאוברס מ-1893 + נוף ל-"Bubbles"</td>
+                    <td class="activity-col">Jordan Pond + פופאובר</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> 2928 Park Loop Rd, Bar Harbor, ME 04609<br>
+                        Jordan Pond House - מסעדה היסטורית מ-1896 מפורסמת בפופאוברס ותה + נוף שקט לאגם ו-"The Bubbles" (שני גבעות עגולות). ארוחת צהריים מיתולוגית - פופאוברס מ-1893 + נוף ל-"Bubbles"<br>
+                        <a href="waze://?ll=44.3185,-68.2498&navigate=yes" class="waze-link">📍 Waze - Jordan Pond House</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">12:30-14:00</td>
                     <td class="duration-col">1.5 שעות</td>
                     <td class="activity-col">Jordan Pond Path</td>
-                    <td class="details-col">הליכה חלקית סביב האגם הטבעי (3 ק"מ אורך). מסלול שטוח: 1.6 ק"מ לטרסות הראשונות, שטוח ונעים, מתאים לכל הגילאים</td>
+                    <td class="details-col">
+                        הליכה חלקית סביב האגם הטבעי (3 ק"מ אורך). מסלול שטוח: 1.6 ק"מ לטרסות הראשונות, שטוח ונעים, מתאים לכל הגילאים<br>
+                        <strong>מוצא:</strong> Jordan Pond House Parking<br>
+                        <a href="waze://?ll=44.3185,-68.2498&navigate=yes" class="waze-link">📍 Waze - נקודת התחלה</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">14:00-15:30</td>
                     <td class="duration-col">1.5 שעות</td>
                     <td class="activity-col">Ocean Path</td>
-                    <td class="details-col">Ocean Path - שביל שטוח עם נוף קבוע לאוקיינוס, הליכה לאורך החוף מ-Sand Beach ל-Otter Point, צילומים מרהיבים של החוף הסלעי</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> Ocean Path Parking, Ocean Dr, Bar Harbor, ME 04609<br>
+                        Ocean Path - שביל שטוח עם נוף קבוע לאוקיינוס, הליכה לאורך החוף מ-Sand Beach ל-Otter Point, צילומים מרהיבים של החוף הסלעי<br>
+                        <a href="waze://?ll=44.3199,-68.1865&navigate=yes" class="waze-link">📍 Waze - Ocean Path</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">20:00-21:00</td>
                     <td class="duration-col">1 שעה</td>
                     <td class="activity-col">Bass Harbor Lighthouse!</td>
-                    <td class="details-col">המגדלור המפורסם ביותר במיין! נבנה ב-1858, גובה 10 מטר, מוקף בסלעי גרניט ורודים. "השקיעה הכי יפה בפארק" - הסיום המושלם</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> Lighthouse Rd, Bass Harbor, ME 04653<br>
+                        המגדלור המפורסם ביותר במיין! נבנה ב-1858, גובה 10 מטר, מוקף בסלעי גרניט ורודים. "השקיעה הכי יפה בפארק" - הסיום המושלם<br>
+                        <a href="waze://?ll=44.2209,-68.3374&navigate=yes" class="waze-link">📍 Waze - Bass Harbor Lighthouse</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
 
         <div class="scenario-header scenario-b">
-            תרחיש B - עייפות או אין חנייה
+            תרחיש B - עייפות או אין חניה
         </div>
 
         <table class="schedule-table">
@@ -360,49 +414,68 @@
                     <td class="time-col">07:30-08:30</td>
                     <td class="duration-col">1 שעה</td>
                     <td class="activity-col">Thunder Hole + Otter Cliffs</td>
-                    <td class="details-col">Thunder Hole - רעם הגלים בסלעים (הכי מרשים בגאות גבוהה), Otter Cliffs - תצפית על צוקי גרניט 33 מטר. פחות הליכה, יותר נהיגה ותצפיות. התחלה מחנייה פחות בעייתית</td>
+                    <td class="details-col">
+                        Thunder Hole - רעש הגלים בסלעים (הכי מרשים בגאות גבוהה), Otter Cliffs - תצפית על צוקי גרניט 33 מטר. פחות הליכה, יותר נהיגה ותצפיות. התחלה מחניה פחות בעייתית<br>
+                        <a href="waze://?ll=44.3130,-68.1894&navigate=yes" class="waze-link">📍 Waze - Thunder Hole</a><br>
+                        <a href="waze://?ll=44.3024,-68.1872&navigate=yes" class="waze-link">📍 Waze - Otter Cliffs</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">09:00-10:30</td>
                     <td class="duration-col">1.5 שעות</td>
                     <td class="activity-col">Jordan Pond + פופאוברס</td>
-                    <td class="details-col">Jordan Pond House - מסעדה היסטורית עם פופאוברס מפורסמים + נוף שקט לאגם ו-"The Bubbles". מקום מושלם לארוחת בוקר מאוחרת אחרי זריחה מוקדמת</td>
+                    <td class="details-col">
+                        Jordan Pond House - מסעדה היסטורית עם פופאוברס מפורסמים + נוף שקט לאגם ו-"The Bubbles". מקום מושלם לארוחת בוקר מאוחרת אחרי זריחה מוקדמת<br>
+                        <a href="waze://?ll=44.3185,-68.2498&navigate=yes" class="waze-link">📍 Waze - Jordan Pond House</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">11:00-12:30</td>
                     <td class="duration-col">1.5 שעות</td>
                     <td class="activity-col">Jordan Pond Path המלא</td>
-                    <td class="details-col">Jordan Pond Path המלא - מעגל מלא 5.3 ק"מ סביב האגם. הליכה שטוחה ורגועה, פחות עמוס, מתאים לימי מנוחה, נוף משתנה לאורך המעגל</td>
+                    <td class="details-col">
+                        Jordan Pond Path המלא - מעגל מלא 5.3 ק"מ סביב האגם. הליכה שטוחה ורגועה, פחות עמוס, מתאים לימי מנוחה, נוף משתנה לאורך המעגל<br>
+                        <a href="waze://?ll=44.3185,-68.2498&navigate=yes" class="waze-link">📍 Waze - נקודת התחלה</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">13:00-14:30</td>
                     <td class="duration-col">1.5 שעות</td>
                     <td class="activity-col">Cadillac Summit Loop</td>
-                    <td class="details-col">חזרה לתצפית מהפסגה - Cadillac Summit Loop: רק 0.3 מייל בלבד + נוף 360 מעלות בשעות היום (שונה מהזריחה), פחות עמוס אחר הצהריים</td>
+                    <td class="details-col">
+                        חזרה לתצפית מהפסגה - Cadillac Summit Loop: רק 0.3 מייל בלבד + נוף 360 מעלות בשעות היום (שונה מהזריחה), פחות עמוס אחר הצהריים<br>
+                        <a href="waze://?ll=44.3532,-68.2250&navigate=yes" class="waze-link">📍 Waze - הר קדילק</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">15:00-16:30</td>
                     <td class="duration-col">1.5 שעות</td>
                     <td class="activity-col">זמן חופשי בבר הארבור</td>
-                    <td class="details-col">זמן חופשי בבר הארבור - מרכז העיר + חנויות ומסעדות + מנוחה לפני השקיעה. רכישת מזכרות, גלידה, קפה</td>
+                    <td class="details-col">
+                        זמן חופשי בבר הארבור - מרכז העיר + חנויות ומסעדות + מנוחה לפני השקיעה. רכישת מזכרות, גלידה, קפה<br>
+                        <a href="waze://?ll=44.3876,-68.2039&navigate=yes" class="waze-link">📍 Waze - מרכז בר הארבור</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="time-col">20:00-21:00</td>
                     <td class="duration-col">1 שעה</td>
                     <td class="activity-col">Bass Harbor Lighthouse</td>
-                    <td class="details-col">שקיעה במגדלור Bass Harbor Lighthouse</td>
+                    <td class="details-col">
+                        שקיעה במגדלור Bass Harbor Lighthouse<br>
+                        <a href="waze://?ll=44.2209,-68.3374&navigate=yes" class="waze-link">📍 Waze - Bass Harbor Lighthouse</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
 
         <div class="parking-alert">
-            <h4>אזהרות חנייה קריטיות:</h4>
+            <h4>אזהרות חניה קריטיות:</h4>
             
             <div class="grid-2">
                 <div>
                     <h4>הר קדילק:</h4>
                     <ul>
-                        <li>הגעה 04:30 - 30 דק לפני זריחה לחנייה</li>
+                        <li>הגעה 04:30 - 30 דק לפני זריחה לחניה</li>
                         <li><span class="highlight">הזמנה מוקדמת חובה ב-recreation.gov</span></li>
                     </ul>
                     
@@ -417,12 +490,12 @@
                     <h4>Jordan Pond:</h4>
                     <ul>
                         <li>בדרך כלל פחות בעייתי, אבל עדיף הגעה לפני 12:00</li>
-                        <li>חנייה גדולה יותר מ-Sand Beach</li>
+                        <li>חניה גדולה יותר מ-Sand Beach</li>
                     </ul>
                     
                     <h4>Bass Harbor:</h4>
                     <ul>
-                        <li>חנייה קטנה - הגעה מוקדמת מומלצת</li>
+                        <li>חניה קטנה - הגעה מוקדמת מומלצת</li>
                         <li>שקיעה פופולרית - הגעה שעה לפני</li>
                     </ul>
                 </div>
@@ -430,7 +503,7 @@
         </div>
 
         <div class="weather-backup">
-            <h4>גיבוי למזג אויר גרוע:</h4>
+            <h4>גיבוי למזג אוויר גרוע:</h4>
             
             <div class="grid-2">
                 <div>
@@ -472,7 +545,7 @@
                         <li>יציאה מהמלון ב-04:00</li>
                         <li>שתיית קפה לפני (לא במהלך הנסיעה)</li>
                         <li>סוודר/מעיל חם חובה</li>
-                        <li>כפפות ולכובע מומלצים</li>
+                        <li>כפפות וכובע מומלצים</li>
                     </ul>
                 </div>
             </div>

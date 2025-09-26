@@ -111,6 +111,31 @@
             border-radius: 8px;
             margin: 20px 0;
         }
+        
+        .waze-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: white !important;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px 0;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .waze-link:hover {
+            background-color: #0056b3;
+        }
+        
+        .address-info {
+            background-color: #f0f8ff;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 5px 0;
+            font-size: 14px;
+            border-right: 3px solid #007bff;
+        }
     </style>
 </head>
 <body>
@@ -133,31 +158,81 @@
                 <td class="time-column">09:00-12:30</td>
                 <td class="activity-column">נסיעה לאלכסנדריה ביי</td>
                 <td class="duration-column">3.5 שעות</td>
-                <td class="details-column">נסיעה מניאגרה לאלכסנדריה ביי דרך Highway 401 East (כביש מהיר קנדי) ו-I-81 South (ארה"ב). מעבר גבול מהיר דרך Thousand Islands Bridge, נוף נהדר לאיים ולנהר St. Lawrence. שימו לב: חזרה לארה"ב</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>יעד:</strong> Alexandria Bay, NY (דרך Thousand Islands Bridge)
+                    </div>
+                    <a href="https://waze.com/ul?q=Alexandria%20Bay%20NY&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ב-Waze</a>
+                    <br><br>
+                    נסיעה מניאגרה לאלכסנדריה ביי דרך Highway 401 East (כביש מהיר קנדי) ו-I-81 South (ארה"ב). מעבר גבול מהיר דרך Thousand Islands Bridge, נוף נהדר לאיים ולנהר St. Lawrence. שימו לב: חזרה לארה"ב
+                </td>
             </tr>
             <tr>
                 <td class="time-column">12:45-13:30</td>
                 <td class="activity-column">ארוחת צהריים מהירה</td>
                 <td class="duration-column">45 דק</td>
-                <td class="details-column">ארוחת צהריים מהירה במרכז Alexandria Bay - עיירת דייגים קטנה וציורית. מומלץ: Admiral's Inn (מול הנמל) או Riveredge Resort Restaurant. מנות דגים טריים, נוף לנהר</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>אופציה 1:</strong> Admiral's Inn, 23 James St, Alexandria Bay, NY 13607
+                    </div>
+                    <a href="https://waze.com/ul?q=Admirals%20Inn%2023%20James%20St%20Alexandria%20Bay%20NY&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ל-Admiral's Inn</a>
+                    <br><br>
+                    <div class="address-info">
+                        <strong>אופציה 2:</strong> Riveredge Resort Restaurant, 17 Holland St, Alexandria Bay, NY 13607
+                    </div>
+                    <a href="https://waze.com/ul?q=Riveredge%20Resort%2017%20Holland%20St%20Alexandria%20Bay%20NY&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ל-Riveredge Resort</a>
+                    <br><br>
+                    ארוחת צהריים מהירה במרכז Alexandria Bay - עיירת דייגים קטנה וציורית. מנות דגים טריים, נוף לנהר
+                </td>
             </tr>
             <tr>
                 <td class="time-column">14:00-16:30</td>
                 <td class="activity-column">Uncle Sam Boat Tours עם ארוחה</td>
                 <td class="duration-column">2.5 שעות</td>
-                <td class="details-column">שייט באלף האיים (1,864 איים!) כולל ארוחת צהריים מלאה על סיפון הסירה. עצירות ב: Boldt Castle (טירת אהבה טרגית על Heart Island), Singer Castle ("טירה אמיתית" על Dark Island). הסירה Alexandria Belle או Uncle Sam XI, מזג אוויר מושלם לשייט</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>כתובת:</strong> Uncle Sam Boat Tours, 47 James St, Alexandria Bay, NY 13607
+                    </div>
+                    <a href="https://waze.com/ul?q=Uncle%20Sam%20Boat%20Tours%2047%20James%20St%20Alexandria%20Bay%20NY&navigate=yes" class="waze-link" target="_blank">🗺️ נווט לשייט</a>
+                    <br><br>
+                    שייט באלף האיים (1,864 איים!) כולל ארוחת צהריים מלאה על סיפון הסירה. עצירות ב: Boldt Castle (טירת אהבה טרגית על Heart Island), Singer Castle ("טירה אמיתית" על Dark Island). הסירה Alexandria Belle או Uncle Sam XI, מזג אוויר מושלם לשייט
+                </td>
             </tr>
             <tr>
                 <td class="time-column">17:00-18:30</td>
                 <td class="activity-column">סיור בקלייטן, NY</td>
                 <td class="duration-column">1.5 שעות</td>
-                <td class="details-column">עיירת דייגים מקסימה ליד נהר St. Lawrence. רחוב ראשי עם חנויות אנטיק, Antique Boat Museum (סירות עץ היסטוריות), Frink Park עם נוף לנהר</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>כתובת:</strong> Clayton, NY 13624
+                    </div>
+                    <a href="https://waze.com/ul?q=Clayton%20NY%2013624&navigate=yes" class="waze-link" target="_blank">🗺️ נווט לקלייטן</a>
+                    <br><br>
+                    <div class="address-info">
+                        <strong>מוזיאון הסירות:</strong> Antique Boat Museum, 750 Mary St, Clayton, NY 13624
+                    </div>
+                    <a href="https://waze.com/ul?q=Antique%20Boat%20Museum%20750%20Mary%20St%20Clayton%20NY&navigate=yes" class="waze-link" target="_blank">🗺️ נווט למוזיאון</a>
+                    <br><br>
+                    עיירת דייגים מקסימה ליד נהר St. Lawrence. רחוב ראשי עם חנויות אנטיק, Antique Boat Museum (סירות עץ היסטוריות), Frink Park עם נוף לנהר
+                </td>
             </tr>
             <tr>
                 <td class="time-column">19:00-21:00</td>
                 <td class="activity-column">ארוחת ערב + מנוחה</td>
                 <td class="duration-column">2 שעות</td>
-                <td class="details-column">ארוחת ערב במסעדה מקומית באלכסנדריה ביי עם נוף לנהר ולאיים: Jacques Cartier Dining Room או Cavallario's Steak House מומלץ. מנות דגים מקומיים וסטייקים</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>אופציה 1:</strong> Jacques Cartier Dining Room, Riveredge Resort
+                    </div>
+                    <a href="https://waze.com/ul?q=Jacques%20Cartier%20Dining%20Room%20Riveredge%20Resort%20Alexandria%20Bay%20NY&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ל-Jacques Cartier</a>
+                    <br><br>
+                    <div class="address-info">
+                        <strong>אופציה 2:</strong> Cavallario's Steak House, 26 Church St, Alexandria Bay, NY 13607
+                    </div>
+                    <a href="https://waze.com/ul?q=Cavallarios%20Steak%20House%2026%20Church%20St%20Alexandria%20Bay%20NY&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ל-Cavallario's</a>
+                    <br><br>
+                    ארוחת ערב במסעדה מקומית באלכסנדריה ביי עם נוף לנהר ולאיים. מנות דגים מקומיים וסטייקים
+                </td>
             </tr>
         </tbody>
     </table>
@@ -191,7 +266,10 @@
 
     <div class="accommodation">
         <h3>🏨 לינה: Riveredge Resort</h3>
-        <p><strong>כתובת:</strong> 17 Holland Street, Alexandria Bay, NY</p>
+        <div class="address-info">
+            <strong>כתובת:</strong> 17 Holland Street, Alexandria Bay, NY 13607
+        </div>
+        <a href="https://waze.com/ul?q=Riveredge%20Resort%2017%20Holland%20Street%20Alexandria%20Bay%20NY&navigate=yes" class="waze-link" target="_blank">🗺️ נווט למלון</a>
         <p><strong>מחיר:</strong> $333.00 (חדר משפחתי, 5 אורחים)</p>
         <p><strong>אישור:</strong> #331848 | <strong>ביטול עד:</strong> 27 ספט' 23:59</p>
         <p><strong>שימו לב:</strong> רק חדר אחד! צריך להזמין חדר נוסף</p>

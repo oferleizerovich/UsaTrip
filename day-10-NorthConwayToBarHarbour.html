@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 10 מעודכן - שישי 10.10 | לבר הארבור - מסלול מהיר ויעיל</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .departure {
+            background: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .improvement-note {
+            background: linear-gradient(135deg, #38a169, #68d391);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .time-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .duration-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .activity-col {
+            width: 180px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .details-col {
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .hotel-info {
+            background: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .hotel-info h3 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        .costs {
+            background: #e6fffa;
+            border: 1px solid #4fd1c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .costs h4 {
+            color: #234e52;
+            margin-top: 0;
+        }
+        
+        .important-note {
+            background: #fed7ed;
+            border: 2px solid #f687b3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .important-note h4 {
+            color: #97266d;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .alternative-box {
+            background: #fef5e7;
+            border: 2px solid #f6ad55;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .alternative-box h3 {
+            color: #c05621;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .waze-link {
+            background: #4285f4;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .waze-link:hover {
+            background: #3367d6;
+            color: white;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>יום 10 מעודכן - שישי 10.10</h1>
+            <h2>לבר הארבור - מסלול מהיר ויעיל</h2>
+            <div class="departure">יציאה: 09:00</div>
+        </div>
+
+        <div class="improvement-note">
+            ✅ המסלול עודכן! במקום הסיבוב הארוך לאגם ווילוביה - שתי אופציות מהירות יותר על הכביש הראשי
+        </div>
+
+        <div class="alternative-box">
+            <h3>🎯 שתי אלטרנטיבות מהירות במקום אגם ווילוביה:</h3>
+            <div class="grid-2">
+                <div>
+                    <h4>אופציה א': גשר פנובסקוט נארוס + פורט נוקס</h4>
+                    <ul>
+                        <li><strong>כתובת:</strong> 740 Fort Knox Rd, Prospect, ME 04981</li>
+                        <li><strong>מרחק מנורת' קונווי:</strong> 140 ק"מ (1.5 שעות)</li>
+                        <li><strong>זמן ביקור:</strong> 45-60 דקות</li>
+                        <li><strong>מיוחד:</strong> מצפה הגשרים הגבוה בעולם! 420 רגל גובה</li>
+                        <li><strong>כניסה:</strong> $5-15 (גילאים)</li>
+                    </ul>
+                    <a href="waze://?ll=44.56164,-68.81095&navigate=yes" class="waze-link">📍 פתח ב-Waze</a>
+                </div>
+                
+                <div>
+                    <h4>אופציה ב': הגנים הבוטניים של חוף מיין</h4>
+                    <ul>
+                        <li><strong>כתובת:</strong> 105 Botanical Gardens Drive, Boothbay, ME 04537</li>
+                        <li><strong>מרחק מנורת' קונווי:</strong> 160 ק"מ (2 שעות)</li>
+                        <li><strong>זמן ביקור:</strong> 1-1.5 שעות</li>
+                        <li><strong>מיוחד:</strong> הגן הבוטני הגדול בניו אינגלנד + טרולים ענקיים!</li>
+                        <li><strong>כניסה:</strong> $10-22 (גילאים)</li>
+                    </ul>
+                    <a href="waze://?ll=43.8721277,-69.6589985&navigate=yes" class="waze-link">📍 פתח ב-Waze</a>
+                </div>
+            </div>
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-11:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">נסיעה לאחת האופציות</td>
+                    <td class="details-col">
+                        <strong>אופציה א':</strong> נסיעה צפונית דרך I-95 North, יציאה 113, לגשר פנובסקוט (1.5 שעות)<br>
+                        <strong>אופציה ב':</strong> נסיעה צפונית דרך I-95 North, Route 1 North, Route 27 South לבוטביי (2 שעות)<br>
+                        <a href="waze://?ll=44.56164,-68.81095&navigate=yes" class="waze-link">Waze - גשר פנובסקוט</a>
+                        <a href="waze://?ll=43.8721277,-69.6589985&navigate=yes" class="waze-link">Waze - הגנים הבוטניים</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00-12:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">ביקור באתר שנבחר</td>
+                    <td class="details-col">
+                        <strong>גשר פנובסקוט:</strong> עליה למצפה הגשרים הגבוה בעולם (420 רגל), נוף 360 מעלות מדהים, ביקור בפורט נוקס ההיסטורי<br>
+                        <strong>הגנים הבוטניים:</strong> טיול בגן הבוטני הגדול בניו אינגלנד, חיפוש אחר 5 הטרולים הענקיים, כפר בתי הפיות
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30-13:30</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">ארוחת צהריים</td>
+                    <td class="details-col">ארוחת צהריים מהירה במקום או פיקניק עם המזון שקניתן. חיסכון בזמן למען הגעה מוקדמת לבר הארבור</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30-16:30</td>
+                    <td class="duration-col">3 שעות</td>
+                    <td class="activity-col">נסיעה לבר הארבור</td>
+                    <td class="details-col">
+                        נסיעה ישירה דרך Route 1 North ו-Route 3 South למונט דזרט איילנד. מעבר דרך עיירות חוף מיין הציוריות - בלפסט, קמדן, רוקלנד. נופים חופיים מדהימים!<br>
+                        <a href="waze://?ll=44.3876,-68.2039&navigate=yes" class="waze-link">Waze - בר הארבור</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:30-17:00</td>
+                    <td class="duration-col">30 דק</td>
+                    <td class="activity-col">צ'ק אין מוקדם</td>
+                    <td class="details-col">הגעה ל-Best Western Acadia Park Inn בלב בר הארבור. צ'ק אין מוקדם (רצוי), קבלת 2 החדרים, התארגנות מהירה לערב באכדיה</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:00-18:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">מרכז העיר בר הארבור</td>
+                    <td class="details-col">
+                        מרכז העיר בר הארבור - Main Street ההיסטורי: לובסטר מפורסם ב-Shaw's Wharf (נוף לפרענק'לין ביי), חנויות יוקרה ואמנות, גלריות מקומיות. הכנות לפארק אכדיה מחר - רכישת מפות, מידע על מזג אוויר<br>
+                        <a href="waze://?ll=44.3876,-68.2039&navigate=yes" class="waze-link">Waze - מרכז בר הארבור</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h3>פרטי האופציות החדשות:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>🌉 גשר פנובסקוט נארוס ומצפה:</h4>
+                    <ul>
+                        <li><strong>כתובת מלאה:</strong> 740 Fort Knox Road, Prospect, ME 04981</li>
+                        <li><strong>גובה המצפה:</strong> 420 רגל (128 מטר) - הגבוה בעולם!</li>
+                        <li><strong>נוף:</strong> 360 מעלות של נהר פנובסקוט, מיין הכפרי והרי המערב הרחוקים</li>
+                        <li><strong>מעלית:</strong> המעלית המהירה ביותר במיין - 42 קומות בדקות</li>
+                        <li><strong>פורט נוקס:</strong> מבצר גרניט היסטורי משנת 1844</li>
+                        <li><strong>זמן מומלץ:</strong> 45-75 דקות</li>
+                        <li><strong>מחירים:</strong> מבוגרים $9, ילדים $5</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>🌸 הגנים הבוטניים של חוף מיין:</h4>
+                    <ul>
+                        <li><strong>כתובת מלאה:</strong> 105 Botanical Gardens Drive, Boothbay, ME 04537</li>
+                        <li><strong>שטח:</strong> 295 דונם - הגן הבוטני הגדול בניו אינגלנד</li>
+                        <li><strong>האטרקציה המיוחדת:</strong> 5 טרולים ענקיים מעץ מחומרים ממוחזרים</li>
+                        <li><strong>כפר בתי הפיות:</strong> אלפי בתי פיות קטנים על החוף</li>
+                        <li><strong>שבילי טיול:</strong> קיירו, חסין לרגליים, נוף לאוקיינוס</li>
+                        <li><strong>זמן מומלץ:</strong> 1-2 שעות</li>
+                        <li><strong>מחירים:</strong> מבוגרים $22, ילדים $10</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>בר הארבור - הכנות לאכדיה:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>ההיסטוריה:</h4>
+                    <ul>
+                        <li>נוסדה: בכ-1796 כ-"Eden"</li>
+                        <li>שונה ל-Bar Harbor באמצע המאה ה-19</li>
+                        <li>התפתחות: ב-1918 התפתחה לאתר נופש לעשירי הצפון המזרח</li>
+                        <li>הרס הגדול: השריפה של 1947 השמידה 67 אחוזות ענק</li>
+                        <li>היום: עיר תייירות מטופחת עם 5,235 תושבים קבועים</li>
+                    </ul>
+                    
+                    <h4>הרחוב הראשי - Main Street:</h4>
+                    <ul>
+                        <li>אורך: מיל של חנויות יוקרה, גלריות ומסעדות במבנים ויקטוריאניים</li>
+                        <li>חנויות מיוחדות:</li>
+                        <ul>
+                            <li>Sherman's Books & Stationery (מ-1886)</li>
+                            <li>Bar Harbor Brewing Company (בירה מקומית)</li>
+                            <li>Lompoc Cafe (מוזיקה חיה)</li>
+                        </ul>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>מסעדות לובסטר מומלצות:</h4>
+                    <ul>
+                        <li><strong>Jordan's Restaurant</strong> (מ-1976): נוף הנמל הטוב ביותר<br>
+                        <a href="waze://?ll=44.3876,-68.2039&navigate=yes" class="waze-link">Waze</a></li>
+                        <li><strong>Side Street Cafe:</strong> אווירה מקומית אמיתית<br>
+                        <a href="waze://?ll=44.3876,-68.2039&navigate=yes" class="waze-link">Waze</a></li>
+                        <li><strong>Stewman's Lobster Pound:</strong> לובסטר בכל הצורות האפשריות<br>
+                        <a href="waze://?ll=44.3876,-68.2039&navigate=yes" class="waze-link">Waze</a></li>
+                        <li><strong>Shaw's Wharf:</strong> ממוקם על רציף עם נוף לפרענק'לין ביי<br>
+                        <a href="waze://?ll=44.3876,-68.2039&navigate=yes" class="waze-link">Waze</a></li>
+                    </ul>
+                    
+                    <h4>הכנות לפארק אכדיה:</h4>
+                    <ul>
+                        <li><strong>מפות:</strong> רכישה ב-Visitor Center או חנויות מקומיות</li>
+                        <li><strong>מזג אוויר:</strong> בדיקה לתכנון הזריחה מחר</li>
+                        <li><strong>ציוד:</strong> פנס ראש לזריחה, בגדים חמים, מים</li>
+                        <li><strong>דלק:</strong> מילוי טנק - תחנות הדלק יקרות יותר בבר הארבור</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel-info">
+            <h3>🏨 לינה: Best Western Acadia Park Inn</h3>
+            <div class="grid-2">
+                <div>
+                    <ul>
+                        <li><strong>כתובת:</strong> 4 Holland Avenue, Bar Harbor, ME 04981</li>
+                        <li><strong>מחיר:</strong> $1,914.04 (2 חדרים - 2 מלך + זוגיות, 4 אורחים)</li>
+                        <li><strong>אישור:</strong> #406878838</li>
+                        <li><strong>ביטול עד:</strong> 30 אוק' 16:00</li>
+                        <li><strong>מיקום:</strong> הליכה של 5 דקות מ-Main Street ומהנמל</li>
+                    </ul>
+                    <a href="waze://?ll=44.3898,-68.2059&navigate=yes" class="waze-link">📍 Waze - המלון</a>
+                </div>
+                
+                <div>
+                    <h4>שירותים במלון:</h4>
+                    <ul>
+                        <li>חניה חופשית (חשוב בבר הארבור!)</li>
+                        <li>בריכה מקורה ומכון כושר</li>
+                        <li>ארוחת בוקר חופשית (שימושי לזריחה המוקדמת מחר)</li>
+                        <li>WiFi חופשי</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="costs">
+            <h4>עלויות משוערות ליום:</h4>
+            <ul>
+                <li>דלק $75</li>
+                <li>ארוחות $180</li>
+                <li>כניסות $25-50 (תלוי באופציה שנבחרה)</li>
+            </ul>
+        </div>
+
+        <div class="important-note">
+            <h4>הערה חשובה:</h4>
+            <p><span class="highlight">הזריחה מחר ב-Cadillac Mountain מתחילה ב-04:30! הכינו הכל הערב.</span></p>
+            <p>📍 <a href="waze://?ll=44.3532,-68.2250&navigate=yes" class="waze-link">Waze - כביש הפארק לקדילק מאונטיין</a></p>
+        </div>
+    </div>
+</body>
+</html>
