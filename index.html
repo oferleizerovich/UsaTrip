@@ -1,423 +1,100 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="he">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>טיול משפחת ליזרובץ - שלכת ניו אינגלנד 2024</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            direction: rtl;
-            text-align: right;
-            margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .header {
-            text-align: center;
-            background: linear-gradient(135deg, #2c5282, #3182ce);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-        }
-        
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .header h2 {
-            margin: 15px 0 0 0;
-            font-size: 20px;
-            opacity: 0.9;
-        }
-        
-        .dates {
-            background: #f6ad55;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 25px;
-            display: inline-block;
-            font-weight: bold;
-            margin-top: 15px;
-            font-size: 18px;
-        }
-        
-        .section {
-            margin: 30px 0;
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 25px;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .section h3 {
-            color: #2d3748;
-            margin-top: 0;
-            font-size: 24px;
-            border-bottom: 2px solid #3182ce;
-            padding-bottom: 10px;
-        }
-        
-        .files-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .file-card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .file-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border-color: #3182ce;
-        }
-        
-        .file-card h4 {
-            margin: 0 0 10px 0;
-            color: #2d3748;
-            font-size: 18px;
-        }
-        
-        .file-card a {
-            text-decoration: none;
-            color: #3182ce;
-            font-weight: bold;
-            font-size: 16px;
-        }
-        
-        .file-card a:hover {
-            color: #2c5282;
-            text-decoration: underline;
-        }
-        
-        .file-card .description {
-            color: #718096;
-            font-size: 14px;
-            margin-top: 8px;
-        }
-        
-        .day-number {
-            background: linear-gradient(135deg, #38a169, #48bb78);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        
-        .summary-card {
-            background: linear-gradient(135deg, #805ad5, #b794f6);
-            color: white;
-        }
-        
-        .summary-card h4,
-        .summary-card a {
-            color: white;
-        }
-        
-        .summary-card .day-number {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        .stats {
-            background: #e6fffa;
-            border: 1px solid #4fd1c7;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        
-        .stats h4 {
-            color: #234e52;
-            margin-top: 0;
-        }
-        
-        .stat-item {
-            display: inline-block;
-            margin: 10px 20px;
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: #234e52;
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: #4a5568;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: #718096;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 40px;
-        }
-        
-        @media (max-width: 768px) {
-            .files-grid {
-                grid-template-columns: 1fr;
-            }
-            .header h1 {
-                font-size: 24px;
-            }
-            .container {
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>טיול משפחת ליזרובץ - אינדקס מסלול (מעודכן)</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; direction: rtl; text-align: right; margin: 0; padding: 20px;
+           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    .header { text-align: center; background: linear-gradient(135deg, #2c5282, #3182ce); color: white; padding: 40px 20px; border-radius: 15px; margin-bottom: 30px; }
+    .header h1 { margin: 0; font-size: 30px; font-weight: 800; }
+    .header h2 { margin: 6px 0 0; font-size: 18px; opacity: .95; }
+    .section { margin: 26px 0; background:#f8f9fa; border-radius: 10px; padding: 22px; border:1px solid #e2e8f0; }
+    .section h3 { color:#2d3748; margin:0 0 10px; font-size:22px; border-bottom:2px solid #3182ce; padding-bottom:8px; }
+    .files-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top: 14px; }
+    .file-card { background:white; border:1px solid #e2e8f0; border-radius:8px; padding:16px; transition:.2s; box-shadow:0 2px 4px rgba(0,0,0,.08); }
+    .file-card:hover{ transform: translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,.12); border-color:#3182ce; }
+    .file-card h4{ margin:0 0 8px; color:#2d3748; font-size:18px; }
+    .file-card a{ text-decoration:none; color:#3182ce; font-weight:700; font-size:16px; }
+    .file-card a:hover{ color:#2c5282; text-decoration: underline; }
+    .file-card .description{ color:#718096; font-size:14px; margin-top:6px; }
+    .day-number{ background: linear-gradient(135deg,#38a169,#48bb78); color:#fff; padding:4px 10px; border-radius:20px; font-size:13px; font-weight:700; display:inline-block; margin-bottom:8px; }
+    .footer { text-align:center; padding: 20px; color:#718096; border-top:1px solid #e2e8f0; margin-top: 24px; }
+    .map-box{ background:#e6fffa; border:1px solid #4fd1c7; border-radius:10px; padding:16px; margin-top:10px; text-align:center; }
+    .map-box a{ display:inline-block; background:#10b981; color:#fff; padding:10px 16px; border-radius:10px; font-weight:800; text-decoration:none; }
+    .map-box a:hover{ filter:brightness(.95); }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .btn { display:inline-block; background:#4a5568; color:#fff; padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none; }
+    .btn:hover{ filter:brightness(.95); }
+    @media (max-width: 768px){ .files-grid { grid-template-columns: 1fr; } .container{ padding:22px; } .header h1{ font-size:24px; } }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🍂 טיול משפחת ליזרובץ 🍂</h1>
-            <h2>שלכת ניו אינגלנד המרהיבה</h2>
-            <div class="dates">1-15 אוקטובר 2024</div>
-        </div>
-
-        <div class="stats">
-            <h4>סטטיסטיקות הטיול</h4>
-            <div class="stat-item">
-                <div class="stat-number">15</div>
-                <div class="stat-label">ימים</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">מדינות</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">25</div>
-                <div class="stat-label">קבצים</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">$11,806</div>
-                <div class="stat-label">עלות כוללת</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>📋 מסמכי סיכום</h3>
-            <div class="files-grid">
-                <div class="file-card summary-card">
-                    <div class="day-number">סיכום</div>
-                    <h4>סיכום מלונות וזמני ביטול</h4>
-                    <a href="סיכום_מלונות_וזמני_ביטול_מעוצב.html">צפה במסמך</a>
-                    <div class="description">פרטי כל המלונות, זמני ביטול ופעולות נדרשות</div>
-                </div>
-                
-                <div class="file-card summary-card">
-                    <div class="day-number">סיכום</div>
-                    <h4>סיכום עלויות יומיות</h4>
-                    <a href="סיכום_עלויות_יומיות_מעוצב.html">צפה במסמך</a>
-                    <div class="description">פירוט מלא של העלויות לפי יום וקטגוריה</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>📅 תוכנית יומית - שבוע ראשון</h3>
-            <div class="files-grid">
-                <div class="file-card">
-                    <div class="day-number">יום 1</div>
-                    <h4>רביעי 1.10 - איתקה וקורנל</h4>
-                    <a href="formatted_itinerary.html">צפה בתוכנית</a>
-                    <div class="description">הגעה לאיתקה, אוניברסיטת קורנל וגנים בוטניים</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 2א</div>
-                    <h4>חמישי 2.10 - יום כיפור אופציה א'</h4>
-                    <a href="day2_yom_kippur_option_a.html">צפה בתוכנית</a>
-                    <div class="description">אגמי האצבעות וקיאקים</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 2ב</div>
-                    <h4>חמישי 2.10 - יום כיפור אופציה ב'</h4>
-                    <a href="day2_yom_kippur_option_b.html">צפה בתוכנית</a>
-                    <div class="description">מנוחה ופעילויות קלות</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 3א</div>
-                    <h4>שישי 3.10 - ניאגרה אופציה א'</h4>
-                    <a href="day3_niagara_option_a.html">צפה בתוכנית</a>
-                    <div class="description">מפלי ניאגרה מצד קנדה</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 3ב</div>
-                    <h4>שישי 3.10 - ניאגרה אופציה ב'</h4>
-                    <a href="day3_niagara_option_b.html">צפה בתוכנית</a>
-                    <div class="description">מפלי ניאגרה מצד אמריקה</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 4.1</div>
-                    <h4>שבת 4.10 - אלכסנדריה ביי אופציה 1</h4>
-                    <a href="day4_saturday_option1.html">צפה בתוכנית</a>
-                    <div class="description">1000 איים ובולדט קאסל</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 4.2</div>
-                    <h4>שבת 4.10 - אלכסנדריה ביי אופציה 2</h4>
-                    <a href="day4_saturday_option2.html">צפה בתוכנית</a>
-                    <div class="description">מסלול קצר יותר</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 5.1</div>
-                    <h4>ראשון 5.10 - ורמונט אופציה 1</h4>
-                    <a href="day5_sunday_option1.html">צפה בתוכנית</a>
-                    <div class="description">סמאגלרס נוטש ומנספילד</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 5.2</div>
-                    <h4>ראשון 5.10 - ורמונט אופציה 2</h4>
-                    <a href="day5_sunday_option2.html">צפה בתוכנית</a>
-                    <div class="description">מסלול חלופי</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>🍁 שבוע שני - שלכת בשיא</h3>
-            <div class="files-grid">
-                <div class="file-card">
-                    <div class="day-number">יום 6</div>
-                    <h4>שני 6.10 - מנספילד ובן אנד ג'ריס</h4>
-                    <a href="day6_main_foliage_page1.html">צפה בתוכנית</a>
-                    <div class="description">שלכת בשיא היופי</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 6 - פירוט</div>
-                    <h4>מנספילד ובן אנד ג'ריס - פירוט מלא</h4>
-                    <a href="day6_mansfield_benjerrys_details.html">צפה בתוכנית</a>
-                    <div class="description">מידע מפורט על האטרקציות</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 6 - סטרלינג</div>
-                    <h4>בריכת סטרלינג - פירוט</h4>
-                    <a href="day6_sterling_pond_details.html">צפה בתוכנית</a>
-                    <div class="description">מידע על בריכת סטרלינג</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 7</div>
-                    <h4>שלישי 7.10 - הרים הלבנים לנורת' קונווי</h4>
-                    <a href="יום_7_הרים_הלבנים_לנורת_קונווי_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">פרנקוניה נוטש והר וושינגטון</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 8</div>
-                    <h4>רביעי 8.10 - נורת' קונווי יום הרים לבנים</h4>
-                    <a href="יום_8_נורת_קונווי_יום_הרים_לבנים_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">רכבת נופית ו-Diana's Baths</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 9</div>
-                    <h4>חמישי 9.10 - נורת' קונווי שלוש אופציות</h4>
-                    <a href="יום_9_נורת_קונווי_שלוש_אופציות_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">Lost River Gorge ו/או Arethusa Falls</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 10</div>
-                    <h4>שישי 10.10 - לבר הארבור דרך אגם ווילוביה</h4>
-                    <a href="יום_10_לבר_הארבור_דרך_אגם_ווילוביה_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">"הפיורד הקטן של ורמונט"</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 10 המשך</div>
-                    <h4>שישי 10.10 - המשך למיין</h4>
-                    <a href="יום_10_המשך_לבר_הארבור_דרך_אגם_ווילוביה_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">מידע נוסף על המעבר לחוף מיין</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 11</div>
-                    <h4>שבת 11.10 - פארק אכדיה תוכנית גמישה</h4>
-                    <a href="יום_11_פארק_אכדיה_תוכנית_גמישה_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">זריחה ראשונה בארה"ב מהר קדילק</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>🏁 שבוע שלישי - חזרה הביתה</h3>
-            <div class="files-grid">
-                <div class="file-card">
-                    <div class="day-number">יום 12</div>
-                    <h4>ראשון 12.10 - דרך לפורטלנד עם קמדן והרספוול</h4>
-                    <a href="יום_12_דרך_לפורטלנד_עם_קמדן_והרספוול_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">כפר הדייגים המקסים והגשר הייחודי</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 13</div>
-                    <h4>שני 13.10 - שתי אופציות למסלול</h4>
-                    <a href="יום_13_שתי_אופציות_למסלול_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">ניופורט או מיסטיק סיפורט</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 14</div>
-                    <h4>שלישי 14.10 - שתי אופציות המשך</h4>
-                    <a href="יום_14_שתי_אופציות_המשך_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">Cliff Walk ו-Frank Pepe Pizza האגדי</div>
-                </div>
-                
-                <div class="file-card">
-                    <div class="day-number">יום 15</div>
-                    <h4>רביעי 15.10 - יום הטיסה</h4>
-                    <a href="יום_15_יום_הטיסה_מעוצב.html">צפה בתוכנית</a>
-                    <div class="description">קניות אחרונות וטיסה חזרה לישראל</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p><strong>טיול משפחת ליזרובץ - שלכת ניו אינגלנד 2024</strong></p>
-            <p>נוצר ב-13 בספטמבר 2025 | כל הקבצים מעוצבים עם יישור RTL מושלם</p>
-            <p>🍂 זיכרונות לכל החיים 🍂</p>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1>🍂 טיול משפחת ליזרובץ – אינדקס מסלול (מעודכן)</h1>
+      <h2>כולל חצי שני של הטיול + קישורים למלונות ולעלויות</h2>
     </div>
+
+    <!-- Weeks and days -->
+    <div class="section">
+      <h3>📅 שבוע ראשון (ימים 1–7)</h3>
+      <div class="files-grid">
+        <div class="file-card"><div class="day-number">יום 1</div><h4>נחיתה ונסיעה לאיתקה</h4><a href="Day-1-Landing and driving towards ithica.html">פתח תוכנית</a><div class="description">EWR → איתקה</div></div>
+        <div class="file-card"><div class="day-number">יום 2א</div><h4>איתקה – אופציה א'</h4><a href="day-2-OptionA-Ithica.html">פתח תוכנית</a><div class="description">מפלים, קורנל</div></div>
+        <div class="file-card"><div class="day-number">יום 2ב</div><h4>באפלו – אופציה ב'</h4><a href="day-2-OptionB-Buffalo.html">פתח תוכנית</a><div class="description">סיור עירוני</div></div>
+        <div class="file-card"><div class="day-number">יום 3א</div><h4>ניאגרה – מאיתקה</h4><a href="day-3_OptionA-NiagraFallsFromIthica.html">פתח תוכנית</a><div class="description">מאחורי המפלים ושייט</div></div>
+        <div class="file-card"><div class="day-number">יום 3ב</div><h4>ניאגרה – מבאפלו</h4><a href="day-3_OptionB-NiagraFalls-FromBuffalo.html">פתח תוכנית</a><div class="description">מסלול מהיר</div></div>
+        <div class="file-card"><div class="day-number">יום 4א</div><h4>אלכסנדריה ביי – שייט</h4><a href="day-4_OptionA-AlexandriaBayBoatTrip.html">פתח תוכנית</a><div class="description">1000 איים</div></div>
+        <div class="file-card"><div class="day-number">יום 4ב</div><h4>אלכסנדריה ביי – הגעה אחה״צ</h4><a href="day-4_OptionB-AlexandriaBayAfterNoon.html">פתח תוכנית</a><div class="description">צ'ק-אין</div></div>
+        <div class="file-card"><div class="day-number">יום 5א</div><h4>בוקר יציאה לסטו</h4><a href="day-5_OptionA-LeavingToStowInTheMorning.html">פתח תוכנית</a><div class="description">Route 100</div></div>
+        <div class="file-card"><div class="day-number">יום 5ב</div><h4>שייט בוקר ואז סטו</h4><a href="day-5_OptionB-AlexandriaBayBoatTripThenStow.html">פתח תוכנית</a><div class="description">אלף האיים → ורמונט</div></div>
+        <div class="file-card"><div class="day-number">יום 6</div><h4>סטו והרי הירוק</h4><a href="day-6-Stow.html">פתח תוכנית</a><div class="description">Mansfield / Sterling Pond</div></div>
+        <div class="file-card"><div class="day-number">יום 7</div><h4>לכיוון הר וושינגטון</h4><a href="day-7-ToMountainWashington.html">פתח תוכנית</a><div class="description">פרנקוניה → Mt. Washington</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>🍁 שבוע שני (ימים 8–15)</h3>
+      <div class="files-grid">
+        <div class="file-card"><div class="day-number">יום 8</div><h4>נורת' קונווי – רכבת ונק׳ תצפית</h4><a href="day-8-NorthConway.html">פתח תוכנית</a><div class="description">Conway Scenic</div></div>
+        <div class="file-card"><div class="day-number">יום 9</div><h4>נורת' קונווי – אופציות</h4><a href="day-9-NorthConway.html">פתח תוכנית</a><div class="description">Lost River / Arethusa</div></div>
+        <div class="file-card"><div class="day-number">יום 10</div><h4>לבר הארבור</h4><a href="day-10-NorthConwayToBarHarbour.html">פתח תוכנית</a><div class="description">נסיעה וחופים</div></div>
+        <div class="file-card"><div class="day-number">יום 11</div><h4>אכדיה – שבת גמישה</h4><a href="day-11-AcadiaPark.html">פתח תוכנית</a><div class="description">Park Loop</div></div>
+        <div class="file-card"><div class="day-number">יום 12</div><h4>בר הארבור → פורטלנד</h4><a href="day-12-BarHarbourToPortland.html">פתח תוכנית</a><div class="description">Camden / Head Light</div></div>
+        <div class="file-card"><div class="day-number">יום 13</div><h4>פורטלנד → ניופורט</h4><a href="day-13-PortlanToNewPort.html">פתח תוכנית</a><div class="description">Cliff Walk</div></div>
+        <div class="file-card"><div class="day-number">יום 14</div><h4>ניופורט → ניו ג'רזי</h4><a href="day-14-NewportToNj.html">פתח תוכנית</a><div class="description">נסיעה דרומה</div></div>
+        <div class="file-card"><div class="day-number">יום 15</div><h4>שופינג, NYC וטיסה</h4><a href="day-15-ShoppingHomeAndNYC.html">פתח תוכנית</a><div class="description">Jersey Gardens → NYC</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>🗽 הארכת NYC (15–19.10)</h3>
+      <p style="margin:0;color:#4a5568">שהות בניו־יורק (SpringHill Suites – Times Square South) עד החזרה.</p>
+    </div>
+
+    <div class="section">
+      <h3>🗺️ מפת נסיעה כוללת – מתחילת המסלול ועד הסוף (כולל NYC)</h3>
+      <div class="map-box">
+        <p style="margin:8px 0 14px">EWR → Ithaca → Niagara Falls → Alexandria Bay → Stowe → North Conway → Bar Harbor → Portland → Newport → Newark Airport → NYC (Times Sq. South) → Newark Airport</p>
+        <a target="_blank" href="https://www.google.com/maps/dir/Newark+Liberty+International+Airport,+Newark,+NJ/Ithaca,+NY/Niagara+Falls,+ON/Alexandria+Bay,+NY/Stowe,+VT/North+Conway,+NH/Bar+Harbor,+ME/Portland,+ME/Newport,+RI/Residence+Inn+by+Marriott+Newark+Liberty+International+Airport/SpringHill+Suites+by+Marriott+New+York+Manhattan+Times+Square+South/Newark+Liberty+International+Airport,+Newark,+NJ">
+          פתח את המפה הכוללת
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>🧾 קישורים למסמכי עזר</h3>
+      <div class="actions">
+        <a class="btn" href="hotels.html">רשימת מלונות מעודכנת</a>
+        <a class="btn" href="CostEstimation.html">טבלת עלויות יומית</a>
+        <a class="btn" href="addresses_master.html">רשימת כתובות לכל הימים</a>
+      </div>
+    </div>
+
+    <div class="footer">מעודכן לפי המסמכים האחרונים. ניתן לערוך ולהרחיב לפי הצורך.</div>
+  </div>
 </body>
 </html>

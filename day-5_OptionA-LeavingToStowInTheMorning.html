@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 5 - ראשון 5.10 | לברלינגטון וסטו - אופציה 1: עבור שייט בשבת</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            line-height: 1.6;
+            max-width: 210mm;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .option-header {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #2980b9;
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .departure-info {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+        
+        .itinerary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .itinerary-table th,
+        .itinerary-table td {
+            border: 2px solid #bdc3c7;
+            padding: 12px;
+            vertical-align: top;
+        }
+        
+        .itinerary-table th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .time-column {
+            width: 15%;
+            text-align: center;
+            font-weight: bold;
+            background-color: #ecf0f1;
+        }
+        
+        .activity-column {
+            width: 20%;
+            text-align: right;
+            font-weight: bold;
+            background-color: #ecf0f1;
+        }
+        
+        .duration-column {
+            width: 10%;
+            text-align: center;
+            font-weight: bold;
+            background-color: #ecf0f1;
+        }
+        
+        .details-column {
+            width: 55%;
+            text-align: right;
+            line-height: 1.8;
+        }
+        
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .cost-info {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .waze-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: white !important;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px 0;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .waze-link:hover {
+            background-color: #0056b3;
+        }
+        
+        .address-info {
+            background-color: #f0f8ff;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 5px 0;
+            font-size: 14px;
+            border-right: 3px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">יום 5 - ראשון 5.10 | לברלינגטון וסטו</div>
+    
+    <div class="option-header">עבור אופציה 1 (שייט ביום שבת)</div>
+    <div class="departure-info">יציאה: 09:00</div>
+    
+    <table class="itinerary-table">
+        <thead>
+            <tr>
+                <th>זמן</th>
+                <th>פעילות</th>
+                <th>משך</th>
+                <th>פירוט מלא</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-column">09:00-11:30</td>
+                <td class="activity-column">נסיעה לברלינגטון</td>
+                <td class="duration-column">2.5 שעות</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>יעד:</strong> Burlington, VT (דרך Lake George)
+                    </div>
+                    <a href="https://waze.com/ul?q=Burlington%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ב-Waze</a>
+                    <br><br>
+                    נסיעה צפונה דרך הרי אדירונדקס הציוריים דרך I-87 North. נסיעה דרך Lake George (אגם מרהיב), Glens Falls, וכפרים הרריים קטנים. נוף סתווי מהמים עם שלכת מוקדמת
+                </td>
+            </tr>
+            <tr>
+                <td class="time-column">11:30-14:00</td>
+                <td class="activity-column">ברלינגטון + שלבורן</td>
+                <td class="duration-column">2.5 שעות</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>מרכז העיר:</strong> Church Street Marketplace, Burlington, VT 05401
+                    </div>
+                    <a href="https://waze.com/ul?q=Church%20Street%20Marketplace%20Burlington%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט למרכז</a>
+                    <br><br>
+                    <div class="address-info">
+                        <strong>נמל:</strong> Waterfront Park, Burlington, VT 05401
+                    </div>
+                    <a href="https://waze.com/ul?q=Waterfront%20Park%20Burlington%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט לנמל</a>
+                    <br><br>
+                    <div class="address-info">
+                        <strong>מוזיאון:</strong> Shelburne Museum, 6000 Shelburne Rd, Shelburne, VT 05482
+                    </div>
+                    <a href="https://waze.com/ul?q=Shelburne%20Museum%206000%20Shelburne%20Rd%20Shelburne%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט למוזיאון</a>
+                    <br><br>
+                    ברלינגטון - "הפנינה של ורמונט": Church Street Marketplace (מהרחוב 4 בלוקים עם חנויות מקומיות), Waterfront Park עם נוף לאגם שמפליין. Shelburne Museum (10 דקות דרומית) - המוזיאון הגדול ביותר בצפון ניו אינגלנד עם ספינת הקיטור Ticonderoga ב-67 מטר אורך
+                </td>
+            </tr>
+            <tr>
+                <td class="time-column">14:30-15:10</td>
+                <td class="activity-column">נסיעה למונפלייר</td>
+                <td class="duration-column">40 דק</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>יעד:</strong> Montpelier, VT
+                    </div>
+                    <a href="https://waze.com/ul?q=Montpelier%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ב-Waze</a>
+                    <br><br>
+                    נסיעה קצרה דרך כביש 89 דרך כפרים ורמונטיים קלאסיים (Waterbury, Montpelier Junction) לבירת המדינה הקטנה ביותר בארה"ב
+                </td>
+            </tr>
+            <tr>
+                <td class="time-column">15:10-16:10</td>
+                <td class="activity-column">מונפלייר - Vermont State House</td>
+                <td class="duration-column">1 שעה</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>בית המדינה:</strong> Vermont State House, 115 State St, Montpelier, VT 05633
+                    </div>
+                    <a href="https://waze.com/ul?q=Vermont%20State%20House%20115%20State%20St%20Montpelier%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט לבית המדינה</a>
+                    <br><br>
+                    <div class="address-info">
+                        <strong>תצפית:</strong> Hubbard Park Stone Tower, Montpelier, VT
+                    </div>
+                    <a href="https://waze.com/ul?q=Hubbard%20Park%20Stone%20Tower%20Montpelier%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט לתצפית</a>
+                    <br><br>
+                    מונפלייר - בירת ורמונט עם 8,000 תושבים בלבד! Vermont State House עם כיפת זהב מ-1938 (1859), Main Street עם גלריות ובתי קפה, Hubbard Park עם Stone Tower לתצפית 360 מעלות על הרי ורמונט
+                </td>
+            </tr>
+            <tr>
+                <td class="time-column">16:30-17:30</td>
+                <td class="activity-column">נסיעה לסטו</td>
+                <td class="duration-column">1 שעה</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>יעד:</strong> Stowe, VT (דרך Route 100)
+                    </div>
+                    <a href="https://waze.com/ul?q=Stowe%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ב-Waze</a>
+                    <br><br>
+                    <div class="address-info">
+                        <strong>עצירות אופציונליות:</strong> Waitsfield, VT או Warren, VT
+                    </div>
+                    <a href="https://waze.com/ul?q=Waitsfield%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ל-Waitsfield</a>
+                    <br><br>
+                    נסיעה דרך כבישים נופיים בהרי Green Mountains דרך Route 100 - הכביש הנופי ביותר בורמונט. עצירות אופציונליות בכפרים: Waitsfield, Warren
+                </td>
+            </tr>
+            <tr>
+                <td class="time-column">17:30-18:30</td>
+                <td class="activity-column">צ'ק אין במלון</td>
+                <td class="duration-column">1 שעה</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>כתובת:</strong> Smugglers Notch Vacation Home, Morses Mill, Cambridge, VT 05444
+                    </div>
+                    <a href="https://waze.com/ul?q=Morses%20Mill%20Cambridge%20VT%2005444&navigate=yes" class="waze-link" target="_blank">🗺️ נווט לבית הנופש</a>
+                    <br><br>
+                    הגעה לבית הנופש Smugglers Notch vacation home ליד Morses Mill, Cambridge. בית עם 5 חדרי שינה במיקום מבודד בין ההרים, נוף מרהיב
+                </td>
+            </tr>
+            <tr>
+                <td class="time-column">19:00-21:00</td>
+                <td class="activity-column">Cold Hollow Cider Mill + Cabot</td>
+                <td class="duration-column">2 שעות</td>
+                <td class="details-column">
+                    <div class="address-info">
+                        <strong>כתובת:</strong> Cold Hollow Cider Mill, 3600 Waterbury-Stowe Rd, Waterbury, VT 05676
+                    </div>
+                    <a href="https://waze.com/ul?q=Cold%20Hollow%20Cider%20Mill%203600%20Waterbury%20Stowe%20Rd%20Waterbury%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ל-Cold Hollow</a>
+                    <br><br>
+                    <div class="address-info">
+                        <strong>כתובת:</strong> Cabot Cheese Store, 2878 Waterbury Stowe Rd, Waterbury, VT 05676
+                    </div>
+                    <a href="https://waze.com/ul?q=Cabot%20Cheese%20Store%202878%20Waterbury%20Stowe%20Rd%20Waterbury%20VT&navigate=yes" class="waze-link" target="_blank">🗺️ נווט ל-Cabot</a>
+                    <br><br>
+                    Cold Hollow Cider Mill (Waterbury) - דונאטס סיידר חמים מפורסמים בכל ורמונט + Cabot Cheese Store - גבינות ורמונט המפורסמות בעולם (cheddar חד במיוחד)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="info-section">
+        <h3 style="text-align: center; color: #2c3e50;">פירוט מלא - ברלינגטון וסטו</h3>
+        
+        <h4>ברלינגטון - הפנינה של ורמונט:</h4>
+        <p><strong>מיקום:</strong> בגדות אגם שמפליין, העיר הגדולה בורמונט (42,000 תושבים)</p>
+        
+        <p><strong>אטרקציות עיקריות:</strong></p>
+        <p>• Church Street Marketplace: מהרחוב 4 בלוקים - Flynn Center for the Performing Arts, Lake Champlain Chocolates, Burton Snowboards flagship store</p>
+        <p>• Waterfront Park: ECHO Leahy Center for Lake Champlain (מוזיאון מדעי ואקווריום), Spirit of Ethan Allen (שייט), שביל אופניים 13 מ"ק</p>
+        <p>• University of Vermont: קמפוס יפה עם נוף לאגם ולהרי Adirondacks</p>
+        
+        <p><strong>Shelburne Museum (10 דקות מברלינגטון):</strong> המוזיאון הגדול ביותר בצפון ניו אינגלנד עם 100,000 חפצים על 45 דונם. כולל 39 מבנים, 25 מהם היסטוריים שהועברו למקום:</p>
+        <p>• ספינת הקיטור Ticonderoga באורך 67 מטר</p>
+        <p>• יציר ות של מונה, מאנה והגה</p>
+        <p>• כפר אמריקאי משוחזר מהמאה ה-19</p>
+        
+        <h4>מונפלייר - הבירה הקטנה ביותר:</h4>
+        <p>• Vermont State House: נבנה ב-1859, כיפת זהב מ-1938, סיורים חופשיים</p>
+        <p>• Main Street מרכז העיר: עם גלריות, בתי קפה וחנויות אמנות</p>
+        <p>• Hubbard Park: Stone Tower - תצפית 360 מעלות על הרי ורמונט</p>
+        
+        <h4>אזור סטו:</h4>
+        <p>• Smugglers Notch: מעבר הררי צר ודרמטי בין פסגות הרים</p>
+        <p>• Stowe Village: כפר סקי מפורסם עם חנויות, מסעדות ויקבי בירה מקומיים</p>
+    </div>
+
+    <div class="cost-info">עלויות משוערות ליום: דלק $95, ארוחות $170, כניסות $55</div>
+</body>
+</html>

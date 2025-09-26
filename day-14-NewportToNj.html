@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יום 14 - שלישי 14.10 | שלוש אופציות המשך</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .departure {
+            background: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .option-header {
+            background: linear-gradient(135deg, #38a169, #48bb78);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .option-2 { background: linear-gradient(135deg, #805ad5, #b794f6); }
+        .option-3 { background: linear-gradient(135deg, #e53e3e, #fc8181); }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .time-col {
+            background: #bee3f8;
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .duration-col {
+            background: #fbb6ce;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .activity-col {
+            width: 180px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .details-col {
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-box h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .pizza-info {
+            background: #fef5e7;
+            border: 2px solid #f6ad55;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .pizza-info h3 {
+            color: #c05621;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .hotel-info {
+            background: #f0fff4;
+            border: 1px solid #68d391;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .hotel-info h3 {
+            color: #2f855a;
+            margin-top: 0;
+        }
+        
+        .costs {
+            background: #e6fffa;
+            border: 1px solid #4fd1c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .costs h4 {
+            color: #234e52;
+            margin-top: 0;
+        }
+        
+        .final-note {
+            background: #fed7ed;
+            border: 2px solid #f687b3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .final-note h4 {
+            color: #97266d;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .waze-link {
+            background: #4285f4;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .waze-link:hover {
+            background: #3367d6;
+            color: white;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .grid-2 { grid-template-columns: 1fr; gap: 10px; }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>יום 14 - שלישי 14.10</h1>
+            <h2>שלוש אופציות המשך</h2>
+        </div>
+
+        <div class="option-header">
+            עבור אופציה 1 (ניופורט יום מלא ביום שני)
+        </div>
+        <div class="departure">יציאה: 08:30</div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">08:30-11:00</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">נסיעה עם עצירה</td>
+                    <td class="details-col">
+                        נסיעה מניופורט צפונה דרך I-95 North עם עצירה בקונטיקט ההיסטורי. מעבר דרך עיירות חוף קטנות ויפות<br>
+                        <strong>יעד ביניים:</strong> New London, CT 06320<br>
+                        <a href="waze://?ll=41.3556,-72.0995&navigate=yes" class="waze-link">📍 Waze - New London</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00-12:00</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">New London - עיר נמל היסטורית</td>
+                    <td class="details-col">
+                        <strong>כתובת מרכז:</strong> Bank St & State St, New London, CT 06320<br>
+                        עיר נמל היסטורית על נהר Thames, Connecticut. אטרקציות: Union Station (1887) - תחנת רכבת יפהפיה בסגנון רומנסק, עם גשרים היסטוריים, מרכז עיר מחודש עם חנויות ובתי קפה מקומיים<br>
+                        <a href="waze://?ll=41.3523,-72.0989&navigate=yes" class="waze-link">📍 Waze - Union Station</a><br>
+                        <a href="waze://?ll=41.3556,-72.0995&navigate=yes" class="waze-link">📍 Waze - מרכז העיר</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:15-14:15</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">Guilford Center</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> Guilford Green, Guilford, CT 06437<br>
+                        עיירה קולוניאלית מושלמת, "הכפר האמריקאי המושלם". Town Green מרכזי מוקף בבתים לבנים ממאה ה-17-18, Guilford Handcraft Center, חנויות אנטיק אמיתיות, אווירה של ניו אינגלנד הקלאסית<br>
+                        <a href="waze://?ll=41.2881,-72.6806&navigate=yes" class="waze-link">📍 Waze - Guilford Green</a><br>
+                        <a href="waze://?ll=41.2875,-72.6798&navigate=yes" class="waze-link">📍 Waze - Handcraft Center</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:15-15:15</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">New Haven - Frank Pepe Pizzeria</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> 157 Wooster St, New Haven, CT 06511<br>
+                        <span class="highlight">האגדה! הפיצריה!</span> Frank Pepe Pizzeria - המקורית מ-1925 ב-157 Wooster Street. הפיצה הטובה בעולם לפי רבים. White Clam Pizza ללא רוטב עגבניות - הסימן המסחרי, תנור פחם מקורי מ-1925 ב-540°C. חוויה קולינרית אמיתית!<br>
+                        <a href="waze://?ll=41.3080,-72.9279&navigate=yes" class="waze-link">📍 Waze - Frank Pepe Pizzeria</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:00-18:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">נסיעה לניו ג'רזי</td>
+                    <td class="details-col">
+                        נסיעה לניו ג'רזי דרך I-95 North ו-I-287 West. מעבר דרך ניו יורק (מנהטן נראה מרחוק), וכניסה לניו ג'רזי - המדינה עם הצפיפות הגבוהה ביותר בארה"ב<br>
+                        <strong>יעד:</strong> Elizabeth, NJ (קרוב לנתב"ג ניוארק)<br>
+                        <a href="waze://?ll=40.6640,-74.2107&navigate=yes" class="waze-link">📍 Waze - Elizabeth, NJ</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:30-20:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">ארוחת ערב ומנוחה</td>
+                    <td class="details-col">
+                        ארוחת ערב ומנוחה באזור נתב"ג ניוארק. אזור Elizabeth עם מסעדות מגוונות המשרתות את נוסעי שדה התעופה. הכנות לטיסה מחר<br>
+                        <strong>מסעדות מומלצות באזור:</strong><br>
+                        • Fornos of Spain: 47 Ferry St, Newark, NJ<br>
+                        <a href="waze://?ll=40.7282,-74.1738&navigate=yes" class="waze-link">📍 Waze - Fornos of Spain</a><br>
+                        • Spirito's: 714 2nd Ave, Elizabeth, NJ<br>
+                        <a href="waze://?ll=40.6640,-74.2107&navigate=yes" class="waze-link">📍 Waze - Spirito's</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="option-header option-2">
+            עבור אופציה 2 (מסלול נופים ביום שני)
+        </div>
+        <div class="departure">יציאה: 09:00</div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-11:30</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">The Cliff Walk</td>
+                    <td class="details-col">
+                        <strong>כתובת התחלה:</strong> Memorial Boulevard, Newport, RI 02840<br>
+                        המסלול המפורסם בעולם שלא עשיתם אתמול! הפעילות הראשית בניופורט: שביל 5.6 ק"מ לאורך הצוקים בין האוקיינוס לאחוזות המיליונרים. התמקדות בקטע החובה עם האחוזות המפורסמות<br>
+                        <a href="waze://?ll=41.4751,-71.2947&navigate=yes" class="waze-link">📍 Waze - תחילת Cliff Walk</a><br>
+                        <a href="waze://?ll=41.4656,-71.2877&navigate=yes" class="waze-link">📍 Waze - The Breakers</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:00-13:00</td>
+                    <td class="duration-col">1 שעה</td>
+                    <td class="activity-col">ארוחת צהריים</td>
+                    <td class="details-col">
+                        ארוחת צהריים בניופורט במסעדה מקומית. מומלצות: The Red Parrot (ליד הנמל), Salvation Cafe (אווירה צעירה), או Benjamin's (גורמה)<br>
+                        <strong>The Red Parrot:</strong> 348 Thames St, Newport, RI 02840<br>
+                        <a href="waze://?ll=41.4893,-71.3126&navigate=yes" class="waze-link">📍 Waze - The Red Parrot</a><br>
+                        <strong>Salvation Cafe:</strong> 140 Broadway, Newport, RI 02840<br>
+                        <a href="waze://?ll=41.4875,-71.3087&navigate=yes" class="waze-link">📍 Waze - Salvation Cafe</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:00-15:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">נסיעה ל-New Haven</td>
+                    <td class="details-col">
+                        נסיעה ל-New Haven דרך I-95 North. מעבר דרך חוף קונטיקט עם עיירות קטנות ונופי חוף<br>
+                        <strong>יעד:</strong> New Haven, CT 06511<br>
+                        <a href="waze://?ll=41.3080,-72.9279&navigate=yes" class="waze-link">📍 Waze - New Haven</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00-17:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">Frank Pepe Pizzeria - הפיצה הטובה בעולם!</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> 157 Wooster St, New Haven, CT 06511<br>
+                        חוויה קולינרית בלתי נשכחת! הפיצה הטובה בעולם - כולל הנסיעה המיוחדת לשם<br>
+                        <a href="waze://?ll=41.3080,-72.9279&navigate=yes" class="waze-link">📍 Waze - Frank Pepe Pizzeria</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:00-18:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">נסיעה לניו ג'רזי</td>
+                    <td class="details-col">
+                        נסיעה לניו ג'רזי עם הגעה למלון קרוב לנתב"ג<br>
+                        <strong>יעד:</strong> Elizabeth, NJ area<br>
+                        <a href="waze://?ll=40.6640,-74.2107&navigate=yes" class="waze-link">📍 Waze - Elizabeth, NJ</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:30-20:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">ארוחת ערב ומנוחה</td>
+                    <td class="details-col">
+                        ארוחת ערב ומנוחה לפני הטיסה<br>
+                        <a href="waze://?ll=40.7282,-74.1738&navigate=yes" class="waze-link">📍 Waze - אזור מסעדות</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="option-header option-3">
+            עבור אופציה 3 (פיצה ושקיעה על מנהטן)
+        </div>
+        <div class="departure">יציאה: 09:00</div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>זמן</th>
+                    <th>משך</th>
+                    <th>פעילות</th>
+                    <th>פירוט מלא</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00-11:00</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">נסיעה ל-New Haven</td>
+                    <td class="details-col">
+                        נסיעה ישירה מניופורט ל-New Haven דרך I-95 North. מעבר דרך קונטיקט עם נופי חוף יפים<br>
+                        <strong>יעד:</strong> New Haven, CT 06511<br>
+                        <a href="waze://?ll=41.3080,-72.9279&navigate=yes" class="waze-link">📍 Waze - New Haven</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00-13:30</td>
+                    <td class="duration-col">2.5 שעות</td>
+                    <td class="activity-col">Frank Pepe Pizzeria - הפיצה הטובה בעולם!</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> 157 Wooster St, New Haven, CT 06511<br>
+                        <span class="highlight">החוויה הקולינרית של החיים!</span> Frank Pepe Pizzeria - המקורית מ-1925. White Clam Pizza ללא רוטב עגבניות, תנור פחם מקורי ב-540°C. זמן ארוך יותר ליהנות מהאווירה ולנסות כמה סוגי פיצה<br>
+                        <a href="waze://?ll=41.3080,-72.9279&navigate=yes" class="waze-link">📍 Waze - Frank Pepe Pizzeria</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:30-16:30</td>
+                    <td class="duration-col">3 שעות</td>
+                    <td class="activity-col">נסיעה לפארק הצופה על מנהטן</td>
+                    <td class="details-col">
+                        נסיעה ישירה מ-New Haven ל-Liberty State Park בניו ג'רזי - המקום הטוב ביותר לצפייה על קו הרקיע של מנהטן ופסל החירות. המסלול דרך I-95 ו-I-287<br>
+                        <strong>יעד:</strong> Liberty State Park, Jersey City, NJ<br>
+                        <a href="waze://?ll=40.6972,-74.0447&navigate=yes" class="waze-link">📍 Waze - Liberty State Park</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:30-18:30</td>
+                    <td class="duration-col">2 שעות</td>
+                    <td class="activity-col">Liberty State Park - שקיעה על מנהטן</td>
+                    <td class="details-col">
+                        <strong>כתובת:</strong> 200 Morris Pesin Dr, Jersey City, NJ 07305<br>
+                        <span class="highlight">השקיעה הכי יפה על מנהטן!</span> הנוף הטוב ביותר על קו הרקיע של מנהטן, פסל החירות, Ellis Island. חנייה חופשית, שבילי הליכה יפים, ואפשרות לפיקניק מול הנוף<br>
+                        <strong>זמן שקיעה באוקטובר:</strong> 18:15 בערך<br>
+                        <a href="waze://?ll=40.6972,-74.0447&navigate=yes" class="waze-link">📍 Waze - Liberty State Park</a><br>
+                        <a href="waze://?ll=40.6955,-74.0434&navigate=yes" class="waze-link">📍 Waze - נקודת התצפית הטובה</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-col">19:00-20:30</td>
+                    <td class="duration-col">1.5 שעות</td>
+                    <td class="activity-col">נסיעה למלון</td>
+                    <td class="details-col">
+                        נסיעה קצרה מהפארק למלון באזור Elizabeth/Newark. מרחק קצר של כ-30 דקות<br>
+                        <strong>יעד:</strong> Elizabeth, NJ area<br>
+                        <a href="waze://?ll=40.6640,-74.2107&navigate=yes" class="waze-link">📍 Waze - אזור המלון</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h3>🌅 Liberty State Park - פירוט מלא:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>המיקום והנוף:</h4>
+                    <ul>
+                        <li><strong>כתובת:</strong> 200 Morris Pesin Dr, Jersey City, NJ 07305</li>
+                        <li>גודל: 1,212 אקר על קו החוף של ניו ג'רזי</li>
+                        <li><strong>הנוף:</strong> מנהטן במלואה, פסל החירות, Ellis Island</li>
+                        <li>אחד הנופים הטובים ביותר על NYC בעולם</li>
+                        <li>חנייה חופשית!</li>
+                    </ul>
+                    
+                    <h4>מה לעשות בפארק:</h4>
+                    <ul>
+                        <li><strong>Liberty Walk:</strong> שביל הליכה של 2 מייל לאורך החוף</li>
+                        <li>פיקניק עם נוף על מנהטן</li>
+                        <li>צילומים מול הרקע של NYC</li>
+                        <li>ביקור במרכז המבקרים (Central Railroad Terminal)</li>
+                        <li>שקיעה מדהימה (18:15 באוקטובר)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>היסטוריה מעניינת:</h4>
+                    <ul>
+                        <li>פתח ב-1976 יום העצמאות ה-200</li>
+                        <li>שוחזר מאזור תעשייתי נטוש</li>
+                        <li>Central Railroad Terminal (1889) - מסוף רכבת היסטורי</li>
+                        <li>נקודת יציאה למעבורות לפסל החירות</li>
+                    </ul>
+                    
+                    <h4>טיפים לביקור:</h4>
+                    <ul>
+                        <li>הגיעו 30 דקות לפני השקיעה</li>
+                        <li>קחו שמיכה לפיקניק</li>
+                        <li>המקום הטוב ביותר: Liberty Walk waterfront</li>
+                        <li>חניה בכניסה הראשית</li>
+                        <li>שירותים ומזנון זמינים</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h4>למה זה הנוף הטוב ביותר על מנהטן:</h4>
+            <ul>
+                <li>מרחק מושלם - לא רחוק מדי, לא קרוב מדי</li>
+                <li>רואים את כל קו הרקיע מדרום לצפון</li>
+                <li>פסל החירות בחזית</li>
+                <li>גישה חופשית בלי תשלום</li>
+                <li>פחות תיירים מ-Brooklyn Bridge Park</li>
+            </ul>
+        </div>
+
+        <div class="pizza-info">
+            <h3>Frank Pepe Pizzeria - פירוט מלא:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>ההיסטוריה:</h4>
+                    <ul>
+                        <li><strong>כתובת:</strong> 157 Wooster St, New Haven, CT 06511</li>
+                        <li>נוסדה: ב-1925 על ידי פרנק פפה, מהגר איטלקי מאיסקיה</li>
+                        <li>המיקום: 157 Wooster Street, New Haven</li>
+                        <li>ההשפעה: יצרה את "New Haven Style Pizza" (נקרא גם "Apizza")</li>
+                        <li>הבנייין המקורי</li>
+                    </ul>
+                    
+                    <h4>הפיצה המיוחדת:</h4>
+                    <ul>
+                        <li><strong>הסימן המסחרי:</strong> White Clam Pizza</li>
+                        <li>ללא רוטב עגבניות בכלל</li>
+                        <li>צדפות טריות מחוף קונטיקט</li>
+                        <li>שום, שמן זית, גבינת מוצרלה ופרמזן</li>
+                        <li>עשבי תיבול איטלקיים</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>התנור המקורי:</h4>
+                    <ul>
+                        <li><strong>Coal Oven:</strong> (תנור פחם)</li>
+                        <li>תנור מקורי מ-1925</li>
+                        <li>טמפרטורה: 540°C (1,000°F)</li>
+                        <li>זמן אפיית: 2-3 דקות בלבד</li>
+                        <li>רק כמה תנורי פחם נותרו בארה"ב</li>
+                    </ul>
+                    
+                    <h4>המיוחדות:</h4>
+                    <ul>
+                        <li>תור תמיד - אין הזמנות מראש</li>
+                        <li>"charred bubbles" - פיצות דקות עם פסגות מפוחמות</li>
+                        <li>מוגשת על מגשי אלומיניום חמים</li>
+                        <li>אין לפרוס - אוכלים ביד</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h4>טיפים:</h4>
+            <ul>
+                <li>הגיעו עם סבלנות - התור יכול להיות ארוך</li>
+                <li>הזמינו גם Regular Tomato Pizza להשוואה</li>
+                <li>אל תבקשו לפרוס - זה נגד הפילוסופיה</li>
+            </ul>
+            <a href="waze://?ll=41.3080,-72.9279&navigate=yes" class="waze-link">📍 Waze - Frank Pepe Pizzeria</a>
+        </div>
+
+        <div class="info-box">
+            <h3>המעבר לניו ג'רזי:</h3>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>המסלול:</h4>
+                    <ul>
+                        <li><strong>נתיב:</strong> I-95 North ל-I-287 West</li>
+                        <li>דרך I-95 North, מעבר דרך ברונקס וניו יורק</li>
+                        <li>נופים בדרך: קו הרקיע של מנהטן (מרחוק)</li>
+                        <li>George Washington Bridge</li>
+                        <li>זמן נסיעה: 1.5-2.5 שעות תלוי בתנועה</li>
+                    </ul>
+                    
+                    <h4>אזור Elizabeth/Newark:</h4>
+                    <ul>
+                        <li><strong>כתובת כללית:</strong> Elizabeth, NJ 07201</li>
+                        <li>שדה התעופה השלישי בגודלו בארה"ב</li>
+                        <li>אזור תעשייתי עם מסעדות מגוונות</li>
+                        <li>קרוב ל-Jersey Gardens Outlets למחר</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>מסעדות מומלצות באזור:</h4>
+                    <ul>
+                        <li><strong>Fornos of Spain</strong> (ספרדית, מ-1956):<br>
+                        47 Ferry St, Newark, NJ 07105<br>
+                        <a href="waze://?ll=40.7282,-74.1738&navigate=yes" class="waze-link">📍 Waze</a></li>
+                        <li><strong>Hobby's Delicatessen</strong> (מזרח אירופית):<br>
+                        32 Branford Pl, Newark, NJ 07102<br>
+                        <a href="waze://?ll=40.7327,-74.1707&navigate=yes" class="waze-link">📍 Waze</a></li>
+                        <li><strong>Spirito's</strong> (איטלקית משפחתית):<br>
+                        714 2nd Ave, Elizabeth, NJ 07202<br>
+                        <a href="waze://?ll=40.6640,-74.2107&navigate=yes" class="waze-link">📍 Waze</a></li>
+                    </ul>
+                    
+                    <h4>Guilford Center - הכפר המושלם:</h4>
+                    <ul>
+                        <li><strong>כתובת:</strong> Guilford Green, CT 06437</li>
+                        <li>נוסד ב-1639</li>
+                        <li>שימר את האופי הקולוניאלי המקורי</li>
+                        <li>Town Green מתקופת ההתנחלות</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>מבנים היסטוריים ב-Guilford Center:</h3>
+            <ul>
+                <li><strong>Henry Whitfield House</strong> (1639) - הבית האבן הקדום ביותר בניו אינגלנד:<br>
+                248 Old Whitfield St, Guilford, CT 06437<br>
+                <a href="waze://?ll=41.2881,-72.6820&navigate=yes" class="waze-link">📍 Waze</a></li>
+                <li><strong>First Congregational Church</strong> (1829):<br>
+                122 Broad St, Guilford, CT 06437<br>
+                <a href="waze://?ll=41.2877,-72.6801&navigate=yes" class="waze-link">📍 Waze</a></li>
+                <li>בתים לבנים קלאסיים ממאות ה-17-18</li>
+            </ul>
+            
+            <h4>חנויות ואמנות:</h4>
+            <ul>
+                <li><strong>Guilford Handcraft Center</strong> - אמנים מקומיים:<br>
+                411 Church St, Guilford, CT 06437<br>
+                <a href="waze://?ll=41.2875,-72.6798&navigate=yes" class="waze-link">📍 Waze</a></li>
+                <li>חנויות אנטיק אמיתיות (לא תיירותיות)</li>
+                <li><strong>Bishop's Orchard</strong> - פירות מקומיים ומאפיה:<br>
+                1355 Boston Post Rd, Guilford, CT 06437<br>
+                <a href="waze://?ll=41.2698,-72.6445&navigate=yes" class="waze-link">📍 Waze</a></li>
+            </ul>
+        </div>
+
+        <div class="hotel-info">
+            <h3>🏨 לינה: Residence Inn Newark Elizabeth/Liberty International Airport, NJ</h3>
+            <ul>
+                <li><strong>כתובת:</strong> 83 International Blvd, Elizabeth, NJ 07201</li>
+                <li>מיקום: ליד נתב"ג ניוארק</li>
+                <li>יתרון: קרוב לשדה התעופה ולקניות מחר ב-Jersey Gardens Outlets</li>
+                <li>שירותים: WiFi חופשי, בריכה, מכון כושר</li>
+            </ul>
+            <a href="waze://?ll=40.6640,-74.2107&navigate=yes" class="waze-link">📍 Waze - מלון Elizabeth</a>
+        </div>
+
+        <div class="costs">
+            <h4>עלויות משוערות ליום:</h4>
+            <ul>
+                <li>דלק $80</li>
+                <li>ארוחות $160</li>
+                <li>כניסות $40</li>
+            </ul>
+        </div>
+
+        <div class="final-note">
+            <h4>מחר - יום הטיסה האחרון!</h4>
+        </div>
+    </div>
+</body>
+</html>
