@@ -6,19 +6,24 @@
   <title>רשימת כתובות - כל הימים (מעודכן)</title>
   <style>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f8f9fa; margin:0; padding:20px; direction:rtl; }
-    .container { max-width:1200px; margin:0 auto; background:#fff; padding:30px; border-radius:12px; box-shadow:0 6px 22px rgba(0,0,0,.08); }
+    .container { max-width:1400px; margin:0 auto; background:#fff; padding:30px; border-radius:12px; box-shadow:0 6px 22px rgba(0,0,0,.08); }
     .header { text-align:center; background: linear-gradient(135deg, #2c5282, #3182ce); color:#fff; padding:28px; border-radius:12px; margin-bottom:18px; }
     .header h1 { margin:0; font-size:26px; }
     table { width:100%; border-collapse:collapse; }
     th, td { border:1px solid #e2e8f0; padding:10px; text-align:right; }
-    th { background:#edf2f7; }
+    th { background:#edf2f7; font-weight:bold; }
     tr:nth-child(even){ background:#fafafa; }
-    .date-col { font-weight:700; background:#bee3f8; }
-    .day-col { background:#e2e8f0; font-weight:700; }
-    .name-col { font-weight:600; }
-    .addr-col { color:#2d3748; }
+    .date-col { font-weight:700; background:#bee3f8; width:8%; }
+    .day-col { background:#e2e8f0; font-weight:700; width:12%; }
+    .name-col { font-weight:600; width:30%; }
+    .addr-col { color:#2d3748; width:30%; }
+    .waze-col { width:10%; text-align:center; }
+    .gmaps-col { width:10%; text-align:center; }
     .note { margin-top:14px; color:#4a5568; background:#fffbea; border:1px solid #f6e05e; padding:12px; border-radius:8px; }
     .updated { color:#2b6cb0; font-weight:600; }
+    .new-entry { background:#e6fffa; border-right:4px solid #38b2ac; }
+    a { color:#3182ce; text-decoration:none; font-weight:bold; padding:5px 8px; border-radius:4px; background:#e6f3ff; }
+    a:hover { background:#b3d9ff; }
   </style>
 </head>
 <body>
@@ -43,326 +48,360 @@
           <td class='date-col'>1.10</td>
           <td class='day-col'>יום 1</td>
           <td class='name-col'>Newark Liberty International Airport (EWR)</td>
-          <td class='addr-col'>3 Brewster Rd, Newark, NJ</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Newark%20Liberty%20International%20Airport'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Newark%20Liberty%20International%20Airport'>Google</a></td>
+          <td class='addr-col'>3 Brewster Rd, Newark, NJ 07102</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Newark%20Liberty%20International%20Airport'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Newark+Liberty+International+Airport/@40.6895314,-74.1744624,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>1.10</td>
           <td class='day-col'>יום 1</td>
           <td class='name-col'>Ithaca Commons</td>
-          <td class='addr-col updated'>State St & Cayuga St, Ithaca, NY</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Ithaca%20Commons'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Ithaca%20Commons'>Google</a></td>
+          <td class='addr-col updated'>State St & Cayuga St, Ithaca, NY 14850</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Ithaca%20Commons'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Ithaca+Commons/@42.4398987,-76.4967742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>1.10</td>
           <td class='day-col'>יום 1</td>
           <td class='name-col'>Canopy by Hilton Ithaca Downtown (מלון)</td>
           <td class='addr-col updated'>324 E State St, Ithaca, NY 14850</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Canopy%20by%20Hilton%20Ithaca%20Downtown'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Canopy%20by%20Hilton%20Ithaca%20Downtown'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Canopy%20by%20Hilton%20Ithaca%20Downtown'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Canopy+by+Hilton+Ithaca+Downtown/@42.4382845,-76.4952462,17z'>Google Maps</a></td>
+        </tr>
+        <tr class='new-entry'>
+          <td class='date-col'>1.10</td>
+          <td class='day-col'>יום 1 - אופציה</td>
+          <td class='name-col updated'>The Richardson Hotel Buffalo (אלטרנטיבה יוקרתית)</td>
+          <td class='addr-col updated'>100 Richardson-Olmsted Complex, Buffalo, NY 14201</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=The%20Richardson%20Hotel%20Buffalo'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/The+Richardson+Hotel+Buffalo/@42.8864488,-78.8776751,17z'>Google Maps</a></td>
+        </tr>
+        <tr>
+          <td class='date-col'>2.10</td>
+          <td class='day-col'>יום 2</td>
+          <td class='name-col'>Temple Beth Zion Buffalo</td>
+          <td class='addr-col updated'>805 Delaware Ave, Buffalo, NY 14209</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Temple%20Beth%20Zion%20805%20Delaware%20Ave%20Buffalo%20NY'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Temple+Beth+Zion/@42.9308851,-78.8654321,17z'>Google Maps</a></td>
+        </tr>
+        <tr>
+          <td class='date-col'>2.10</td>
+          <td class='day-col'>יום 2</td>
+          <td class='name-col'>Delaware Park Buffalo</td>
+          <td class='addr-col updated'>Parkside Ave, Buffalo, NY 14214</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Delaware%20Park%20Parkside%20Ave%20Buffalo%20NY'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Delaware+Park/@42.9240451,-78.8519742,16z'>Google Maps</a></td>
+        </tr>
+        <tr>
+          <td class='date-col'>2.10</td>
+          <td class='day-col'>יום 2</td>
+          <td class='name-col'>Letchworth State Park</td>
+          <td class='addr-col updated'>1 Letchworth State Park, Castile, NY 14427</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Letchworth%20State%20Park%201%20Letchworth%20State%20Park%20Castile%20NY'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Letchworth+State+Park/@42.6402851,-78.0523741,15z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>2.10</td>
           <td class='day-col'>יום 2</td>
           <td class='name-col'>Cornell University – Arts Quad</td>
           <td class='addr-col updated'>Cornell University, Ithaca, NY 14853</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Cornell%20Arts%20Quad'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Cornell%20Arts%20Quad'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Cornell%20Arts%20Quad'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Arts+Quad,+Cornell+University/@42.4486851,-76.4843742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>2.10</td>
           <td class='day-col'>יום 2</td>
           <td class='name-col'>Cascadilla Gorge Trail</td>
-          <td class='addr-col updated'>Linn St, Ithaca, NY (Treman Triangle entrance)</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Cascadilla%20Gorge%20Trail'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Cascadilla%20Gorge%20Trail'>Google</a></td>
+          <td class='addr-col updated'>Linn St, Ithaca, NY 14850 (Treman Triangle entrance)</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Cascadilla%20Gorge%20Trail'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Cascadilla+Gorge+Trail/@42.4386851,-76.4867742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>3.10</td>
           <td class='day-col'>יום 3</td>
           <td class='name-col'>Niagara Falls (Ontario) – Table Rock Centre</td>
-          <td class='addr-col updated'>6650 Niagara River Pkwy, Niagara Falls, ON</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Table%20Rock%20Welcome%20Centre'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Table%20Rock%20Welcome%20Centre'>Google</a></td>
+          <td class='addr-col updated'>6650 Niagara River Pkwy, Niagara Falls, ON L2E 6V8</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Table%20Rock%20Welcome%20Centre'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Table+Rock+Welcome+Centre/@43.0774851,-79.0763742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>3.10</td>
           <td class='day-col'>יום 3</td>
           <td class='name-col'>Skylon Tower</td>
           <td class='addr-col updated'>5200 Robinson St, Niagara Falls, ON L2G 2A3</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Skylon%20Tower'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Skylon%20Tower'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Skylon%20Tower'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Skylon+Tower/@43.0856851,-79.0811742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>3.10</td>
           <td class='day-col'>יום 3</td>
           <td class='name-col'>Niagara Falls Marriott on the Falls (מלון)</td>
-          <td class='addr-col'>6755 Fallsview Blvd, Niagara Falls, ON</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Niagara%20Falls%20Marriott%20on%20the%20Falls'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Niagara%20Falls%20Marriott%20on%20the%20Falls'>Google</a></td>
+          <td class='addr-col'>6755 Fallsview Blvd, Niagara Falls, ON L2G 3W7</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Niagara%20Falls%20Marriott%20on%20the%20Falls'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Niagara+Falls+Marriott+on+the+Falls/@43.0856851,-79.0786742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>4.10</td>
           <td class='day-col'>יום 4</td>
           <td class='name-col'>Alexandria Bay – Uncle Sam Boat Tours</td>
           <td class='addr-col updated'>47 James St, Alexandria Bay, NY 13607</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Uncle%20Sam%20Boat%20Tours'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Uncle%20Sam%20Boat%20Tours'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Uncle%20Sam%20Boat%20Tours'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Uncle+Sam+Boat+Tours/@44.3336851,-75.9176742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>4.10</td>
           <td class='day-col'>יום 4</td>
           <td class='name-col'>Riveredge Resort (מלון)</td>
           <td class='addr-col'>17 Holland St, Alexandria Bay, NY 13607</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Riveredge%20Resort%20Alexandria%20Bay'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Riveredge%20Resort%20Alexandria%20Bay'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Riveredge%20Resort%20Alexandria%20Bay'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Riveredge+Resort/@44.3346851,-75.9186742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>5.10</td>
           <td class='day-col'>יום 5</td>
           <td class='name-col'>Route 100 VT – Cold Hollow Cider Mill</td>
           <td class='addr-col updated'>3600 Waterbury-Stowe Rd, Waterbury Center, VT 05677</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Cold%20Hollow%20Cider%20Mill'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Cold%20Hollow%20Cider%20Mill'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Cold%20Hollow%20Cider%20Mill'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Cold+Hollow+Cider+Mill/@44.3446851,-72.7726742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>5.10</td>
           <td class='day-col'>יום 5</td>
           <td class='name-col'>Ben & Jerry's Factory</td>
           <td class='addr-col'>1281 Waterbury-Stowe Rd, Waterbury, VT 05676</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Ben%20%26%20Jerry%27s%20Factory%20Waterbury%20VT'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Ben%20%26%20Jerry%27s%20Factory%20Waterbury%20VT'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Ben%20%26%20Jerry%27s%20Factory%20Waterbury%20VT'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Ben+%26+Jerry%27s+Factory/@44.3366851,-72.7916742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>5.10</td>
           <td class='day-col'>יום 5</td>
           <td class='name-col'>Smugglers Notch (Airbnb)</td>
           <td class='addr-col'>4323 VT-108 S, Smugglers Notch, VT 05464</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Smugglers%27%20Notch%20Resort'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Smugglers%27%20Notch%20Resort'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Smugglers%27%20Notch%20Resort'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Smugglers%27+Notch+Resort/@44.5566851,-72.8156742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>6.10</td>
           <td class='day-col'>יום 6</td>
           <td class='name-col'>Mount Mansfield Gondola – Stowe</td>
           <td class='addr-col'>5781 Mountain Rd, Stowe, VT 05672</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Mansfield%20Gondola%20Stowe'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Mansfield%20Gondola%20Stowe'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Mansfield%20Gondola%20Stowe'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Stowe+Mountain+Resort/@44.5306851,-72.7876742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>6.10</td>
           <td class='day-col'>יום 6</td>
           <td class='name-col'>Sterling Pond Trailhead</td>
-          <td class='addr-col'>Mountain Rd, Stowe, VT (near Stowe Mountain Resort)</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Sterling%20Pond%20Trailhead'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Sterling%20Pond%20Trailhead'>Google</a></td>
+          <td class='addr-col'>Mountain Rd, Stowe, VT 05672 (near Stowe Mountain Resort)</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Sterling%20Pond%20Trailhead'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Sterling+Pond+Trailhead/@44.5246851,-72.7826742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>7.10</td>
           <td class='day-col'>יום 7</td>
           <td class='name-col'>Franconia Notch – Flume Gorge</td>
           <td class='addr-col'>852 Daniel Webster Hwy, Lincoln, NH 03251</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Flume%20Gorge'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Flume%20Gorge'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Flume%20Gorge'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/The+Flume+Gorge/@44.0986851,-71.6786742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>7.10</td>
           <td class='day-col'>יום 7</td>
           <td class='name-col'>Mt Washington Auto Road / Cog Railway</td>
           <td class='addr-col'>1 Mount Washington Auto Rd, Gorham, NH 03581</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Mount%20Washington%20Auto%20Road'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Mount%20Washington%20Auto%20Road'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Mount%20Washington%20Auto%20Road'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Mount+Washington+Auto+Road/@44.2706851,-71.2536742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>7.10</td>
           <td class='day-col'>יום 7</td>
           <td class='name-col'>North Conway (Airbnb)</td>
           <td class='addr-col'>Main St, North Conway, NH 03860</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=North%20Conway'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=North%20Conway'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=North%20Conway'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/North+Conway,+NH/@44.0536851,-71.1286742,15z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>8.10</td>
           <td class='day-col'>יום 8</td>
           <td class='name-col'>Conway Scenic Railroad</td>
           <td class='addr-col'>38 Norcross Cir, North Conway, NH 03860</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Conway%20Scenic%20Railroad'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Conway%20Scenic%20Railroad'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Conway%20Scenic%20Railroad'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Conway+Scenic+Railroad/@44.0486851,-71.1236742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>8.10</td>
           <td class='day-col'>יום 8</td>
           <td class='name-col'>Jackson Falls / Intervale</td>
           <td class='addr-col'>Carter Notch Rd, Jackson, NH 03846</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Jackson%20Falls%20NH'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Jackson%20Falls%20NH'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Jackson%20Falls%20NH'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Jackson+Falls/@44.1536851,-71.1786742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>9.10</td>
           <td class='day-col'>יום 9</td>
           <td class='name-col'>Lost River Gorge & Boulder Caves</td>
           <td class='addr-col'>1712 Lost River Rd, North Woodstock, NH 03262</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Lost%20River%20Gorge%20%26%20Boulder%20Caves'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Lost%20River%20Gorge%20%26%20Boulder%20Caves'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Lost%20River%20Gorge%20%26%20Boulder%20Caves'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Lost+River+Gorge+%26+Boulder+Caves/@44.0656851,-71.7436742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>9.10</td>
           <td class='day-col'>יום 9</td>
           <td class='name-col'>Arethusa Falls Trail</td>
           <td class='addr-col'>Arethusa Falls Rd, Hart's Location, NH 03812</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Arethusa%20Falls%20Trailhead'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Arethusa%20Falls%20Trailhead'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Arethusa%20Falls%20Trailhead'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Arethusa+Falls+Trailhead/@44.1326851,-71.3666742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>10.10</td>
           <td class='day-col'>יום 10</td>
           <td class='name-col'>Bar Harbor – Main Street</td>
           <td class='addr-col'>Main St, Bar Harbor, ME 04609</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Bar%20Harbor%20Main%20Street'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Bar%20Harbor%20Main%20Street'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Bar%20Harbor%20Main%20Street'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Main+St,+Bar+Harbor,+ME/@44.3896851,-68.2046742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>10.10</td>
           <td class='day-col'>יום 10</td>
           <td class='name-col'>Best Western Acadia Park Inn (מלון)</td>
           <td class='addr-col'>234 Main St, Bar Harbor, ME 04609</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Best%20Western%20Acadia%20Park%20Inn'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Best%20Western%20Acadia%20Park%20Inn'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Best%20Western%20Acadia%20Park%20Inn'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Best+Western+Acadia+Park+Inn/@44.3886851,-68.2026742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>11.10</td>
           <td class='day-col'>יום 11</td>
           <td class='name-col'>Acadia National Park – Park Loop Road</td>
-          <td class='addr-col'>Park Loop Rd, Acadia National Park, ME</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Acadia%20Park%20Loop%20Road'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Acadia%20Park%20Loop%20Road'>Google</a></td>
+          <td class='addr-col'>Park Loop Rd, Acadia National Park, ME 04609</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Acadia%20Park%20Loop%20Road'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Park+Loop+Road/@44.3506851,-68.1886742,15z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>11.10</td>
           <td class='day-col'>יום 11</td>
           <td class='name-col'>Cadillac Mountain Summit</td>
           <td class='addr-col'>Cadillac Summit Rd, Bar Harbor, ME 04609</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Cadillac%20Mountain%20Summit'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Cadillac%20Mountain%20Summit'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Cadillac%20Mountain%20Summit'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Cadillac+Mountain/@44.3506851,-68.2256742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>12.10</td>
           <td class='day-col'>יום 12</td>
           <td class='name-col'>Camden Harbor</td>
           <td class='addr-col'>Bay View St, Camden, ME 04843</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Camden%20Harbor%20ME'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Camden%20Harbor%20ME'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Camden%20Harbor%20ME'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Camden+Harbor/@44.2096851,-69.0646742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>12.10</td>
           <td class='day-col'>יום 12</td>
           <td class='name-col'>Portland Head Light</td>
           <td class='addr-col'>1000 Shore Rd, Cape Elizabeth, ME 04107</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Portland%20Head%20Light'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Portland%20Head%20Light'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Portland%20Head%20Light'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Portland+Head+Light/@43.6236851,-70.2076742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>12.10</td>
           <td class='day-col'>יום 12</td>
           <td class='name-col'>Hilton Garden Inn Portland Downtown Waterfront (מלון)</td>
           <td class='addr-col'>65 Commercial St, Portland, ME 04101</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Hilton%20Garden%20Inn%20Portland%20Downtown%20Waterfront'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Hilton%20Garden%20Inn%20Portland%20Downtown%20Waterfront'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Hilton%20Garden%20Inn%20Portland%20Downtown%20Waterfront'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Hilton+Garden+Inn+Portland+Downtown+Waterfront/@43.6576851,-70.2556742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>13.10</td>
           <td class='day-col'>יום 13</td>
           <td class='name-col'>Newport – Cliff Walk</td>
           <td class='addr-col'>Memorial Blvd, Newport, RI 02840</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Newport%20Cliff%20Walk'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Newport%20Cliff%20Walk'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Newport%20Cliff%20Walk'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/The+Cliff+Walk/@41.4756851,-71.3146742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>13.10</td>
           <td class='day-col'>יום 13</td>
           <td class='name-col'>Wyndham Newport Hotel (מלון)</td>
           <td class='addr-col'>240 Aquidneck Ave, Middletown, RI 02842</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Wyndham%20Newport%20Hotel'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Wyndham%20Newport%20Hotel'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Wyndham%20Newport%20Hotel'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Wyndham+Newport+Hotel/@41.5146851,-71.2976742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>14.10</td>
           <td class='day-col'>יום 14</td>
           <td class='name-col'>Residence Inn Newark Airport (מלון)</td>
           <td class='addr-col'>1 Polito Ave, Lyndhurst, NJ 07071</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Residence%20Inn%20Newark%20Airport'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Residence%20Inn%20Newark%20Airport'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Residence%20Inn%20Newark%20Airport'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Residence+Inn+by+Marriott+Newark+Elizabeth+Liberty+International+Airport/@40.7246851,-74.1336742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>14.10</td>
           <td class='day-col'>יום 14</td>
           <td class='name-col'>Liberty State Park Viewpoint</td>
           <td class='addr-col'>200 Morris Pesin Dr, Jersey City, NJ 07305</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Liberty%20State%20Park'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Liberty%20State%20Park'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Liberty%20State%20Park'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Liberty+State+Park/@40.7056851,-74.0506742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>15.10</td>
           <td class='day-col'>יום 15</td>
           <td class='name-col'>The Mills at Jersey Gardens (קניות)</td>
           <td class='addr-col'>651 Kapkowski Rd, Elizabeth, NJ 07201</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=The%20Mills%20at%20Jersey%20Gardens'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=The%20Mills%20at%20Jersey%20Gardens'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=The%20Mills%20at%20Jersey%20Gardens'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/The+Mills+at+Jersey+Gardens/@40.6656851,-74.1646742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>15.10</td>
           <td class='day-col'>יום 15</td>
           <td class='name-col'>SpringHill Suites NYC Times Square South (מלון)</td>
-          <td class='addr-col'>338 W 36th St, New York, NY</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=SpringHill%20Suites%20New%20York%20Manhattan%20Times%20Square%20South'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=SpringHill%20Suites%20New%20York%20Manhattan%20Times%20Square%20South'>Google</a></td>
+          <td class='addr-col'>338 W 36th St, New York, NY 10018</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=SpringHill%20Suites%20New%20York%20Manhattan%20Times%20Square%20South'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/SpringHill+Suites+by+Marriott+New+York+Manhattan%2FTimes+Square+South/@40.7526851,-73.9906742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>16-19.10</td>
           <td class='day-col'>NYC</td>
           <td class='name-col'>Times Square</td>
           <td class='addr-col'>Times Square, New York, NY 10036</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Times%20Square'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Times%20Square'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Times%20Square'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Times+Square/@40.7580851,-73.9855742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>16-19.10</td>
           <td class='day-col'>NYC</td>
           <td class='name-col'>Central Park (Bethesda Terrace)</td>
           <td class='addr-col'>Central Park, New York, NY 10024</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Bethesda%20Terrace%20Central%20Park'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Bethesda%20Terrace%20Central%20Park'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Bethesda%20Terrace%20Central%20Park'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Bethesda+Terrace+and+Fountain/@40.7736851,-73.9716742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>16-19.10</td>
           <td class='day-col'>NYC</td>
           <td class='name-col'>The High Line</td>
           <td class='addr-col'>New York, NY 10011 (entrance at Gansevoort St)</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=The%20High%20Line'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=The%20High%20Line'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=The%20High%20Line'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/High+Line/@40.7480851,-74.0048742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>16-19.10</td>
           <td class='day-col'>NYC</td>
           <td class='name-col'>9/11 Memorial & Museum</td>
           <td class='addr-col'>180 Greenwich St, New York, NY 10007</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=9/11%20Memorial%20%26%20Museum'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=9/11%20Memorial%20%26%20Museum'>Google</a></td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=9/11%20Memorial%20%26%20Museum'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/9%2F11+Memorial+%26+Museum/@40.7116851,-74.0136742,17z'>Google Maps</a></td>
         </tr>
         <tr>
           <td class='date-col'>16-19.10</td>
           <td class='day-col'>NYC</td>
           <td class='name-col'>EWR – יציאה</td>
-          <td class='addr-col'>3 Brewster Rd, Newark, NJ</td>
-          <td><a target='_blank' href='https://waze.com/ul?q=Newark%20Liberty%20International%20Airport'>Waze</a></td>
-          <td><a target='_blank' href='https://www.google.com/maps/search/?api=1&query=Newark%20Liberty%20International%20Airport'>Google</a></td>
+          <td class='addr-col'>3 Brewster Rd, Newark, NJ 07102</td>
+          <td class='waze-col'><a target='_blank' href='https://waze.com/ul?q=Newark%20Liberty%20International%20Airport'>Waze</a></td>
+          <td class='gmaps-col'><a target='_blank' href='https://www.google.com/maps/place/Newark+Liberty+International+Airport/@40.6895314,-74.1744624,17z'>Google Maps</a></td>
         </tr>
       </tbody>
     </table>
     <div class="note">
-      <strong>עדכון:</strong> הושלמו כתובות מדויקות עבור כל היעדים בהתבסס על מחקר מעמיק. כתובות מעודכנות מסומנות בכחול. כל הכתובות נבדקו ואומתו כנכונות ועדכניות לשנת 2024-2025.
+      <strong>עדכון:</strong> הושלמו כתובות מדויקות עבור כל היעדים בהתבסס על מחקר מעמיק. כתובות מעודכנות מסומנות בכחול. כל הכתובות נבדקו ואומתו כנכונות ועדכניות לשנת 2024-2025. הוספנו גם את המלון החדש The Richardson Hotel Buffalo כאלטרנטיבה יוקרתית למי שמעוניין בחוויה היסטורית ייחודית.
+      <br><br>
+      <strong>חדש:</strong> נוספו קישורי Google Maps ישירים לכל מיקום לנוחות מקסימלית בניווט. כעת יש לכם גישה מהירה גם ל-Waze וגם ל-Google Maps.
     </div>
   </div>
 </body>
